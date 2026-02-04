@@ -1,0 +1,1000 @@
+{"id": "code_00487", "instruction": "写一个函数判断一个字符串是否是回文", "output": "def is_palindrome(s):\n    return s == s[::-1]", "category": "code"}
+{"id": "math_00659", "instruction": "计算 48 + 22 的值", "output": "70", "category": "math"}
+{"id": "code_00570", "instruction": "用 Python 实现二分查找", "output": "def binary_search(arr, target):\n    left, right = 0, len(arr) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            left = mid + 1\n        else:\n            right = mid - 1\n    return -1", "category": "code"}
+{"id": "code_00929", "instruction": "写一个 Python 装饰器用于计时", "output": "import time\ndef timer(func):\n    def wrapper(*args, **kwargs):\n        start = time.time()\n        result = func(*args, **kwargs)\n        print(f'{func.__name__} took {time.time()-start:.2f}s')\n        return result\n    return wrapper", "category": "code"}
+{"id": "code_00779", "instruction": "用 Python 实现二分查找", "output": "def binary_search(arr, target):\n    left, right = 0, len(arr) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            left = mid + 1\n        else:\n            right = mid - 1\n    return -1", "category": "code"}
+{"id": "code_00259", "instruction": "写一个 Python 函数计算斐波那契数列的第 n 项", "output": "def fibonacci(n):\n    if n <= 1:\n        return n\n    return fibonacci(n-1) + fibonacci(n-2)", "category": "code"}
+{"id": "math_00185", "instruction": "计算 63 的 2 次方", "output": "126", "category": "math"}
+{"id": "inst_00344", "instruction": "解释梯度下降的基本原理", "output": "梯度下降是一种优化算法，通过计算损失函数关于参数的梯度，沿梯度的反方向更新参数，逐步最小化损失函数。", "category": "instruction"}
+{"id": "math_00886", "instruction": "计算 47 的 8 次方", "output": "376", "category": "math"}
+{"id": "inst_00042", "instruction": "什么是注意力机制？", "output": "注意力机制是一种让模型在处理输入时能够聚焦于最相关部分的技术。它通过计算查询与键的相似度来分配注意力权重，然后对值进行加权求和。", "category": "instruction"}
+{"id": "inst_00891", "instruction": "解释什么是机器学习中的过拟合现象", "output": "过拟合是指模型在训练数据上表现很好，但在未见过的测试数据上表现较差的现象。这通常是因为模型过度学习了训练数据中的噪声和细节，而不是学习到了真正的规律。", "category": "instruction"}
+{"id": "inst_00235", "instruction": "什么是 Transformer 架构？", "output": "Transformer 是一种基于自注意力机制的神经网络架构，完全摒弃了循环和卷积结构。它由编码器和解码器组成，使用多头注意力和前馈网络。", "category": "instruction"}
+{"id": "inst_00634", "instruction": "解释梯度下降的基本原理", "output": "梯度下降是一种优化算法，通过计算损失函数关于参数的梯度，沿梯度的反方向更新参数，逐步最小化损失函数。", "category": "instruction"}
+{"id": "code_00166", "instruction": "写一个 Python 装饰器用于计时", "output": "import time\ndef timer(func):\n    def wrapper(*args, **kwargs):\n        start = time.time()\n        result = func(*args, **kwargs)\n        print(f'{func.__name__} took {time.time()-start:.2f}s')\n        return result\n    return wrapper", "category": "code"}
+{"id": "math_00561", "instruction": "求解方程 64x + 45 = 128", "output": "x = 1.3", "category": "math"}
+{"id": "inst_00625", "instruction": "总结深度学习的三个关键组成部分", "output": "深度学习的三个关键组成部分是：1. 神经网络架构 2. 损失函数 3. 优化算法", "category": "instruction"}
+{"id": "inst_00305", "instruction": "解释梯度下降的基本原理", "output": "梯度下降是一种优化算法，通过计算损失函数关于参数的梯度，沿梯度的反方向更新参数，逐步最小化损失函数。", "category": "instruction"}
+{"id": "code_00934", "instruction": "写一个函数判断一个字符串是否是回文", "output": "def is_palindrome(s):\n    return s == s[::-1]", "category": "code"}
+{"id": "inst_00109", "instruction": "解释什么是机器学习中的过拟合现象", "output": "过拟合是指模型在训练数据上表现很好，但在未见过的测试数据上表现较差的现象。这通常是因为模型过度学习了训练数据中的噪声和细节，而不是学习到了真正的规律。", "category": "instruction"}
+{"id": "inst_00119", "instruction": "解释梯度下降的基本原理", "output": "梯度下降是一种优化算法，通过计算损失函数关于参数的梯度，沿梯度的反方向更新参数，逐步最小化损失函数。", "category": "instruction"}
+{"id": "code_00485", "instruction": "用 Python 实现冒泡排序", "output": "def bubble_sort(arr):\n    n = len(arr)\n    for i in range(n):\n        for j in range(0, n-i-1):\n            if arr[j] > arr[j+1]:\n                arr[j], arr[j+1] = arr[j+1], arr[j]\n    return arr", "category": "code"}
+{"id": "inst_00650", "instruction": "总结深度学习的三个关键组成部分", "output": "深度学习的三个关键组成部分是：1. 神经网络架构 2. 损失函数 3. 优化算法", "category": "instruction"}
+{"id": "math_00128", "instruction": "求解方程 52x + 22 = 72", "output": "x = 0.96", "category": "math"}
+{"id": "inst_00029", "instruction": "解释梯度下降的基本原理", "output": "梯度下降是一种优化算法，通过计算损失函数关于参数的梯度，沿梯度的反方向更新参数，逐步最小化损失函数。", "category": "instruction"}
+{"id": "math_00023", "instruction": "计算 35 的 41 次方", "output": "1435", "category": "math"}
+{"id": "math_00371", "instruction": "将分数 42/40 化为小数", "output": "0.4", "category": "math"}
+{"id": "math_00110", "instruction": "计算 36 的 3 次方", "output": "108", "category": "math"}
+{"id": "inst_00112", "instruction": "什么是 Transformer 架构？", "output": "Transformer 是一种基于自注意力机制的神经网络架构，完全摒弃了循环和卷积结构。它由编码器和解码器组成，使用多头注意力和前馈网络。", "category": "instruction"}
+{"id": "math_00190", "instruction": "计算 18 的 30 次方", "output": "540", "category": "math"}
+{"id": "inst_00262", "instruction": "什么是 Transformer 架构？", "output": "Transformer 是一种基于自注意力机制的神经网络架构，完全摒弃了循环和卷积结构。它由编码器和解码器组成，使用多头注意力和前馈网络。", "category": "instruction"}
+{"id": "inst_00928", "instruction": "解释什么是机器学习中的过拟合现象", "output": "过拟合是指模型在训练数据上表现很好，但在未见过的测试数据上表现较差的现象。这通常是因为模型过度学习了训练数据中的噪声和细节，而不是学习到了真正的规律。", "category": "instruction"}
+{"id": "math_00091", "instruction": "将分数 6/40 化为小数", "output": "-3.17", "category": "math"}
+{"id": "inst_00434", "instruction": "什么是注意力机制？", "output": "注意力机制是一种让模型在处理输入时能够聚焦于最相关部分的技术。它通过计算查询与键的相似度来分配注意力权重，然后对值进行加权求和。", "category": "instruction"}
+{"id": "math_00181", "instruction": "计算 46 + 20 的值", "output": "66", "category": "math"}
+{"id": "code_00618", "instruction": "写一个 Python 装饰器用于计时", "output": "import time\ndef timer(func):\n    def wrapper(*args, **kwargs):\n        start = time.time()\n        result = func(*args, **kwargs)\n        print(f'{func.__name__} took {time.time()-start:.2f}s')\n        return result\n    return wrapper", "category": "code"}
+{"id": "code_00431", "instruction": "写一个 Python 装饰器用于计时", "output": "import time\ndef timer(func):\n    def wrapper(*args, **kwargs):\n        start = time.time()\n        result = func(*args, **kwargs)\n        print(f'{func.__name__} took {time.time()-start:.2f}s')\n        return result\n    return wrapper", "category": "code"}
+{"id": "math_00018", "instruction": "计算 82 的 24 次方", "output": "1968", "category": "math"}
+{"id": "code_00164", "instruction": "用 Python 实现二分查找", "output": "def binary_search(arr, target):\n    left, right = 0, len(arr) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            left = mid + 1\n        else:\n            right = mid - 1\n    return -1", "category": "code"}
+{"id": "math_00294", "instruction": "将分数 31/46 化为小数", "output": "-0.16", "category": "math"}
+{"id": "code_00947", "instruction": "用 Python 实现二分查找", "output": "def binary_search(arr, target):\n    left, right = 0, len(arr) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            left = mid + 1\n        else:\n            right = mid - 1\n    return -1", "category": "code"}
+{"id": "inst_00349", "instruction": "什么是注意力机制？", "output": "注意力机制是一种让模型在处理输入时能够聚焦于最相关部分的技术。它通过计算查询与键的相似度来分配注意力权重，然后对值进行加权求和。", "category": "instruction"}
+{"id": "inst_00592", "instruction": "总结深度学习的三个关键组成部分", "output": "深度学习的三个关键组成部分是：1. 神经网络架构 2. 损失函数 3. 优化算法", "category": "instruction"}
+{"id": "inst_00378", "instruction": "解释梯度下降的基本原理", "output": "梯度下降是一种优化算法，通过计算损失函数关于参数的梯度，沿梯度的反方向更新参数，逐步最小化损失函数。", "category": "instruction"}
+{"id": "code_00452", "instruction": "写一个函数判断一个字符串是否是回文", "output": "def is_palindrome(s):\n    return s == s[::-1]", "category": "code"}
+{"id": "math_00457", "instruction": "计算 3 的 21 次方", "output": "63", "category": "math"}
+{"id": "code_00640", "instruction": "用 Python 实现二分查找", "output": "def binary_search(arr, target):\n    left, right = 0, len(arr) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            left = mid + 1\n        else:\n            right = mid - 1\n    return -1", "category": "code"}
+{"id": "inst_00187", "instruction": "什么是 Transformer 架构？", "output": "Transformer 是一种基于自注意力机制的神经网络架构，完全摒弃了循环和卷积结构。它由编码器和解码器组成，使用多头注意力和前馈网络。", "category": "instruction"}
+{"id": "math_00922", "instruction": "将分数 55/30 化为小数", "output": "0.55", "category": "math"}
+{"id": "math_00438", "instruction": "一个矩形的长为 100 厘米，宽为 37 厘米，求面积", "output": "面积 = 100 × 37 = 3700 平方厘米", "category": "math"}
+{"id": "inst_00663", "instruction": "什么是 Transformer 架构？", "output": "Transformer 是一种基于自注意力机制的神经网络架构，完全摒弃了循环和卷积结构。它由编码器和解码器组成，使用多头注意力和前馈网络。", "category": "instruction"}
+{"id": "math_00516", "instruction": "一个矩形的长为 7 厘米，宽为 42 厘米，求面积", "output": "面积 = 7 × 42 = 294 平方厘米", "category": "math"}
+{"id": "math_00427", "instruction": "计算 29 的 7 次方", "output": "203", "category": "math"}
+{"id": "math_00441", "instruction": "计算 63 的 39 次方", "output": "2457", "category": "math"}
+{"id": "inst_00484", "instruction": "解释什么是机器学习中的过拟合现象", "output": "过拟合是指模型在训练数据上表现很好，但在未见过的测试数据上表现较差的现象。这通常是因为模型过度学习了训练数据中的噪声和细节，而不是学习到了真正的规律。", "category": "instruction"}
+{"id": "math_00611", "instruction": "将分数 12/33 化为小数", "output": "11.0", "category": "math"}
+{"id": "math_00533", "instruction": "一个矩形的长为 31 厘米，宽为 20 厘米，求面积", "output": "面积 = 31 × 20 = 620 平方厘米", "category": "math"}
+{"id": "inst_00312", "instruction": "总结深度学习的三个关键组成部分", "output": "深度学习的三个关键组成部分是：1. 神经网络架构 2. 损失函数 3. 优化算法", "category": "instruction"}
+{"id": "code_00258", "instruction": "写一个 Python 装饰器用于计时", "output": "import time\ndef timer(func):\n    def wrapper(*args, **kwargs):\n        start = time.time()\n        result = func(*args, **kwargs)\n        print(f'{func.__name__} took {time.time()-start:.2f}s')\n        return result\n    return wrapper", "category": "code"}
+{"id": "math_00004", "instruction": "将分数 78/2 化为小数", "output": "1.82", "category": "math"}
+{"id": "inst_00492", "instruction": "什么是注意力机制？", "output": "注意力机制是一种让模型在处理输入时能够聚焦于最相关部分的技术。它通过计算查询与键的相似度来分配注意力权重，然后对值进行加权求和。", "category": "instruction"}
+{"id": "code_00728", "instruction": "写一个函数判断一个字符串是否是回文", "output": "def is_palindrome(s):\n    return s == s[::-1]", "category": "code"}
+{"id": "code_00285", "instruction": "写一个函数判断一个字符串是否是回文", "output": "def is_palindrome(s):\n    return s == s[::-1]", "category": "code"}
+{"id": "inst_00557", "instruction": "总结深度学习的三个关键组成部分", "output": "深度学习的三个关键组成部分是：1. 神经网络架构 2. 损失函数 3. 优化算法", "category": "instruction"}
+{"id": "math_00782", "instruction": "求解方程 60x + 4 = 144", "output": "x = 2.33", "category": "math"}
+{"id": "inst_00958", "instruction": "总结深度学习的三个关键组成部分", "output": "深度学习的三个关键组成部分是：1. 神经网络架构 2. 损失函数 3. 优化算法", "category": "instruction"}
+{"id": "inst_00681", "instruction": "总结深度学习的三个关键组成部分", "output": "深度学习的三个关键组成部分是：1. 神经网络架构 2. 损失函数 3. 优化算法", "category": "instruction"}
+{"id": "code_00915", "instruction": "写一个函数判断一个字符串是否是回文", "output": "def is_palindrome(s):\n    return s == s[::-1]", "category": "code"}
+{"id": "math_00846", "instruction": "求解方程 73x + 25 = 174", "output": "x = 2.04", "category": "math"}
+{"id": "code_00627", "instruction": "写一个函数判断一个字符串是否是回文", "output": "def is_palindrome(s):\n    return s == s[::-1]", "category": "code"}
+{"id": "inst_00723", "instruction": "解释什么是机器学习中的过拟合现象", "output": "过拟合是指模型在训练数据上表现很好，但在未见过的测试数据上表现较差的现象。这通常是因为模型过度学习了训练数据中的噪声和细节，而不是学习到了真正的规律。", "category": "instruction"}
+{"id": "math_00924", "instruction": "计算 51 的 2 次方", "output": "102", "category": "math"}
+{"id": "math_00639", "instruction": "一个矩形的长为 7 厘米，宽为 4 厘米，求面积", "output": "面积 = 7 × 4 = 28 平方厘米", "category": "math"}
+{"id": "math_00130", "instruction": "将分数 52/44 化为小数", "output": "1.81", "category": "math"}
+{"id": "inst_00356", "instruction": "解释什么是机器学习中的过拟合现象", "output": "过拟合是指模型在训练数据上表现很好，但在未见过的测试数据上表现较差的现象。这通常是因为模型过度学习了训练数据中的噪声和细节，而不是学习到了真正的规律。", "category": "instruction"}
+{"id": "code_00996", "instruction": "用 Python 实现二分查找", "output": "def binary_search(arr, target):\n    left, right = 0, len(arr) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            left = mid + 1\n        else:\n            right = mid - 1\n    return -1", "category": "code"}
+{"id": "code_00138", "instruction": "写一个 Python 装饰器用于计时", "output": "import time\ndef timer(func):\n    def wrapper(*args, **kwargs):\n        start = time.time()\n        result = func(*args, **kwargs)\n        print(f'{func.__name__} took {time.time()-start:.2f}s')\n        return result\n    return wrapper", "category": "code"}
+{"id": "math_00562", "instruction": "将分数 35/6 化为小数", "output": "5.17", "category": "math"}
+{"id": "inst_00387", "instruction": "总结深度学习的三个关键组成部分", "output": "深度学习的三个关键组成部分是：1. 神经网络架构 2. 损失函数 3. 优化算法", "category": "instruction"}
+{"id": "inst_00574", "instruction": "总结深度学习的三个关键组成部分", "output": "深度学习的三个关键组成部分是：1. 神经网络架构 2. 损失函数 3. 优化算法", "category": "instruction"}
+{"id": "inst_00418", "instruction": "解释梯度下降的基本原理", "output": "梯度下降是一种优化算法，通过计算损失函数关于参数的梯度，沿梯度的反方向更新参数，逐步最小化损失函数。", "category": "instruction"}
+{"id": "code_00409", "instruction": "写一个函数判断一个字符串是否是回文", "output": "def is_palindrome(s):\n    return s == s[::-1]", "category": "code"}
+{"id": "code_00032", "instruction": "写一个 Python 装饰器用于计时", "output": "import time\ndef timer(func):\n    def wrapper(*args, **kwargs):\n        start = time.time()\n        result = func(*args, **kwargs)\n        print(f'{func.__name__} took {time.time()-start:.2f}s')\n        return result\n    return wrapper", "category": "code"}
+{"id": "inst_00309", "instruction": "解释梯度下降的基本原理", "output": "梯度下降是一种优化算法，通过计算损失函数关于参数的梯度，沿梯度的反方向更新参数，逐步最小化损失函数。", "category": "instruction"}
+{"id": "math_00448", "instruction": "求解方程 99x + 9 = 196", "output": "x = 1.89", "category": "math"}
+{"id": "inst_00631", "instruction": "什么是 Transformer 架构？", "output": "Transformer 是一种基于自注意力机制的神经网络架构，完全摒弃了循环和卷积结构。它由编码器和解码器组成，使用多头注意力和前馈网络。", "category": "instruction"}
+{"id": "inst_00794", "instruction": "什么是 Transformer 架构？", "output": "Transformer 是一种基于自注意力机制的神经网络架构，完全摒弃了循环和卷积结构。它由编码器和解码器组成，使用多头注意力和前馈网络。", "category": "instruction"}
+{"id": "code_00188", "instruction": "用 Python 实现二分查找", "output": "def binary_search(arr, target):\n    left, right = 0, len(arr) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            left = mid + 1\n        else:\n            right = mid - 1\n    return -1", "category": "code"}
+{"id": "math_00940", "instruction": "求解方程 63x + 41 = 138", "output": "x = 1.54", "category": "math"}
+{"id": "code_00341", "instruction": "用 Python 实现二分查找", "output": "def binary_search(arr, target):\n    left, right = 0, len(arr) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            left = mid + 1\n        else:\n            right = mid - 1\n    return -1", "category": "code"}
+{"id": "code_00545", "instruction": "写一个函数判断一个字符串是否是回文", "output": "def is_palindrome(s):\n    return s == s[::-1]", "category": "code"}
+{"id": "math_00645", "instruction": "一个矩形的长为 10 厘米，宽为 25 厘米，求面积", "output": "面积 = 10 × 25 = 250 平方厘米", "category": "math"}
+{"id": "code_00773", "instruction": "写一个函数判断一个字符串是否是回文", "output": "def is_palindrome(s):\n    return s == s[::-1]", "category": "code"}
+{"id": "code_00442", "instruction": "用 Python 实现冒泡排序", "output": "def bubble_sort(arr):\n    n = len(arr)\n    for i in range(n):\n        for j in range(0, n-i-1):\n            if arr[j] > arr[j+1]:\n                arr[j], arr[j+1] = arr[j+1], arr[j]\n    return arr", "category": "code"}
+{"id": "inst_00052", "instruction": "解释什么是机器学习中的过拟合现象", "output": "过拟合是指模型在训练数据上表现很好，但在未见过的测试数据上表现较差的现象。这通常是因为模型过度学习了训练数据中的噪声和细节，而不是学习到了真正的规律。", "category": "instruction"}
+{"id": "code_00236", "instruction": "写一个 Python 函数计算斐波那契数列的第 n 项", "output": "def fibonacci(n):\n    if n <= 1:\n        return n\n    return fibonacci(n-1) + fibonacci(n-2)", "category": "code"}
+{"id": "code_00148", "instruction": "用 Python 实现二分查找", "output": "def binary_search(arr, target):\n    left, right = 0, len(arr) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            left = mid + 1\n        else:\n            right = mid - 1\n    return -1", "category": "code"}
+{"id": "math_00546", "instruction": "计算 46 + 5 的值", "output": "51", "category": "math"}
+{"id": "code_00299", "instruction": "写一个函数判断一个字符串是否是回文", "output": "def is_palindrome(s):\n    return s == s[::-1]", "category": "code"}
+{"id": "code_00100", "instruction": "写一个 Python 装饰器用于计时", "output": "import time\ndef timer(func):\n    def wrapper(*args, **kwargs):\n        start = time.time()\n        result = func(*args, **kwargs)\n        print(f'{func.__name__} took {time.time()-start:.2f}s')\n        return result\n    return wrapper", "category": "code"}
+{"id": "code_00270", "instruction": "写一个 Python 装饰器用于计时", "output": "import time\ndef timer(func):\n    def wrapper(*args, **kwargs):\n        start = time.time()\n        result = func(*args, **kwargs)\n        print(f'{func.__name__} took {time.time()-start:.2f}s')\n        return result\n    return wrapper", "category": "code"}
+{"id": "inst_00717", "instruction": "什么是注意力机制？", "output": "注意力机制是一种让模型在处理输入时能够聚焦于最相关部分的技术。它通过计算查询与键的相似度来分配注意力权重，然后对值进行加权求和。", "category": "instruction"}
+{"id": "inst_00680", "instruction": "什么是注意力机制？", "output": "注意力机制是一种让模型在处理输入时能够聚焦于最相关部分的技术。它通过计算查询与键的相似度来分配注意力权重，然后对值进行加权求和。", "category": "instruction"}
+{"id": "math_00240", "instruction": "计算 71 + 19 的值", "output": "90", "category": "math"}
+{"id": "math_00901", "instruction": "求解方程 85x + 43 = 91", "output": "x = 0.56", "category": "math"}
+{"id": "code_00939", "instruction": "写一个 Python 装饰器用于计时", "output": "import time\ndef timer(func):\n    def wrapper(*args, **kwargs):\n        start = time.time()\n        result = func(*args, **kwargs)\n        print(f'{func.__name__} took {time.time()-start:.2f}s')\n        return result\n    return wrapper", "category": "code"}
+{"id": "math_00714", "instruction": "计算 43 + 11 的值", "output": "54", "category": "math"}
+{"id": "math_00943", "instruction": "求解方程 41x + 29 = 159", "output": "x = 3.17", "category": "math"}
+{"id": "inst_00230", "instruction": "什么是 Transformer 架构？", "output": "Transformer 是一种基于自注意力机制的神经网络架构，完全摒弃了循环和卷积结构。它由编码器和解码器组成，使用多头注意力和前馈网络。", "category": "instruction"}
+{"id": "inst_00386", "instruction": "解释什么是机器学习中的过拟合现象", "output": "过拟合是指模型在训练数据上表现很好，但在未见过的测试数据上表现较差的现象。这通常是因为模型过度学习了训练数据中的噪声和细节，而不是学习到了真正的规律。", "category": "instruction"}
+{"id": "math_00710", "instruction": "将分数 14/22 化为小数", "output": "3.64", "category": "math"}
+{"id": "code_00273", "instruction": "写一个 Python 函数计算斐波那契数列的第 n 项", "output": "def fibonacci(n):\n    if n <= 1:\n        return n\n    return fibonacci(n-1) + fibonacci(n-2)", "category": "code"}
+{"id": "inst_00497", "instruction": "什么是 Transformer 架构？", "output": "Transformer 是一种基于自注意力机制的神经网络架构，完全摒弃了循环和卷积结构。它由编码器和解码器组成，使用多头注意力和前馈网络。", "category": "instruction"}
+{"id": "math_00865", "instruction": "将分数 12/39 化为小数", "output": "9.58", "category": "math"}
+{"id": "math_00033", "instruction": "求解方程 18x + 33 = 127", "output": "x = 5.22", "category": "math"}
+{"id": "math_00558", "instruction": "计算 84 + 22 的值", "output": "106", "category": "math"}
+{"id": "inst_00020", "instruction": "解释什么是机器学习中的过拟合现象", "output": "过拟合是指模型在训练数据上表现很好，但在未见过的测试数据上表现较差的现象。这通常是因为模型过度学习了训练数据中的噪声和细节，而不是学习到了真正的规律。", "category": "instruction"}
+{"id": "math_00232", "instruction": "求解方程 41x + 8 = 191", "output": "x = 4.46", "category": "math"}
+{"id": "math_00647", "instruction": "将分数 88/40 化为小数", "output": "-0.1", "category": "math"}
+{"id": "math_00147", "instruction": "求解方程 56x + 38 = 156", "output": "x = 2.11", "category": "math"}
+{"id": "code_00835", "instruction": "写一个函数判断一个字符串是否是回文", "output": "def is_palindrome(s):\n    return s == s[::-1]", "category": "code"}
+{"id": "code_00743", "instruction": "写一个 Python 装饰器用于计时", "output": "import time\ndef timer(func):\n    def wrapper(*args, **kwargs):\n        start = time.time()\n        result = func(*args, **kwargs)\n        print(f'{func.__name__} took {time.time()-start:.2f}s')\n        return result\n    return wrapper", "category": "code"}
+{"id": "math_00848", "instruction": "求解方程 89x + 47 = 21", "output": "x = -0.29", "category": "math"}
+{"id": "code_00370", "instruction": "用 Python 实现二分查找", "output": "def binary_search(arr, target):\n    left, right = 0, len(arr) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            left = mid + 1\n        else:\n            right = mid - 1\n    return -1", "category": "code"}
+{"id": "code_00876", "instruction": "用 Python 实现冒泡排序", "output": "def bubble_sort(arr):\n    n = len(arr)\n    for i in range(n):\n        for j in range(0, n-i-1):\n            if arr[j] > arr[j+1]:\n                arr[j], arr[j+1] = arr[j+1], arr[j]\n    return arr", "category": "code"}
+{"id": "math_00346", "instruction": "一个矩形的长为 3 厘米，宽为 43 厘米，求面积", "output": "面积 = 3 × 43 = 129 平方厘米", "category": "math"}
+{"id": "code_00567", "instruction": "用 Python 实现二分查找", "output": "def binary_search(arr, target):\n    left, right = 0, len(arr) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            left = mid + 1\n        else:\n            right = mid - 1\n    return -1", "category": "code"}
+{"id": "math_00911", "instruction": "计算 62 + 7 的值", "output": "69", "category": "math"}
+{"id": "math_00957", "instruction": "计算 57 + 8 的值", "output": "65", "category": "math"}
+{"id": "code_00564", "instruction": "用 Python 实现冒泡排序", "output": "def bubble_sort(arr):\n    n = len(arr)\n    for i in range(n):\n        for j in range(0, n-i-1):\n            if arr[j] > arr[j+1]:\n                arr[j], arr[j+1] = arr[j+1], arr[j]\n    return arr", "category": "code"}
+{"id": "math_00361", "instruction": "计算 38 的 48 次方", "output": "1824", "category": "math"}
+{"id": "math_00669", "instruction": "计算 57 + 21 的值", "output": "78", "category": "math"}
+{"id": "math_00217", "instruction": "计算 73 的 40 次方", "output": "2920", "category": "math"}
+{"id": "inst_00777", "instruction": "解释梯度下降的基本原理", "output": "梯度下降是一种优化算法，通过计算损失函数关于参数的梯度，沿梯度的反方向更新参数，逐步最小化损失函数。", "category": "instruction"}
+{"id": "code_00572", "instruction": "写一个 Python 装饰器用于计时", "output": "import time\ndef timer(func):\n    def wrapper(*args, **kwargs):\n        start = time.time()\n        result = func(*args, **kwargs)\n        print(f'{func.__name__} took {time.time()-start:.2f}s')\n        return result\n    return wrapper", "category": "code"}
+{"id": "math_00644", "instruction": "计算 73 + 36 的值", "output": "109", "category": "math"}
+{"id": "math_00628", "instruction": "计算 35 + 29 的值", "output": "64", "category": "math"}
+{"id": "inst_00551", "instruction": "解释梯度下降的基本原理", "output": "梯度下降是一种优化算法，通过计算损失函数关于参数的梯度，沿梯度的反方向更新参数，逐步最小化损失函数。", "category": "instruction"}
+{"id": "math_00966", "instruction": "将分数 35/33 化为小数", "output": "4.03", "category": "math"}
+{"id": "math_00331", "instruction": "计算 38 + 23 的值", "output": "61", "category": "math"}
+{"id": "math_00730", "instruction": "将分数 48/27 化为小数", "output": "3.19", "category": "math"}
+{"id": "math_00612", "instruction": "将分数 20/11 化为小数", "output": "7.9", "category": "math"}
+{"id": "code_00478", "instruction": "写一个 Python 装饰器用于计时", "output": "import time\ndef timer(func):\n    def wrapper(*args, **kwargs):\n        start = time.time()\n        result = func(*args, **kwargs)\n        print(f'{func.__name__} took {time.time()-start:.2f}s')\n        return result\n    return wrapper", "category": "code"}
+{"id": "inst_00688", "instruction": "什么是注意力机制？", "output": "注意力机制是一种让模型在处理输入时能够聚焦于最相关部分的技术。它通过计算查询与键的相似度来分配注意力权重，然后对值进行加权求和。", "category": "instruction"}
+{"id": "code_00565", "instruction": "写一个函数判断一个字符串是否是回文", "output": "def is_palindrome(s):\n    return s == s[::-1]", "category": "code"}
+{"id": "inst_00196", "instruction": "总结深度学习的三个关键组成部分", "output": "深度学习的三个关键组成部分是：1. 神经网络架构 2. 损失函数 3. 优化算法", "category": "instruction"}
+{"id": "inst_00007", "instruction": "总结深度学习的三个关键组成部分", "output": "深度学习的三个关键组成部分是：1. 神经网络架构 2. 损失函数 3. 优化算法", "category": "instruction"}
+{"id": "code_00413", "instruction": "用 Python 实现冒泡排序", "output": "def bubble_sort(arr):\n    n = len(arr)\n    for i in range(n):\n        for j in range(0, n-i-1):\n            if arr[j] > arr[j+1]:\n                arr[j], arr[j+1] = arr[j+1], arr[j]\n    return arr", "category": "code"}
+{"id": "code_00646", "instruction": "写一个 Python 装饰器用于计时", "output": "import time\ndef timer(func):\n    def wrapper(*args, **kwargs):\n        start = time.time()\n        result = func(*args, **kwargs)\n        print(f'{func.__name__} took {time.time()-start:.2f}s')\n        return result\n    return wrapper", "category": "code"}
+{"id": "math_00875", "instruction": "求解方程 93x + 41 = 127", "output": "x = 0.92", "category": "math"}
+{"id": "code_00215", "instruction": "写一个 Python 装饰器用于计时", "output": "import time\ndef timer(func):\n    def wrapper(*args, **kwargs):\n        start = time.time()\n        result = func(*args, **kwargs)\n        print(f'{func.__name__} took {time.time()-start:.2f}s')\n        return result\n    return wrapper", "category": "code"}
+{"id": "math_00951", "instruction": "计算 73 的 48 次方", "output": "3504", "category": "math"}
+{"id": "code_00539", "instruction": "用 Python 实现冒泡排序", "output": "def bubble_sort(arr):\n    n = len(arr)\n    for i in range(n):\n        for j in range(0, n-i-1):\n            if arr[j] > arr[j+1]:\n                arr[j], arr[j+1] = arr[j+1], arr[j]\n    return arr", "category": "code"}
+{"id": "math_00495", "instruction": "计算 40 + 36 的值", "output": "76", "category": "math"}
+{"id": "code_00256", "instruction": "用 Python 实现冒泡排序", "output": "def bubble_sort(arr):\n    n = len(arr)\n    for i in range(n):\n        for j in range(0, n-i-1):\n            if arr[j] > arr[j+1]:\n                arr[j], arr[j+1] = arr[j+1], arr[j]\n    return arr", "category": "code"}
+{"id": "inst_00398", "instruction": "解释梯度下降的基本原理", "output": "梯度下降是一种优化算法，通过计算损失函数关于参数的梯度，沿梯度的反方向更新参数，逐步最小化损失函数。", "category": "instruction"}
+{"id": "math_00887", "instruction": "将分数 24/44 化为小数", "output": "6.38", "category": "math"}
+{"id": "inst_00297", "instruction": "解释梯度下降的基本原理", "output": "梯度下降是一种优化算法，通过计算损失函数关于参数的梯度，沿梯度的反方向更新参数，逐步最小化损失函数。", "category": "instruction"}
+{"id": "code_00132", "instruction": "写一个函数判断一个字符串是否是回文", "output": "def is_palindrome(s):\n    return s == s[::-1]", "category": "code"}
+{"id": "math_00553", "instruction": "计算 5 的 19 次方", "output": "95", "category": "math"}
+{"id": "inst_00616", "instruction": "解释梯度下降的基本原理", "output": "梯度下降是一种优化算法，通过计算损失函数关于参数的梯度，沿梯度的反方向更新参数，逐步最小化损失函数。", "category": "instruction"}
+{"id": "inst_00054", "instruction": "总结深度学习的三个关键组成部分", "output": "深度学习的三个关键组成部分是：1. 神经网络架构 2. 损失函数 3. 优化算法", "category": "instruction"}
+{"id": "inst_00869", "instruction": "总结深度学习的三个关键组成部分", "output": "深度学习的三个关键组成部分是：1. 神经网络架构 2. 损失函数 3. 优化算法", "category": "instruction"}
+{"id": "math_00048", "instruction": "求解方程 70x + 50 = 136", "output": "x = 1.23", "category": "math"}
+{"id": "inst_00899", "instruction": "什么是 Transformer 架构？", "output": "Transformer 是一种基于自注意力机制的神经网络架构，完全摒弃了循环和卷积结构。它由编码器和解码器组成，使用多头注意力和前馈网络。", "category": "instruction"}
+{"id": "code_00471", "instruction": "写一个 Python 装饰器用于计时", "output": "import time\ndef timer(func):\n    def wrapper(*args, **kwargs):\n        start = time.time()\n        result = func(*args, **kwargs)\n        print(f'{func.__name__} took {time.time()-start:.2f}s')\n        return result\n    return wrapper", "category": "code"}
+{"id": "math_00221", "instruction": "将分数 90/18 化为小数", "output": "1.39", "category": "math"}
+{"id": "inst_00527", "instruction": "总结深度学习的三个关键组成部分", "output": "深度学习的三个关键组成部分是：1. 神经网络架构 2. 损失函数 3. 优化算法", "category": "instruction"}
+{"id": "inst_00816", "instruction": "解释梯度下降的基本原理", "output": "梯度下降是一种优化算法，通过计算损失函数关于参数的梯度，沿梯度的反方向更新参数，逐步最小化损失函数。", "category": "instruction"}
+{"id": "math_00754", "instruction": "计算 58 的 25 次方", "output": "1450", "category": "math"}
+{"id": "math_00602", "instruction": "一个矩形的长为 83 厘米，宽为 5 厘米，求面积", "output": "面积 = 83 × 5 = 415 平方厘米", "category": "math"}
+{"id": "math_00854", "instruction": "一个矩形的长为 58 厘米，宽为 32 厘米，求面积", "output": "面积 = 58 × 32 = 1856 平方厘米", "category": "math"}
+{"id": "inst_00058", "instruction": "解释梯度下降的基本原理", "output": "梯度下降是一种优化算法，通过计算损失函数关于参数的梯度，沿梯度的反方向更新参数，逐步最小化损失函数。", "category": "instruction"}
+{"id": "math_00817", "instruction": "求解方程 9x + 46 = 39", "output": "x = -0.78", "category": "math"}
+{"id": "math_00684", "instruction": "将分数 87/35 化为小数", "output": "0.72", "category": "math"}
+{"id": "code_00071", "instruction": "用 Python 实现二分查找", "output": "def binary_search(arr, target):\n    left, right = 0, len(arr) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            left = mid + 1\n        else:\n            right = mid - 1\n    return -1", "category": "code"}
+{"id": "math_00806", "instruction": "一个矩形的长为 30 厘米，宽为 25 厘米，求面积", "output": "面积 = 30 × 25 = 750 平方厘米", "category": "math"}
+{"id": "inst_00458", "instruction": "什么是 Transformer 架构？", "output": "Transformer 是一种基于自注意力机制的神经网络架构，完全摒弃了循环和卷积结构。它由编码器和解码器组成，使用多头注意力和前馈网络。", "category": "instruction"}
+{"id": "code_00677", "instruction": "用 Python 实现冒泡排序", "output": "def bubble_sort(arr):\n    n = len(arr)\n    for i in range(n):\n        for j in range(0, n-i-1):\n            if arr[j] > arr[j+1]:\n                arr[j], arr[j+1] = arr[j+1], arr[j]\n    return arr", "category": "code"}
+{"id": "math_00465", "instruction": "求解方程 31x + 7 = 38", "output": "x = 1.0", "category": "math"}
+{"id": "math_00830", "instruction": "计算 84 + 42 的值", "output": "126", "category": "math"}
+{"id": "code_00068", "instruction": "用 Python 实现冒泡排序", "output": "def bubble_sort(arr):\n    n = len(arr)\n    for i in range(n):\n        for j in range(0, n-i-1):\n            if arr[j] > arr[j+1]:\n                arr[j], arr[j+1] = arr[j+1], arr[j]\n    return arr", "category": "code"}
+{"id": "math_00384", "instruction": "一个矩形的长为 25 厘米，宽为 8 厘米，求面积", "output": "面积 = 25 × 8 = 200 平方厘米", "category": "math"}
+{"id": "code_00613", "instruction": "写一个 Python 装饰器用于计时", "output": "import time\ndef timer(func):\n    def wrapper(*args, **kwargs):\n        start = time.time()\n        result = func(*args, **kwargs)\n        print(f'{func.__name__} took {time.time()-start:.2f}s')\n        return result\n    return wrapper", "category": "code"}
+{"id": "code_00060", "instruction": "写一个 Python 装饰器用于计时", "output": "import time\ndef timer(func):\n    def wrapper(*args, **kwargs):\n        start = time.time()\n        result = func(*args, **kwargs)\n        print(f'{func.__name__} took {time.time()-start:.2f}s')\n        return result\n    return wrapper", "category": "code"}
+{"id": "code_00864", "instruction": "写一个 Python 函数计算斐波那契数列的第 n 项", "output": "def fibonacci(n):\n    if n <= 1:\n        return n\n    return fibonacci(n-1) + fibonacci(n-2)", "category": "code"}
+{"id": "code_00494", "instruction": "用 Python 实现二分查找", "output": "def binary_search(arr, target):\n    left, right = 0, len(arr) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            left = mid + 1\n        else:\n            right = mid - 1\n    return -1", "category": "code"}
+{"id": "math_00437", "instruction": "计算 59 的 22 次方", "output": "1298", "category": "math"}
+{"id": "math_00955", "instruction": "计算 70 的 14 次方", "output": "980", "category": "math"}
+{"id": "math_00319", "instruction": "计算 2 的 47 次方", "output": "94", "category": "math"}
+{"id": "inst_00708", "instruction": "什么是注意力机制？", "output": "注意力机制是一种让模型在处理输入时能够聚焦于最相关部分的技术。它通过计算查询与键的相似度来分配注意力权重，然后对值进行加权求和。", "category": "instruction"}
+{"id": "code_00500", "instruction": "用 Python 实现冒泡排序", "output": "def bubble_sort(arr):\n    n = len(arr)\n    for i in range(n):\n        for j in range(0, n-i-1):\n            if arr[j] > arr[j+1]:\n                arr[j], arr[j+1] = arr[j+1], arr[j]\n    return arr", "category": "code"}
+{"id": "inst_00282", "instruction": "什么是注意力机制？", "output": "注意力机制是一种让模型在处理输入时能够聚焦于最相关部分的技术。它通过计算查询与键的相似度来分配注意力权重，然后对值进行加权求和。", "category": "instruction"}
+{"id": "code_00158", "instruction": "用 Python 实现冒泡排序", "output": "def bubble_sort(arr):\n    n = len(arr)\n    for i in range(n):\n        for j in range(0, n-i-1):\n            if arr[j] > arr[j+1]:\n                arr[j], arr[j+1] = arr[j+1], arr[j]\n    return arr", "category": "code"}
+{"id": "code_00763", "instruction": "用 Python 实现冒泡排序", "output": "def bubble_sort(arr):\n    n = len(arr)\n    for i in range(n):\n        for j in range(0, n-i-1):\n            if arr[j] > arr[j+1]:\n                arr[j], arr[j+1] = arr[j+1], arr[j]\n    return arr", "category": "code"}
+{"id": "math_00696", "instruction": "将分数 21/27 化为小数", "output": "6.71", "category": "math"}
+{"id": "code_00586", "instruction": "用 Python 实现二分查找", "output": "def binary_search(arr, target):\n    left, right = 0, len(arr) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            left = mid + 1\n        else:\n            right = mid - 1\n    return -1", "category": "code"}
+{"id": "inst_00905", "instruction": "解释梯度下降的基本原理", "output": "梯度下降是一种优化算法，通过计算损失函数关于参数的梯度，沿梯度的反方向更新参数，逐步最小化损失函数。", "category": "instruction"}
+{"id": "math_00937", "instruction": "求解方程 48x + 45 = 37", "output": "x = -0.17", "category": "math"}
+{"id": "code_00336", "instruction": "用 Python 实现二分查找", "output": "def binary_search(arr, target):\n    left, right = 0, len(arr) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            left = mid + 1\n        else:\n            right = mid - 1\n    return -1", "category": "code"}
+{"id": "inst_00971", "instruction": "总结深度学习的三个关键组成部分", "output": "深度学习的三个关键组成部分是：1. 神经网络架构 2. 损失函数 3. 优化算法", "category": "instruction"}
+{"id": "math_00985", "instruction": "计算 44 的 44 次方", "output": "1936", "category": "math"}
+{"id": "code_00942", "instruction": "用 Python 实现二分查找", "output": "def binary_search(arr, target):\n    left, right = 0, len(arr) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            left = mid + 1\n        else:\n            right = mid - 1\n    return -1", "category": "code"}
+{"id": "inst_00820", "instruction": "解释梯度下降的基本原理", "output": "梯度下降是一种优化算法，通过计算损失函数关于参数的梯度，沿梯度的反方向更新参数，逐步最小化损失函数。", "category": "instruction"}
+{"id": "math_00260", "instruction": "一个矩形的长为 90 厘米，宽为 30 厘米，求面积", "output": "面积 = 90 × 30 = 2700 平方厘米", "category": "math"}
+{"id": "inst_00847", "instruction": "什么是注意力机制？", "output": "注意力机制是一种让模型在处理输入时能够聚焦于最相关部分的技术。它通过计算查询与键的相似度来分配注意力权重，然后对值进行加权求和。", "category": "instruction"}
+{"id": "math_00965", "instruction": "将分数 22/21 化为小数", "output": "7.27", "category": "math"}
+{"id": "code_00263", "instruction": "用 Python 实现冒泡排序", "output": "def bubble_sort(arr):\n    n = len(arr)\n    for i in range(n):\n        for j in range(0, n-i-1):\n            if arr[j] > arr[j+1]:\n                arr[j], arr[j+1] = arr[j+1], arr[j]\n    return arr", "category": "code"}
+{"id": "code_00908", "instruction": "写一个 Python 装饰器用于计时", "output": "import time\ndef timer(func):\n    def wrapper(*args, **kwargs):\n        start = time.time()\n        result = func(*args, **kwargs)\n        print(f'{func.__name__} took {time.time()-start:.2f}s')\n        return result\n    return wrapper", "category": "code"}
+{"id": "code_00073", "instruction": "写一个 Python 函数计算斐波那契数列的第 n 项", "output": "def fibonacci(n):\n    if n <= 1:\n        return n\n    return fibonacci(n-1) + fibonacci(n-2)", "category": "code"}
+{"id": "inst_00358", "instruction": "总结深度学习的三个关键组成部分", "output": "深度学习的三个关键组成部分是：1. 神经网络架构 2. 损失函数 3. 优化算法", "category": "instruction"}
+{"id": "code_00342", "instruction": "用 Python 实现二分查找", "output": "def binary_search(arr, target):\n    left, right = 0, len(arr) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            left = mid + 1\n        else:\n            right = mid - 1\n    return -1", "category": "code"}
+{"id": "code_00199", "instruction": "写一个函数判断一个字符串是否是回文", "output": "def is_palindrome(s):\n    return s == s[::-1]", "category": "code"}
+{"id": "inst_00753", "instruction": "解释梯度下降的基本原理", "output": "梯度下降是一种优化算法，通过计算损失函数关于参数的梯度，沿梯度的反方向更新参数，逐步最小化损失函数。", "category": "instruction"}
+{"id": "inst_00328", "instruction": "解释什么是机器学习中的过拟合现象", "output": "过拟合是指模型在训练数据上表现很好，但在未见过的测试数据上表现较差的现象。这通常是因为模型过度学习了训练数据中的噪声和细节，而不是学习到了真正的规律。", "category": "instruction"}
+{"id": "inst_00353", "instruction": "总结深度学习的三个关键组成部分", "output": "深度学习的三个关键组成部分是：1. 神经网络架构 2. 损失函数 3. 优化算法", "category": "instruction"}
+{"id": "code_00194", "instruction": "写一个函数判断一个字符串是否是回文", "output": "def is_palindrome(s):\n    return s == s[::-1]", "category": "code"}
+{"id": "inst_00357", "instruction": "什么是注意力机制？", "output": "注意力机制是一种让模型在处理输入时能够聚焦于最相关部分的技术。它通过计算查询与键的相似度来分配注意力权重，然后对值进行加权求和。", "category": "instruction"}
+{"id": "code_00226", "instruction": "写一个 Python 函数计算斐波那契数列的第 n 项", "output": "def fibonacci(n):\n    if n <= 1:\n        return n\n    return fibonacci(n-1) + fibonacci(n-2)", "category": "code"}
+{"id": "math_00774", "instruction": "将分数 95/12 化为小数", "output": "1.57", "category": "math"}
+{"id": "inst_00330", "instruction": "解释什么是机器学习中的过拟合现象", "output": "过拟合是指模型在训练数据上表现很好，但在未见过的测试数据上表现较差的现象。这通常是因为模型过度学习了训练数据中的噪声和细节，而不是学习到了真正的规律。", "category": "instruction"}
+{"id": "code_00871", "instruction": "用 Python 实现冒泡排序", "output": "def bubble_sort(arr):\n    n = len(arr)\n    for i in range(n):\n        for j in range(0, n-i-1):\n            if arr[j] > arr[j+1]:\n                arr[j], arr[j+1] = arr[j+1], arr[j]\n    return arr", "category": "code"}
+{"id": "code_00701", "instruction": "写一个 Python 装饰器用于计时", "output": "import time\ndef timer(func):\n    def wrapper(*args, **kwargs):\n        start = time.time()\n        result = func(*args, **kwargs)\n        print(f'{func.__name__} took {time.time()-start:.2f}s')\n        return result\n    return wrapper", "category": "code"}
+{"id": "inst_00790", "instruction": "什么是 Transformer 架构？", "output": "Transformer 是一种基于自注意力机制的神经网络架构，完全摒弃了循环和卷积结构。它由编码器和解码器组成，使用多头注意力和前馈网络。", "category": "instruction"}
+{"id": "code_00679", "instruction": "用 Python 实现冒泡排序", "output": "def bubble_sort(arr):\n    n = len(arr)\n    for i in range(n):\n        for j in range(0, n-i-1):\n            if arr[j] > arr[j+1]:\n                arr[j], arr[j+1] = arr[j+1], arr[j]\n    return arr", "category": "code"}
+{"id": "inst_00583", "instruction": "解释什么是机器学习中的过拟合现象", "output": "过拟合是指模型在训练数据上表现很好，但在未见过的测试数据上表现较差的现象。这通常是因为模型过度学习了训练数据中的噪声和细节，而不是学习到了真正的规律。", "category": "instruction"}
+{"id": "math_00534", "instruction": "计算 82 的 40 次方", "output": "3280", "category": "math"}
+{"id": "math_00323", "instruction": "一个矩形的长为 81 厘米，宽为 46 厘米，求面积", "output": "面积 = 81 × 46 = 3726 平方厘米", "category": "math"}
+{"id": "inst_00657", "instruction": "什么是 Transformer 架构？", "output": "Transformer 是一种基于自注意力机制的神经网络架构，完全摒弃了循环和卷积结构。它由编码器和解码器组成，使用多头注意力和前馈网络。", "category": "instruction"}
+{"id": "inst_00967", "instruction": "总结深度学习的三个关键组成部分", "output": "深度学习的三个关键组成部分是：1. 神经网络架构 2. 损失函数 3. 优化算法", "category": "instruction"}
+{"id": "code_00379", "instruction": "用 Python 实现二分查找", "output": "def binary_search(arr, target):\n    left, right = 0, len(arr) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            left = mid + 1\n        else:\n            right = mid - 1\n    return -1", "category": "code"}
+{"id": "math_00003", "instruction": "计算 5 的 2 次方", "output": "10", "category": "math"}
+{"id": "math_00791", "instruction": "求解方程 43x + 20 = 4", "output": "x = -0.37", "category": "math"}
+{"id": "math_00117", "instruction": "计算 46 + 14 的值", "output": "60", "category": "math"}
+{"id": "math_00906", "instruction": "计算 34 + 15 的值", "output": "49", "category": "math"}
+{"id": "code_00814", "instruction": "写一个 Python 函数计算斐波那契数列的第 n 项", "output": "def fibonacci(n):\n    if n <= 1:\n        return n\n    return fibonacci(n-1) + fibonacci(n-2)", "category": "code"}
+{"id": "math_00786", "instruction": "计算 48 的 6 次方", "output": "288", "category": "math"}
+{"id": "code_00784", "instruction": "用 Python 实现冒泡排序", "output": "def bubble_sort(arr):\n    n = len(arr)\n    for i in range(n):\n        for j in range(0, n-i-1):\n            if arr[j] > arr[j+1]:\n                arr[j], arr[j+1] = arr[j+1], arr[j]\n    return arr", "category": "code"}
+{"id": "math_00141", "instruction": "计算 93 + 20 的值", "output": "113", "category": "math"}
+{"id": "math_00101", "instruction": "一个矩形的长为 9 厘米，宽为 16 厘米，求面积", "output": "面积 = 9 × 16 = 144 平方厘米", "category": "math"}
+{"id": "math_00142", "instruction": "计算 42 的 26 次方", "output": "1092", "category": "math"}
+{"id": "inst_00099", "instruction": "解释什么是机器学习中的过拟合现象", "output": "过拟合是指模型在训练数据上表现很好，但在未见过的测试数据上表现较差的现象。这通常是因为模型过度学习了训练数据中的噪声和细节，而不是学习到了真正的规律。", "category": "instruction"}
+{"id": "math_00296", "instruction": "计算 60 + 8 的值", "output": "68", "category": "math"}
+{"id": "code_00893", "instruction": "用 Python 实现冒泡排序", "output": "def bubble_sort(arr):\n    n = len(arr)\n    for i in range(n):\n        for j in range(0, n-i-1):\n            if arr[j] > arr[j+1]:\n                arr[j], arr[j+1] = arr[j+1], arr[j]\n    return arr", "category": "code"}
+{"id": "inst_00206", "instruction": "总结深度学习的三个关键组成部分", "output": "深度学习的三个关键组成部分是：1. 神经网络架构 2. 损失函数 3. 优化算法", "category": "instruction"}
+{"id": "math_00234", "instruction": "计算 36 的 47 次方", "output": "1692", "category": "math"}
+{"id": "code_00480", "instruction": "写一个 Python 装饰器用于计时", "output": "import time\ndef timer(func):\n    def wrapper(*args, **kwargs):\n        start = time.time()\n        result = func(*args, **kwargs)\n        print(f'{func.__name__} took {time.time()-start:.2f}s')\n        return result\n    return wrapper", "category": "code"}
+{"id": "code_00776", "instruction": "写一个函数判断一个字符串是否是回文", "output": "def is_palindrome(s):\n    return s == s[::-1]", "category": "code"}
+{"id": "math_00081", "instruction": "计算 34 的 30 次方", "output": "1020", "category": "math"}
+{"id": "inst_00501", "instruction": "总结深度学习的三个关键组成部分", "output": "深度学习的三个关键组成部分是：1. 神经网络架构 2. 损失函数 3. 优化算法", "category": "instruction"}
+{"id": "inst_00337", "instruction": "总结深度学习的三个关键组成部分", "output": "深度学习的三个关键组成部分是：1. 神经网络架构 2. 损失函数 3. 优化算法", "category": "instruction"}
+{"id": "math_00213", "instruction": "求解方程 94x + 34 = 167", "output": "x = 1.41", "category": "math"}
+{"id": "math_00499", "instruction": "求解方程 28x + 22 = 197", "output": "x = 6.25", "category": "math"}
+{"id": "inst_00160", "instruction": "总结深度学习的三个关键组成部分", "output": "深度学习的三个关键组成部分是：1. 神经网络架构 2. 损失函数 3. 优化算法", "category": "instruction"}
+{"id": "math_00700", "instruction": "计算 99 + 6 的值", "output": "105", "category": "math"}
+{"id": "math_00347", "instruction": "将分数 88/50 化为小数", "output": "1.6", "category": "math"}
+{"id": "inst_00350", "instruction": "总结深度学习的三个关键组成部分", "output": "深度学习的三个关键组成部分是：1. 神经网络架构 2. 损失函数 3. 优化算法", "category": "instruction"}
+{"id": "math_00878", "instruction": "计算 43 的 40 次方", "output": "1720", "category": "math"}
+{"id": "math_00216", "instruction": "求解方程 12x + 18 = 116", "output": "x = 8.17", "category": "math"}
+{"id": "code_00021", "instruction": "用 Python 实现冒泡排序", "output": "def bubble_sort(arr):\n    n = len(arr)\n    for i in range(n):\n        for j in range(0, n-i-1):\n            if arr[j] > arr[j+1]:\n                arr[j], arr[j+1] = arr[j+1], arr[j]\n    return arr", "category": "code"}
+{"id": "code_00064", "instruction": "用 Python 实现冒泡排序", "output": "def bubble_sort(arr):\n    n = len(arr)\n    for i in range(n):\n        for j in range(0, n-i-1):\n            if arr[j] > arr[j+1]:\n                arr[j], arr[j+1] = arr[j+1], arr[j]\n    return arr", "category": "code"}
+{"id": "code_00098", "instruction": "写一个 Python 装饰器用于计时", "output": "import time\ndef timer(func):\n    def wrapper(*args, **kwargs):\n        start = time.time()\n        result = func(*args, **kwargs)\n        print(f'{func.__name__} took {time.time()-start:.2f}s')\n        return result\n    return wrapper", "category": "code"}
+{"id": "math_00987", "instruction": "求解方程 57x + 30 = 1", "output": "x = -0.51", "category": "math"}
+{"id": "math_00389", "instruction": "将分数 27/38 化为小数", "output": "0.67", "category": "math"}
+{"id": "inst_00733", "instruction": "什么是 Transformer 架构？", "output": "Transformer 是一种基于自注意力机制的神经网络架构，完全摒弃了循环和卷积结构。它由编码器和解码器组成，使用多头注意力和前馈网络。", "category": "instruction"}
+{"id": "inst_00757", "instruction": "总结深度学习的三个关键组成部分", "output": "深度学习的三个关键组成部分是：1. 神经网络架构 2. 损失函数 3. 优化算法", "category": "instruction"}
+{"id": "code_00695", "instruction": "用 Python 实现冒泡排序", "output": "def bubble_sort(arr):\n    n = len(arr)\n    for i in range(n):\n        for j in range(0, n-i-1):\n            if arr[j] > arr[j+1]:\n                arr[j], arr[j+1] = arr[j+1], arr[j]\n    return arr", "category": "code"}
+{"id": "math_00568", "instruction": "计算 45 的 29 次方", "output": "1305", "category": "math"}
+{"id": "code_00264", "instruction": "写一个 Python 装饰器用于计时", "output": "import time\ndef timer(func):\n    def wrapper(*args, **kwargs):\n        start = time.time()\n        result = func(*args, **kwargs)\n        print(f'{func.__name__} took {time.time()-start:.2f}s')\n        return result\n    return wrapper", "category": "code"}
+{"id": "math_00257", "instruction": "将分数 10/11 化为小数", "output": "-1.0", "category": "math"}
+{"id": "math_00408", "instruction": "一个矩形的长为 80 厘米，宽为 41 厘米，求面积", "output": "面积 = 80 × 41 = 3280 平方厘米", "category": "math"}
+{"id": "math_00722", "instruction": "一个矩形的长为 43 厘米，宽为 20 厘米，求面积", "output": "面积 = 43 × 20 = 860 平方厘米", "category": "math"}
+{"id": "inst_00884", "instruction": "什么是注意力机制？", "output": "注意力机制是一种让模型在处理输入时能够聚焦于最相关部分的技术。它通过计算查询与键的相似度来分配注意力权重，然后对值进行加权求和。", "category": "instruction"}
+{"id": "code_00925", "instruction": "用 Python 实现冒泡排序", "output": "def bubble_sort(arr):\n    n = len(arr)\n    for i in range(n):\n        for j in range(0, n-i-1):\n            if arr[j] > arr[j+1]:\n                arr[j], arr[j+1] = arr[j+1], arr[j]\n    return arr", "category": "code"}
+{"id": "inst_00807", "instruction": "解释梯度下降的基本原理", "output": "梯度下降是一种优化算法，通过计算损失函数关于参数的梯度，沿梯度的反方向更新参数，逐步最小化损失函数。", "category": "instruction"}
+{"id": "inst_00805", "instruction": "什么是注意力机制？", "output": "注意力机制是一种让模型在处理输入时能够聚焦于最相关部分的技术。它通过计算查询与键的相似度来分配注意力权重，然后对值进行加权求和。", "category": "instruction"}
+{"id": "code_00698", "instruction": "用 Python 实现冒泡排序", "output": "def bubble_sort(arr):\n    n = len(arr)\n    for i in range(n):\n        for j in range(0, n-i-1):\n            if arr[j] > arr[j+1]:\n                arr[j], arr[j+1] = arr[j+1], arr[j]\n    return arr", "category": "code"}
+{"id": "inst_00274", "instruction": "什么是注意力机制？", "output": "注意力机制是一种让模型在处理输入时能够聚焦于最相关部分的技术。它通过计算查询与键的相似度来分配注意力权重，然后对值进行加权求和。", "category": "instruction"}
+{"id": "inst_00390", "instruction": "总结深度学习的三个关键组成部分", "output": "深度学习的三个关键组成部分是：1. 神经网络架构 2. 损失函数 3. 优化算法", "category": "instruction"}
+{"id": "math_00670", "instruction": "求解方程 53x + 33 = 199", "output": "x = 3.13", "category": "math"}
+{"id": "math_00303", "instruction": "将分数 66/48 化为小数", "output": "-0.2", "category": "math"}
+{"id": "inst_00424", "instruction": "解释什么是机器学习中的过拟合现象", "output": "过拟合是指模型在训练数据上表现很好，但在未见过的测试数据上表现较差的现象。这通常是因为模型过度学习了训练数据中的噪声和细节，而不是学习到了真正的规律。", "category": "instruction"}
+{"id": "code_00116", "instruction": "写一个 Python 函数计算斐波那契数列的第 n 项", "output": "def fibonacci(n):\n    if n <= 1:\n        return n\n    return fibonacci(n-1) + fibonacci(n-2)", "category": "code"}
+{"id": "inst_00388", "instruction": "什么是 Transformer 架构？", "output": "Transformer 是一种基于自注意力机制的神经网络架构，完全摒弃了循环和卷积结构。它由编码器和解码器组成，使用多头注意力和前馈网络。", "category": "instruction"}
+{"id": "inst_00751", "instruction": "解释梯度下降的基本原理", "output": "梯度下降是一种优化算法，通过计算损失函数关于参数的梯度，沿梯度的反方向更新参数，逐步最小化损失函数。", "category": "instruction"}
+{"id": "code_00900", "instruction": "写一个 Python 函数计算斐波那契数列的第 n 项", "output": "def fibonacci(n):\n    if n <= 1:\n        return n\n    return fibonacci(n-1) + fibonacci(n-2)", "category": "code"}
+{"id": "inst_00593", "instruction": "总结深度学习的三个关键组成部分", "output": "深度学习的三个关键组成部分是：1. 神经网络架构 2. 损失函数 3. 优化算法", "category": "instruction"}
+{"id": "code_00735", "instruction": "写一个 Python 装饰器用于计时", "output": "import time\ndef timer(func):\n    def wrapper(*args, **kwargs):\n        start = time.time()\n        result = func(*args, **kwargs)\n        print(f'{func.__name__} took {time.time()-start:.2f}s')\n        return result\n    return wrapper", "category": "code"}
+{"id": "math_00077", "instruction": "将分数 2/6 化为小数", "output": "93.5", "category": "math"}
+{"id": "inst_00980", "instruction": "解释梯度下降的基本原理", "output": "梯度下降是一种优化算法，通过计算损失函数关于参数的梯度，沿梯度的反方向更新参数，逐步最小化损失函数。", "category": "instruction"}
+{"id": "code_00288", "instruction": "写一个 Python 装饰器用于计时", "output": "import time\ndef timer(func):\n    def wrapper(*args, **kwargs):\n        start = time.time()\n        result = func(*args, **kwargs)\n        print(f'{func.__name__} took {time.time()-start:.2f}s')\n        return result\n    return wrapper", "category": "code"}
+{"id": "inst_00137", "instruction": "解释什么是机器学习中的过拟合现象", "output": "过拟合是指模型在训练数据上表现很好，但在未见过的测试数据上表现较差的现象。这通常是因为模型过度学习了训练数据中的噪声和细节，而不是学习到了真正的规律。", "category": "instruction"}
+{"id": "math_00721", "instruction": "求解方程 1x + 17 = 99", "output": "x = 82.0", "category": "math"}
+{"id": "inst_00811", "instruction": "什么是注意力机制？", "output": "注意力机制是一种让模型在处理输入时能够聚焦于最相关部分的技术。它通过计算查询与键的相似度来分配注意力权重，然后对值进行加权求和。", "category": "instruction"}
+{"id": "code_00512", "instruction": "写一个函数判断一个字符串是否是回文", "output": "def is_palindrome(s):\n    return s == s[::-1]", "category": "code"}
+{"id": "code_00225", "instruction": "用 Python 实现二分查找", "output": "def binary_search(arr, target):\n    left, right = 0, len(arr) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            left = mid + 1\n        else:\n            right = mid - 1\n    return -1", "category": "code"}
+{"id": "inst_00134", "instruction": "解释梯度下降的基本原理", "output": "梯度下降是一种优化算法，通过计算损失函数关于参数的梯度，沿梯度的反方向更新参数，逐步最小化损失函数。", "category": "instruction"}
+{"id": "inst_00889", "instruction": "总结深度学习的三个关键组成部分", "output": "深度学习的三个关键组成部分是：1. 神经网络架构 2. 损失函数 3. 优化算法", "category": "instruction"}
+{"id": "code_00406", "instruction": "用 Python 实现二分查找", "output": "def binary_search(arr, target):\n    left, right = 0, len(arr) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            left = mid + 1\n        else:\n            right = mid - 1\n    return -1", "category": "code"}
+{"id": "math_00692", "instruction": "计算 86 + 34 的值", "output": "120", "category": "math"}
+{"id": "code_00977", "instruction": "写一个函数判断一个字符串是否是回文", "output": "def is_palindrome(s):\n    return s == s[::-1]", "category": "code"}
+{"id": "math_00195", "instruction": "计算 100 + 42 的值", "output": "142", "category": "math"}
+{"id": "code_00189", "instruction": "写一个 Python 函数计算斐波那契数列的第 n 项", "output": "def fibonacci(n):\n    if n <= 1:\n        return n\n    return fibonacci(n-1) + fibonacci(n-2)", "category": "code"}
+{"id": "math_00720", "instruction": "计算 24 + 9 的值", "output": "33", "category": "math"}
+{"id": "math_00198", "instruction": "计算 73 + 14 的值", "output": "87", "category": "math"}
+{"id": "code_00664", "instruction": "写一个 Python 函数计算斐波那契数列的第 n 项", "output": "def fibonacci(n):\n    if n <= 1:\n        return n\n    return fibonacci(n-1) + fibonacci(n-2)", "category": "code"}
+{"id": "inst_00046", "instruction": "什么是 Transformer 架构？", "output": "Transformer 是一种基于自注意力机制的神经网络架构，完全摒弃了循环和卷积结构。它由编码器和解码器组成，使用多头注意力和前馈网络。", "category": "instruction"}
+{"id": "math_00451", "instruction": "将分数 91/15 化为小数", "output": "1.25", "category": "math"}
+{"id": "inst_00959", "instruction": "什么是 Transformer 架构？", "output": "Transformer 是一种基于自注意力机制的神经网络架构，完全摒弃了循环和卷积结构。它由编码器和解码器组成，使用多头注意力和前馈网络。", "category": "instruction"}
+{"id": "inst_00241", "instruction": "解释梯度下降的基本原理", "output": "梯度下降是一种优化算法，通过计算损失函数关于参数的梯度，沿梯度的反方向更新参数，逐步最小化损失函数。", "category": "instruction"}
+{"id": "code_00203", "instruction": "写一个函数判断一个字符串是否是回文", "output": "def is_palindrome(s):\n    return s == s[::-1]", "category": "code"}
+{"id": "code_00446", "instruction": "写一个 Python 函数计算斐波那契数列的第 n 项", "output": "def fibonacci(n):\n    if n <= 1:\n        return n\n    return fibonacci(n-1) + fibonacci(n-2)", "category": "code"}
+{"id": "code_00541", "instruction": "写一个函数判断一个字符串是否是回文", "output": "def is_palindrome(s):\n    return s == s[::-1]", "category": "code"}
+{"id": "math_00526", "instruction": "计算 92 + 42 的值", "output": "134", "category": "math"}
+{"id": "inst_00824", "instruction": "总结深度学习的三个关键组成部分", "output": "深度学习的三个关键组成部分是：1. 神经网络架构 2. 损失函数 3. 优化算法", "category": "instruction"}
+{"id": "code_00149", "instruction": "用 Python 实现冒泡排序", "output": "def bubble_sort(arr):\n    n = len(arr)\n    for i in range(n):\n        for j in range(0, n-i-1):\n            if arr[j] > arr[j+1]:\n                arr[j], arr[j+1] = arr[j+1], arr[j]\n    return arr", "category": "code"}
+{"id": "inst_00365", "instruction": "解释梯度下降的基本原理", "output": "梯度下降是一种优化算法，通过计算损失函数关于参数的梯度，沿梯度的反方向更新参数，逐步最小化损失函数。", "category": "instruction"}
+{"id": "math_00345", "instruction": "计算 74 的 23 次方", "output": "1702", "category": "math"}
+{"id": "inst_00013", "instruction": "什么是 Transformer 架构？", "output": "Transformer 是一种基于自注意力机制的神经网络架构，完全摒弃了循环和卷积结构。它由编码器和解码器组成，使用多头注意力和前馈网络。", "category": "instruction"}
+{"id": "code_00635", "instruction": "写一个函数判断一个字符串是否是回文", "output": "def is_palindrome(s):\n    return s == s[::-1]", "category": "code"}
+{"id": "math_00882", "instruction": "一个矩形的长为 78 厘米，宽为 45 厘米，求面积", "output": "面积 = 78 × 45 = 3510 平方厘米", "category": "math"}
+{"id": "inst_00713", "instruction": "解释梯度下降的基本原理", "output": "梯度下降是一种优化算法，通过计算损失函数关于参数的梯度，沿梯度的反方向更新参数，逐步最小化损失函数。", "category": "instruction"}
+{"id": "inst_00307", "instruction": "什么是 Transformer 架构？", "output": "Transformer 是一种基于自注意力机制的神经网络架构，完全摒弃了循环和卷积结构。它由编码器和解码器组成，使用多头注意力和前馈网络。", "category": "instruction"}
+{"id": "math_00998", "instruction": "计算 30 + 25 的值", "output": "55", "category": "math"}
+{"id": "math_00809", "instruction": "计算 93 的 42 次方", "output": "3906", "category": "math"}
+{"id": "math_00691", "instruction": "计算 79 + 48 的值", "output": "127", "category": "math"}
+{"id": "code_00974", "instruction": "用 Python 实现二分查找", "output": "def binary_search(arr, target):\n    left, right = 0, len(arr) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            left = mid + 1\n        else:\n            right = mid - 1\n    return -1", "category": "code"}
+{"id": "inst_00705", "instruction": "解释什么是机器学习中的过拟合现象", "output": "过拟合是指模型在训练数据上表现很好，但在未见过的测试数据上表现较差的现象。这通常是因为模型过度学习了训练数据中的噪声和细节，而不是学习到了真正的规律。", "category": "instruction"}
+{"id": "math_00547", "instruction": "计算 99 + 38 的值", "output": "137", "category": "math"}
+{"id": "inst_00348", "instruction": "什么是 Transformer 架构？", "output": "Transformer 是一种基于自注意力机制的神经网络架构，完全摒弃了循环和卷积结构。它由编码器和解码器组成，使用多头注意力和前馈网络。", "category": "instruction"}
+{"id": "inst_00793", "instruction": "解释梯度下降的基本原理", "output": "梯度下降是一种优化算法，通过计算损失函数关于参数的梯度，沿梯度的反方向更新参数，逐步最小化损失函数。", "category": "instruction"}
+{"id": "inst_00573", "instruction": "总结深度学习的三个关键组成部分", "output": "深度学习的三个关键组成部分是：1. 神经网络架构 2. 损失函数 3. 优化算法", "category": "instruction"}
+{"id": "math_00578", "instruction": "计算 48 的 24 次方", "output": "1152", "category": "math"}
+{"id": "math_00292", "instruction": "将分数 17/19 化为小数", "output": "5.53", "category": "math"}
+{"id": "inst_00201", "instruction": "总结深度学习的三个关键组成部分", "output": "深度学习的三个关键组成部分是：1. 神经网络架构 2. 损失函数 3. 优化算法", "category": "instruction"}
+{"id": "inst_00025", "instruction": "解释什么是机器学习中的过拟合现象", "output": "过拟合是指模型在训练数据上表现很好，但在未见过的测试数据上表现较差的现象。这通常是因为模型过度学习了训练数据中的噪声和细节，而不是学习到了真正的规律。", "category": "instruction"}
+{"id": "inst_00049", "instruction": "什么是 Transformer 架构？", "output": "Transformer 是一种基于自注意力机制的神经网络架构，完全摒弃了循环和卷积结构。它由编码器和解码器组成，使用多头注意力和前馈网络。", "category": "instruction"}
+{"id": "math_00449", "instruction": "一个矩形的长为 16 厘米，宽为 1 厘米，求面积", "output": "面积 = 16 × 1 = 16 平方厘米", "category": "math"}
+{"id": "inst_00575", "instruction": "解释梯度下降的基本原理", "output": "梯度下降是一种优化算法，通过计算损失函数关于参数的梯度，沿梯度的反方向更新参数，逐步最小化损失函数。", "category": "instruction"}
+{"id": "inst_00144", "instruction": "总结深度学习的三个关键组成部分", "output": "深度学习的三个关键组成部分是：1. 神经网络架构 2. 损失函数 3. 优化算法", "category": "instruction"}
+{"id": "math_00338", "instruction": "一个矩形的长为 59 厘米，宽为 17 厘米，求面积", "output": "面积 = 59 × 17 = 1003 平方厘米", "category": "math"}
+{"id": "inst_00589", "instruction": "什么是注意力机制？", "output": "注意力机制是一种让模型在处理输入时能够聚焦于最相关部分的技术。它通过计算查询与键的相似度来分配注意力权重，然后对值进行加权求和。", "category": "instruction"}
+{"id": "inst_00852", "instruction": "解释梯度下降的基本原理", "output": "梯度下降是一种优化算法，通过计算损失函数关于参数的梯度，沿梯度的反方向更新参数，逐步最小化损失函数。", "category": "instruction"}
+{"id": "code_00948", "instruction": "写一个 Python 函数计算斐波那契数列的第 n 项", "output": "def fibonacci(n):\n    if n <= 1:\n        return n\n    return fibonacci(n-1) + fibonacci(n-2)", "category": "code"}
+{"id": "inst_00209", "instruction": "什么是注意力机制？", "output": "注意力机制是一种让模型在处理输入时能够聚焦于最相关部分的技术。它通过计算查询与键的相似度来分配注意力权重，然后对值进行加权求和。", "category": "instruction"}
+{"id": "math_00683", "instruction": "一个矩形的长为 72 厘米，宽为 47 厘米，求面积", "output": "面积 = 72 × 47 = 3384 平方厘米", "category": "math"}
+{"id": "code_00851", "instruction": "写一个 Python 装饰器用于计时", "output": "import time\ndef timer(func):\n    def wrapper(*args, **kwargs):\n        start = time.time()\n        result = func(*args, **kwargs)\n        print(f'{func.__name__} took {time.time()-start:.2f}s')\n        return result\n    return wrapper", "category": "code"}
+{"id": "inst_00420", "instruction": "什么是注意力机制？", "output": "注意力机制是一种让模型在处理输入时能够聚焦于最相关部分的技术。它通过计算查询与键的相似度来分配注意力权重，然后对值进行加权求和。", "category": "instruction"}
+{"id": "inst_00382", "instruction": "什么是注意力机制？", "output": "注意力机制是一种让模型在处理输入时能够聚焦于最相关部分的技术。它通过计算查询与键的相似度来分配注意力权重，然后对值进行加权求和。", "category": "instruction"}
+{"id": "math_00936", "instruction": "求解方程 41x + 8 = 62", "output": "x = 1.32", "category": "math"}
+{"id": "math_00468", "instruction": "计算 60 的 49 次方", "output": "2940", "category": "math"}
+{"id": "code_00964", "instruction": "写一个 Python 装饰器用于计时", "output": "import time\ndef timer(func):\n    def wrapper(*args, **kwargs):\n        start = time.time()\n        result = func(*args, **kwargs)\n        print(f'{func.__name__} took {time.time()-start:.2f}s')\n        return result\n    return wrapper", "category": "code"}
+{"id": "code_00310", "instruction": "写一个函数判断一个字符串是否是回文", "output": "def is_palindrome(s):\n    return s == s[::-1]", "category": "code"}
+{"id": "code_00870", "instruction": "用 Python 实现冒泡排序", "output": "def bubble_sort(arr):\n    n = len(arr)\n    for i in range(n):\n        for j in range(0, n-i-1):\n            if arr[j] > arr[j+1]:\n                arr[j], arr[j+1] = arr[j+1], arr[j]\n    return arr", "category": "code"}
+{"id": "inst_00667", "instruction": "解释梯度下降的基本原理", "output": "梯度下降是一种优化算法，通过计算损失函数关于参数的梯度，沿梯度的反方向更新参数，逐步最小化损失函数。", "category": "instruction"}
+{"id": "code_00636", "instruction": "写一个 Python 函数计算斐波那契数列的第 n 项", "output": "def fibonacci(n):\n    if n <= 1:\n        return n\n    return fibonacci(n-1) + fibonacci(n-2)", "category": "code"}
+{"id": "code_00015", "instruction": "写一个 Python 函数计算斐波那契数列的第 n 项", "output": "def fibonacci(n):\n    if n <= 1:\n        return n\n    return fibonacci(n-1) + fibonacci(n-2)", "category": "code"}
+{"id": "code_00247", "instruction": "写一个 Python 函数计算斐波那契数列的第 n 项", "output": "def fibonacci(n):\n    if n <= 1:\n        return n\n    return fibonacci(n-1) + fibonacci(n-2)", "category": "code"}
+{"id": "inst_00982", "instruction": "什么是 Transformer 架构？", "output": "Transformer 是一种基于自注意力机制的神经网络架构，完全摒弃了循环和卷积结构。它由编码器和解码器组成，使用多头注意力和前馈网络。", "category": "instruction"}
+{"id": "inst_00304", "instruction": "什么是注意力机制？", "output": "注意力机制是一种让模型在处理输入时能够聚焦于最相关部分的技术。它通过计算查询与键的相似度来分配注意力权重，然后对值进行加权求和。", "category": "instruction"}
+{"id": "math_00173", "instruction": "计算 92 + 19 的值", "output": "111", "category": "math"}
+{"id": "inst_00778", "instruction": "什么是注意力机制？", "output": "注意力机制是一种让模型在处理输入时能够聚焦于最相关部分的技术。它通过计算查询与键的相似度来分配注意力权重，然后对值进行加权求和。", "category": "instruction"}
+{"id": "inst_00280", "instruction": "解释梯度下降的基本原理", "output": "梯度下降是一种优化算法，通过计算损失函数关于参数的梯度，沿梯度的反方向更新参数，逐步最小化损失函数。", "category": "instruction"}
+{"id": "inst_00515", "instruction": "什么是 Transformer 架构？", "output": "Transformer 是一种基于自注意力机制的神经网络架构，完全摒弃了循环和卷积结构。它由编码器和解码器组成，使用多头注意力和前馈网络。", "category": "instruction"}
+{"id": "code_00082", "instruction": "写一个 Python 装饰器用于计时", "output": "import time\ndef timer(func):\n    def wrapper(*args, **kwargs):\n        start = time.time()\n        result = func(*args, **kwargs)\n        print(f'{func.__name__} took {time.time()-start:.2f}s')\n        return result\n    return wrapper", "category": "code"}
+{"id": "math_00383", "instruction": "一个矩形的长为 70 厘米，宽为 42 厘米，求面积", "output": "面积 = 70 × 42 = 2940 平方厘米", "category": "math"}
+{"id": "math_00087", "instruction": "计算 65 的 34 次方", "output": "2210", "category": "math"}
+{"id": "math_00175", "instruction": "计算 89 的 10 次方", "output": "890", "category": "math"}
+{"id": "code_00761", "instruction": "用 Python 实现二分查找", "output": "def binary_search(arr, target):\n    left, right = 0, len(arr) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            left = mid + 1\n        else:\n            right = mid - 1\n    return -1", "category": "code"}
+{"id": "math_00423", "instruction": "一个矩形的长为 86 厘米，宽为 49 厘米，求面积", "output": "面积 = 86 × 49 = 4214 平方厘米", "category": "math"}
+{"id": "math_00610", "instruction": "将分数 36/9 化为小数", "output": "4.22", "category": "math"}
+{"id": "code_00415", "instruction": "用 Python 实现二分查找", "output": "def binary_search(arr, target):\n    left, right = 0, len(arr) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            left = mid + 1\n        else:\n            right = mid - 1\n    return -1", "category": "code"}
+{"id": "math_00571", "instruction": "计算 10 + 43 的值", "output": "53", "category": "math"}
+{"id": "inst_00588", "instruction": "解释梯度下降的基本原理", "output": "梯度下降是一种优化算法，通过计算损失函数关于参数的梯度，沿梯度的反方向更新参数，逐步最小化损失函数。", "category": "instruction"}
+{"id": "code_00890", "instruction": "写一个函数判断一个字符串是否是回文", "output": "def is_palindrome(s):\n    return s == s[::-1]", "category": "code"}
+{"id": "math_00479", "instruction": "将分数 71/48 化为小数", "output": "-0.52", "category": "math"}
+{"id": "math_00231", "instruction": "计算 35 的 20 次方", "output": "700", "category": "math"}
+{"id": "code_00083", "instruction": "用 Python 实现二分查找", "output": "def binary_search(arr, target):\n    left, right = 0, len(arr) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            left = mid + 1\n        else:\n            right = mid - 1\n    return -1", "category": "code"}
+{"id": "code_00914", "instruction": "用 Python 实现冒泡排序", "output": "def bubble_sort(arr):\n    n = len(arr)\n    for i in range(n):\n        for j in range(0, n-i-1):\n            if arr[j] > arr[j+1]:\n                arr[j], arr[j+1] = arr[j+1], arr[j]\n    return arr", "category": "code"}
+{"id": "code_00351", "instruction": "写一个函数判断一个字符串是否是回文", "output": "def is_palindrome(s):\n    return s == s[::-1]", "category": "code"}
+{"id": "code_00333", "instruction": "写一个 Python 装饰器用于计时", "output": "import time\ndef timer(func):\n    def wrapper(*args, **kwargs):\n        start = time.time()\n        result = func(*args, **kwargs)\n        print(f'{func.__name__} took {time.time()-start:.2f}s')\n        return result\n    return wrapper", "category": "code"}
+{"id": "math_00295", "instruction": "计算 71 + 27 的值", "output": "98", "category": "math"}
+{"id": "inst_00917", "instruction": "解释梯度下降的基本原理", "output": "梯度下降是一种优化算法，通过计算损失函数关于参数的梯度，沿梯度的反方向更新参数，逐步最小化损失函数。", "category": "instruction"}
+{"id": "code_00638", "instruction": "用 Python 实现冒泡排序", "output": "def bubble_sort(arr):\n    n = len(arr)\n    for i in range(n):\n        for j in range(0, n-i-1):\n            if arr[j] > arr[j+1]:\n                arr[j], arr[j+1] = arr[j+1], arr[j]\n    return arr", "category": "code"}
+{"id": "math_00520", "instruction": "求解方程 35x + 29 = 132", "output": "x = 2.94", "category": "math"}
+{"id": "code_00279", "instruction": "用 Python 实现二分查找", "output": "def binary_search(arr, target):\n    left, right = 0, len(arr) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            left = mid + 1\n        else:\n            right = mid - 1\n    return -1", "category": "code"}
+{"id": "code_00399", "instruction": "写一个函数判断一个字符串是否是回文", "output": "def is_palindrome(s):\n    return s == s[::-1]", "category": "code"}
+{"id": "inst_00844", "instruction": "解释梯度下降的基本原理", "output": "梯度下降是一种优化算法，通过计算损失函数关于参数的梯度，沿梯度的反方向更新参数，逐步最小化损失函数。", "category": "instruction"}
+{"id": "code_00252", "instruction": "写一个 Python 装饰器用于计时", "output": "import time\ndef timer(func):\n    def wrapper(*args, **kwargs):\n        start = time.time()\n        result = func(*args, **kwargs)\n        print(f'{func.__name__} took {time.time()-start:.2f}s')\n        return result\n    return wrapper", "category": "code"}
+{"id": "math_00211", "instruction": "一个矩形的长为 2 厘米，宽为 27 厘米，求面积", "output": "面积 = 2 × 27 = 54 平方厘米", "category": "math"}
+{"id": "inst_00428", "instruction": "什么是注意力机制？", "output": "注意力机制是一种让模型在处理输入时能够聚焦于最相关部分的技术。它通过计算查询与键的相似度来分配注意力权重，然后对值进行加权求和。", "category": "instruction"}
+{"id": "math_00214", "instruction": "将分数 100/31 化为小数", "output": "0.89", "category": "math"}
+{"id": "math_00933", "instruction": "计算 45 + 23 的值", "output": "68", "category": "math"}
+{"id": "inst_00787", "instruction": "总结深度学习的三个关键组成部分", "output": "深度学习的三个关键组成部分是：1. 神经网络架构 2. 损失函数 3. 优化算法", "category": "instruction"}
+{"id": "math_00197", "instruction": "计算 80 + 10 的值", "output": "90", "category": "math"}
+{"id": "code_00712", "instruction": "用 Python 实现冒泡排序", "output": "def bubble_sort(arr):\n    n = len(arr)\n    for i in range(n):\n        for j in range(0, n-i-1):\n            if arr[j] > arr[j+1]:\n                arr[j], arr[j+1] = arr[j+1], arr[j]\n    return arr", "category": "code"}
+{"id": "inst_00815", "instruction": "解释什么是机器学习中的过拟合现象", "output": "过拟合是指模型在训练数据上表现很好，但在未见过的测试数据上表现较差的现象。这通常是因为模型过度学习了训练数据中的噪声和细节，而不是学习到了真正的规律。", "category": "instruction"}
+{"id": "math_00804", "instruction": "一个矩形的长为 71 厘米，宽为 38 厘米，求面积", "output": "面积 = 71 × 38 = 2698 平方厘米", "category": "math"}
+{"id": "code_00921", "instruction": "写一个 Python 装饰器用于计时", "output": "import time\ndef timer(func):\n    def wrapper(*args, **kwargs):\n        start = time.time()\n        result = func(*args, **kwargs)\n        print(f'{func.__name__} took {time.time()-start:.2f}s')\n        return result\n    return wrapper", "category": "code"}
+{"id": "inst_00597", "instruction": "什么是 Transformer 架构？", "output": "Transformer 是一种基于自注意力机制的神经网络架构，完全摒弃了循环和卷积结构。它由编码器和解码器组成，使用多头注意力和前馈网络。", "category": "instruction"}
+{"id": "math_00831", "instruction": "计算 49 的 25 次方", "output": "1225", "category": "math"}
+{"id": "math_00034", "instruction": "计算 15 + 10 的值", "output": "25", "category": "math"}
+{"id": "inst_00709", "instruction": "解释什么是机器学习中的过拟合现象", "output": "过拟合是指模型在训练数据上表现很好，但在未见过的测试数据上表现较差的现象。这通常是因为模型过度学习了训练数据中的噪声和细节，而不是学习到了真正的规律。", "category": "instruction"}
+{"id": "math_00127", "instruction": "计算 45 的 20 次方", "output": "900", "category": "math"}
+{"id": "math_00107", "instruction": "将分数 27/46 化为小数", "output": "1.56", "category": "math"}
+{"id": "inst_00904", "instruction": "什么是注意力机制？", "output": "注意力机制是一种让模型在处理输入时能够聚焦于最相关部分的技术。它通过计算查询与键的相似度来分配注意力权重，然后对值进行加权求和。", "category": "instruction"}
+{"id": "math_00005", "instruction": "将分数 54/15 化为小数", "output": "1.85", "category": "math"}
+{"id": "code_00742", "instruction": "写一个 Python 函数计算斐波那契数列的第 n 项", "output": "def fibonacci(n):\n    if n <= 1:\n        return n\n    return fibonacci(n-1) + fibonacci(n-2)", "category": "code"}
+{"id": "inst_00171", "instruction": "什么是 Transformer 架构？", "output": "Transformer 是一种基于自注意力机制的神经网络架构，完全摒弃了循环和卷积结构。它由编码器和解码器组成，使用多头注意力和前馈网络。", "category": "instruction"}
+{"id": "code_00481", "instruction": "写一个函数判断一个字符串是否是回文", "output": "def is_palindrome(s):\n    return s == s[::-1]", "category": "code"}
+{"id": "code_00874", "instruction": "写一个 Python 函数计算斐波那契数列的第 n 项", "output": "def fibonacci(n):\n    if n <= 1:\n        return n\n    return fibonacci(n-1) + fibonacci(n-2)", "category": "code"}
+{"id": "inst_00706", "instruction": "解释梯度下降的基本原理", "output": "梯度下降是一种优化算法，通过计算损失函数关于参数的梯度，沿梯度的反方向更新参数，逐步最小化损失函数。", "category": "instruction"}
+{"id": "code_00459", "instruction": "写一个函数判断一个字符串是否是回文", "output": "def is_palindrome(s):\n    return s == s[::-1]", "category": "code"}
+{"id": "math_00772", "instruction": "求解方程 85x + 34 = 57", "output": "x = 0.27", "category": "math"}
+{"id": "math_00629", "instruction": "计算 38 + 25 的值", "output": "63", "category": "math"}
+{"id": "math_00863", "instruction": "计算 72 的 36 次方", "output": "2592", "category": "math"}
+{"id": "math_00537", "instruction": "求解方程 38x + 28 = 1", "output": "x = -0.71", "category": "math"}
+{"id": "math_00741", "instruction": "将分数 63/6 化为小数", "output": "1.98", "category": "math"}
+{"id": "inst_00121", "instruction": "总结深度学习的三个关键组成部分", "output": "深度学习的三个关键组成部分是：1. 神经网络架构 2. 损失函数 3. 优化算法", "category": "instruction"}
+{"id": "code_00039", "instruction": "写一个 Python 装饰器用于计时", "output": "import time\ndef timer(func):\n    def wrapper(*args, **kwargs):\n        start = time.time()\n        result = func(*args, **kwargs)\n        print(f'{func.__name__} took {time.time()-start:.2f}s')\n        return result\n    return wrapper", "category": "code"}
+{"id": "inst_00607", "instruction": "什么是 Transformer 架构？", "output": "Transformer 是一种基于自注意力机制的神经网络架构，完全摒弃了循环和卷积结构。它由编码器和解码器组成，使用多头注意力和前馈网络。", "category": "instruction"}
+{"id": "code_00916", "instruction": "用 Python 实现二分查找", "output": "def binary_search(arr, target):\n    left, right = 0, len(arr) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            left = mid + 1\n        else:\n            right = mid - 1\n    return -1", "category": "code"}
+{"id": "math_00486", "instruction": "计算 57 的 34 次方", "output": "1938", "category": "math"}
+{"id": "inst_00632", "instruction": "总结深度学习的三个关键组成部分", "output": "深度学习的三个关键组成部分是：1. 神经网络架构 2. 损失函数 3. 优化算法", "category": "instruction"}
+{"id": "code_00744", "instruction": "写一个 Python 装饰器用于计时", "output": "import time\ndef timer(func):\n    def wrapper(*args, **kwargs):\n        start = time.time()\n        result = func(*args, **kwargs)\n        print(f'{func.__name__} took {time.time()-start:.2f}s')\n        return result\n    return wrapper", "category": "code"}
+{"id": "inst_00736", "instruction": "解释什么是机器学习中的过拟合现象", "output": "过拟合是指模型在训练数据上表现很好，但在未见过的测试数据上表现较差的现象。这通常是因为模型过度学习了训练数据中的噪声和细节，而不是学习到了真正的规律。", "category": "instruction"}
+{"id": "code_00836", "instruction": "写一个 Python 函数计算斐波那契数列的第 n 项", "output": "def fibonacci(n):\n    if n <= 1:\n        return n\n    return fibonacci(n-1) + fibonacci(n-2)", "category": "code"}
+{"id": "inst_00113", "instruction": "什么是 Transformer 架构？", "output": "Transformer 是一种基于自注意力机制的神经网络架构，完全摒弃了循环和卷积结构。它由编码器和解码器组成，使用多头注意力和前馈网络。", "category": "instruction"}
+{"id": "code_00313", "instruction": "用 Python 实现冒泡排序", "output": "def bubble_sort(arr):\n    n = len(arr)\n    for i in range(n):\n        for j in range(0, n-i-1):\n            if arr[j] > arr[j+1]:\n                arr[j], arr[j+1] = arr[j+1], arr[j]\n    return arr", "category": "code"}
+{"id": "code_00834", "instruction": "用 Python 实现二分查找", "output": "def binary_search(arr, target):\n    left, right = 0, len(arr) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            left = mid + 1\n        else:\n            right = mid - 1\n    return -1", "category": "code"}
+{"id": "code_00461", "instruction": "写一个 Python 函数计算斐波那契数列的第 n 项", "output": "def fibonacci(n):\n    if n <= 1:\n        return n\n    return fibonacci(n-1) + fibonacci(n-2)", "category": "code"}
+{"id": "math_00931", "instruction": "计算 68 的 41 次方", "output": "2788", "category": "math"}
+{"id": "inst_00633", "instruction": "解释梯度下降的基本原理", "output": "梯度下降是一种优化算法，通过计算损失函数关于参数的梯度，沿梯度的反方向更新参数，逐步最小化损失函数。", "category": "instruction"}
+{"id": "math_00016", "instruction": "求解方程 99x + 19 = 21", "output": "x = 0.02", "category": "math"}
+{"id": "math_00290", "instruction": "一个矩形的长为 80 厘米，宽为 49 厘米，求面积", "output": "面积 = 80 × 49 = 3920 平方厘米", "category": "math"}
+{"id": "math_00394", "instruction": "求解方程 15x + 43 = 7", "output": "x = -2.4", "category": "math"}
+{"id": "math_00435", "instruction": "求解方程 73x + 43 = 103", "output": "x = 0.82", "category": "math"}
+{"id": "math_00822", "instruction": "一个矩形的长为 69 厘米，宽为 19 厘米，求面积", "output": "面积 = 69 × 19 = 1311 平方厘米", "category": "math"}
+{"id": "inst_00879", "instruction": "什么是注意力机制？", "output": "注意力机制是一种让模型在处理输入时能够聚焦于最相关部分的技术。它通过计算查询与键的相似度来分配注意力权重，然后对值进行加权求和。", "category": "instruction"}
+{"id": "math_00954", "instruction": "将分数 47/35 化为小数", "output": "3.38", "category": "math"}
+{"id": "math_00507", "instruction": "一个矩形的长为 87 厘米，宽为 47 厘米，求面积", "output": "面积 = 87 × 47 = 4089 平方厘米", "category": "math"}
+{"id": "inst_00373", "instruction": "什么是注意力机制？", "output": "注意力机制是一种让模型在处理输入时能够聚焦于最相关部分的技术。它通过计算查询与键的相似度来分配注意力权重，然后对值进行加权求和。", "category": "instruction"}
+{"id": "math_00498", "instruction": "计算 66 的 24 次方", "output": "1584", "category": "math"}
+{"id": "code_00798", "instruction": "写一个函数判断一个字符串是否是回文", "output": "def is_palindrome(s):\n    return s == s[::-1]", "category": "code"}
+{"id": "code_00150", "instruction": "用 Python 实现冒泡排序", "output": "def bubble_sort(arr):\n    n = len(arr)\n    for i in range(n):\n        for j in range(0, n-i-1):\n            if arr[j] > arr[j+1]:\n                arr[j], arr[j+1] = arr[j+1], arr[j]\n    return arr", "category": "code"}
+{"id": "code_00552", "instruction": "用 Python 实现冒泡排序", "output": "def bubble_sort(arr):\n    n = len(arr)\n    for i in range(n):\n        for j in range(0, n-i-1):\n            if arr[j] > arr[j+1]:\n                arr[j], arr[j+1] = arr[j+1], arr[j]\n    return arr", "category": "code"}
+{"id": "math_00375", "instruction": "计算 39 + 32 的值", "output": "71", "category": "math"}
+{"id": "inst_00157", "instruction": "解释梯度下降的基本原理", "output": "梯度下降是一种优化算法，通过计算损失函数关于参数的梯度，沿梯度的反方向更新参数，逐步最小化损失函数。", "category": "instruction"}
+{"id": "code_00926", "instruction": "用 Python 实现二分查找", "output": "def binary_search(arr, target):\n    left, right = 0, len(arr) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            left = mid + 1\n        else:\n            right = mid - 1\n    return -1", "category": "code"}
+{"id": "math_00654", "instruction": "将分数 18/21 化为小数", "output": "7.56", "category": "math"}
+{"id": "code_00417", "instruction": "写一个函数判断一个字符串是否是回文", "output": "def is_palindrome(s):\n    return s == s[::-1]", "category": "code"}
+{"id": "inst_00301", "instruction": "总结深度学习的三个关键组成部分", "output": "深度学习的三个关键组成部分是：1. 神经网络架构 2. 损失函数 3. 优化算法", "category": "instruction"}
+{"id": "math_00340", "instruction": "计算 45 的 38 次方", "output": "1710", "category": "math"}
+{"id": "math_00114", "instruction": "计算 89 + 10 的值", "output": "99", "category": "math"}
+{"id": "math_00182", "instruction": "计算 69 的 48 次方", "output": "3312", "category": "math"}
+{"id": "math_00668", "instruction": "求解方程 5x + 37 = 180", "output": "x = 28.6", "category": "math"}
+{"id": "inst_00519", "instruction": "什么是注意力机制？", "output": "注意力机制是一种让模型在处理输入时能够聚焦于最相关部分的技术。它通过计算查询与键的相似度来分配注意力权重，然后对值进行加权求和。", "category": "instruction"}
+{"id": "code_00455", "instruction": "写一个 Python 装饰器用于计时", "output": "import time\ndef timer(func):\n    def wrapper(*args, **kwargs):\n        start = time.time()\n        result = func(*args, **kwargs)\n        print(f'{func.__name__} took {time.time()-start:.2f}s')\n        return result\n    return wrapper", "category": "code"}
+{"id": "math_00818", "instruction": "将分数 59/24 化为小数", "output": "-0.14", "category": "math"}
+{"id": "code_00932", "instruction": "写一个 Python 装饰器用于计时", "output": "import time\ndef timer(func):\n    def wrapper(*args, **kwargs):\n        start = time.time()\n        result = func(*args, **kwargs)\n        print(f'{func.__name__} took {time.time()-start:.2f}s')\n        return result\n    return wrapper", "category": "code"}
+{"id": "code_00676", "instruction": "写一个函数判断一个字符串是否是回文", "output": "def is_palindrome(s):\n    return s == s[::-1]", "category": "code"}
+{"id": "inst_00732", "instruction": "总结深度学习的三个关键组成部分", "output": "深度学习的三个关键组成部分是：1. 神经网络架构 2. 损失函数 3. 优化算法", "category": "instruction"}
+{"id": "math_00162", "instruction": "计算 59 + 9 的值", "output": "68", "category": "math"}
+{"id": "code_00332", "instruction": "用 Python 实现冒泡排序", "output": "def bubble_sort(arr):\n    n = len(arr)\n    for i in range(n):\n        for j in range(0, n-i-1):\n            if arr[j] > arr[j+1]:\n                arr[j], arr[j+1] = arr[j+1], arr[j]\n    return arr", "category": "code"}
+{"id": "math_00249", "instruction": "计算 78 的 39 次方", "output": "3042", "category": "math"}
+{"id": "math_00752", "instruction": "计算 24 的 50 次方", "output": "1200", "category": "math"}
+{"id": "inst_00866", "instruction": "解释梯度下降的基本原理", "output": "梯度下降是一种优化算法，通过计算损失函数关于参数的梯度，沿梯度的反方向更新参数，逐步最小化损失函数。", "category": "instruction"}
+{"id": "code_00223", "instruction": "写一个 Python 装饰器用于计时", "output": "import time\ndef timer(func):\n    def wrapper(*args, **kwargs):\n        start = time.time()\n        result = func(*args, **kwargs)\n        print(f'{func.__name__} took {time.time()-start:.2f}s')\n        return result\n    return wrapper", "category": "code"}
+{"id": "code_00898", "instruction": "写一个函数判断一个字符串是否是回文", "output": "def is_palindrome(s):\n    return s == s[::-1]", "category": "code"}
+{"id": "math_00861", "instruction": "计算 1 + 20 的值", "output": "21", "category": "math"}
+{"id": "code_00888", "instruction": "用 Python 实现二分查找", "output": "def binary_search(arr, target):\n    left, right = 0, len(arr) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            left = mid + 1\n        else:\n            right = mid - 1\n    return -1", "category": "code"}
+{"id": "math_00493", "instruction": "求解方程 45x + 20 = 168", "output": "x = 3.29", "category": "math"}
+{"id": "inst_00845", "instruction": "什么是注意力机制？", "output": "注意力机制是一种让模型在处理输入时能够聚焦于最相关部分的技术。它通过计算查询与键的相似度来分配注意力权重，然后对值进行加权求和。", "category": "instruction"}
+{"id": "inst_00795", "instruction": "解释梯度下降的基本原理", "output": "梯度下降是一种优化算法，通过计算损失函数关于参数的梯度，沿梯度的反方向更新参数，逐步最小化损失函数。", "category": "instruction"}
+{"id": "code_00591", "instruction": "写一个函数判断一个字符串是否是回文", "output": "def is_palindrome(s):\n    return s == s[::-1]", "category": "code"}
+{"id": "math_00489", "instruction": "将分数 7/41 化为小数", "output": "17.86", "category": "math"}
+{"id": "inst_00599", "instruction": "解释梯度下降的基本原理", "output": "梯度下降是一种优化算法，通过计算损失函数关于参数的梯度，沿梯度的反方向更新参数，逐步最小化损失函数。", "category": "instruction"}
+{"id": "math_00595", "instruction": "求解方程 18x + 16 = 127", "output": "x = 6.17", "category": "math"}
+{"id": "math_00488", "instruction": "一个矩形的长为 50 厘米，宽为 27 厘米，求面积", "output": "面积 = 50 × 27 = 1350 平方厘米", "category": "math"}
+{"id": "inst_00579", "instruction": "什么是 Transformer 架构？", "output": "Transformer 是一种基于自注意力机制的神经网络架构，完全摒弃了循环和卷积结构。它由编码器和解码器组成，使用多头注意力和前馈网络。", "category": "instruction"}
+{"id": "inst_00037", "instruction": "解释什么是机器学习中的过拟合现象", "output": "过拟合是指模型在训练数据上表现很好，但在未见过的测试数据上表现较差的现象。这通常是因为模型过度学习了训练数据中的噪声和细节，而不是学习到了真正的规律。", "category": "instruction"}
+{"id": "math_00186", "instruction": "计算 93 的 11 次方", "output": "1023", "category": "math"}
+{"id": "code_00440", "instruction": "写一个 Python 函数计算斐波那契数列的第 n 项", "output": "def fibonacci(n):\n    if n <= 1:\n        return n\n    return fibonacci(n-1) + fibonacci(n-2)", "category": "code"}
+{"id": "math_00509", "instruction": "计算 30 的 35 次方", "output": "1050", "category": "math"}
+{"id": "math_00873", "instruction": "计算 36 的 27 次方", "output": "972", "category": "math"}
+{"id": "inst_00892", "instruction": "解释梯度下降的基本原理", "output": "梯度下降是一种优化算法，通过计算损失函数关于参数的梯度，沿梯度的反方向更新参数，逐步最小化损失函数。", "category": "instruction"}
+{"id": "code_00903", "instruction": "用 Python 实现二分查找", "output": "def binary_search(arr, target):\n    left, right = 0, len(arr) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            left = mid + 1\n        else:\n            right = mid - 1\n    return -1", "category": "code"}
+{"id": "math_00909", "instruction": "一个矩形的长为 51 厘米，宽为 30 厘米，求面积", "output": "面积 = 51 × 30 = 1530 平方厘米", "category": "math"}
+{"id": "math_00719", "instruction": "计算 55 的 33 次方", "output": "1815", "category": "math"}
+{"id": "inst_00522", "instruction": "解释什么是机器学习中的过拟合现象", "output": "过拟合是指模型在训练数据上表现很好，但在未见过的测试数据上表现较差的现象。这通常是因为模型过度学习了训练数据中的噪声和细节，而不是学习到了真正的规律。", "category": "instruction"}
+{"id": "code_00300", "instruction": "用 Python 实现二分查找", "output": "def binary_search(arr, target):\n    left, right = 0, len(arr) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            left = mid + 1\n        else:\n            right = mid - 1\n    return -1", "category": "code"}
+{"id": "math_00075", "instruction": "计算 18 的 28 次方", "output": "504", "category": "math"}
+{"id": "math_00821", "instruction": "将分数 71/27 化为小数", "output": "-0.32", "category": "math"}
+{"id": "math_00983", "instruction": "计算 28 的 32 次方", "output": "896", "category": "math"}
+{"id": "code_00165", "instruction": "写一个 Python 装饰器用于计时", "output": "import time\ndef timer(func):\n    def wrapper(*args, **kwargs):\n        start = time.time()\n        result = func(*args, **kwargs)\n        print(f'{func.__name__} took {time.time()-start:.2f}s')\n        return result\n    return wrapper", "category": "code"}
+{"id": "math_00838", "instruction": "将分数 61/18 化为小数", "output": "-0.1", "category": "math"}
+{"id": "math_00432", "instruction": "一个矩形的长为 4 厘米，宽为 12 厘米，求面积", "output": "面积 = 4 × 12 = 48 平方厘米", "category": "math"}
+{"id": "code_00910", "instruction": "写一个 Python 装饰器用于计时", "output": "import time\ndef timer(func):\n    def wrapper(*args, **kwargs):\n        start = time.time()\n        result = func(*args, **kwargs)\n        print(f'{func.__name__} took {time.time()-start:.2f}s')\n        return result\n    return wrapper", "category": "code"}
+{"id": "code_00470", "instruction": "写一个 Python 装饰器用于计时", "output": "import time\ndef timer(func):\n    def wrapper(*args, **kwargs):\n        start = time.time()\n        result = func(*args, **kwargs)\n        print(f'{func.__name__} took {time.time()-start:.2f}s')\n        return result\n    return wrapper", "category": "code"}
+{"id": "code_00090", "instruction": "写一个 Python 装饰器用于计时", "output": "import time\ndef timer(func):\n    def wrapper(*args, **kwargs):\n        start = time.time()\n        result = func(*args, **kwargs)\n        print(f'{func.__name__} took {time.time()-start:.2f}s')\n        return result\n    return wrapper", "category": "code"}
+{"id": "code_00524", "instruction": "用 Python 实现冒泡排序", "output": "def bubble_sort(arr):\n    n = len(arr)\n    for i in range(n):\n        for j in range(0, n-i-1):\n            if arr[j] > arr[j+1]:\n                arr[j], arr[j+1] = arr[j+1], arr[j]\n    return arr", "category": "code"}
+{"id": "math_00174", "instruction": "一个矩形的长为 70 厘米，宽为 6 厘米，求面积", "output": "面积 = 70 × 6 = 420 平方厘米", "category": "math"}
+{"id": "math_00604", "instruction": "将分数 82/38 化为小数", "output": "0.11", "category": "math"}
+{"id": "math_00412", "instruction": "计算 84 + 42 的值", "output": "126", "category": "math"}
+{"id": "code_00103", "instruction": "写一个 Python 装饰器用于计时", "output": "import time\ndef timer(func):\n    def wrapper(*args, **kwargs):\n        start = time.time()\n        result = func(*args, **kwargs)\n        print(f'{func.__name__} took {time.time()-start:.2f}s')\n        return result\n    return wrapper", "category": "code"}
+{"id": "inst_00702", "instruction": "解释什么是机器学习中的过拟合现象", "output": "过拟合是指模型在训练数据上表现很好，但在未见过的测试数据上表现较差的现象。这通常是因为模型过度学习了训练数据中的噪声和细节，而不是学习到了真正的规律。", "category": "instruction"}
+{"id": "inst_00686", "instruction": "总结深度学习的三个关键组成部分", "output": "深度学习的三个关键组成部分是：1. 神经网络架构 2. 损失函数 3. 优化算法", "category": "instruction"}
+{"id": "code_00169", "instruction": "用 Python 实现冒泡排序", "output": "def bubble_sort(arr):\n    n = len(arr)\n    for i in range(n):\n        for j in range(0, n-i-1):\n            if arr[j] > arr[j+1]:\n                arr[j], arr[j+1] = arr[j+1], arr[j]\n    return arr", "category": "code"}
+{"id": "code_00000", "instruction": "写一个 Python 函数计算斐波那契数列的第 n 项", "output": "def fibonacci(n):\n    if n <= 1:\n        return n\n    return fibonacci(n-1) + fibonacci(n-2)", "category": "code"}
+{"id": "inst_00842", "instruction": "什么是注意力机制？", "output": "注意力机制是一种让模型在处理输入时能够聚焦于最相关部分的技术。它通过计算查询与键的相似度来分配注意力权重，然后对值进行加权求和。", "category": "instruction"}
+{"id": "code_00938", "instruction": "用 Python 实现二分查找", "output": "def binary_search(arr, target):\n    left, right = 0, len(arr) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            left = mid + 1\n        else:\n            right = mid - 1\n    return -1", "category": "code"}
+{"id": "math_00010", "instruction": "计算 46 + 23 的值", "output": "69", "category": "math"}
+{"id": "math_00531", "instruction": "求解方程 20x + 36 = 187", "output": "x = 7.55", "category": "math"}
+{"id": "code_00560", "instruction": "用 Python 实现二分查找", "output": "def binary_search(arr, target):\n    left, right = 0, len(arr) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            left = mid + 1\n        else:\n            right = mid - 1\n    return -1", "category": "code"}
+{"id": "math_00745", "instruction": "计算 87 的 20 次方", "output": "1740", "category": "math"}
+{"id": "math_00641", "instruction": "计算 14 + 28 的值", "output": "42", "category": "math"}
+{"id": "code_00038", "instruction": "写一个 Python 函数计算斐波那契数列的第 n 项", "output": "def fibonacci(n):\n    if n <= 1:\n        return n\n    return fibonacci(n-1) + fibonacci(n-2)", "category": "code"}
+{"id": "math_00502", "instruction": "计算 65 + 50 的值", "output": "115", "category": "math"}
+{"id": "math_00858", "instruction": "一个矩形的长为 20 厘米，宽为 25 厘米，求面积", "output": "面积 = 20 × 25 = 500 平方厘米", "category": "math"}
+{"id": "math_00991", "instruction": "一个矩形的长为 33 厘米，宽为 6 厘米，求面积", "output": "面积 = 33 × 6 = 198 平方厘米", "category": "math"}
+{"id": "math_00504", "instruction": "一个矩形的长为 99 厘米，宽为 40 厘米，求面积", "output": "面积 = 99 × 40 = 3960 平方厘米", "category": "math"}
+{"id": "math_00192", "instruction": "计算 36 的 49 次方", "output": "1764", "category": "math"}
+{"id": "math_00694", "instruction": "一个矩形的长为 92 厘米，宽为 31 厘米，求面积", "output": "面积 = 92 × 31 = 2852 平方厘米", "category": "math"}
+{"id": "inst_00360", "instruction": "总结深度学习的三个关键组成部分", "output": "深度学习的三个关键组成部分是：1. 神经网络架构 2. 损失函数 3. 优化算法", "category": "instruction"}
+{"id": "code_00028", "instruction": "用 Python 实现二分查找", "output": "def binary_search(arr, target):\n    left, right = 0, len(arr) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            left = mid + 1\n        else:\n            right = mid - 1\n    return -1", "category": "code"}
+{"id": "code_00555", "instruction": "写一个 Python 装饰器用于计时", "output": "import time\ndef timer(func):\n    def wrapper(*args, **kwargs):\n        start = time.time()\n        result = func(*args, **kwargs)\n        print(f'{func.__name__} took {time.time()-start:.2f}s')\n        return result\n    return wrapper", "category": "code"}
+{"id": "code_00666", "instruction": "写一个 Python 装饰器用于计时", "output": "import time\ndef timer(func):\n    def wrapper(*args, **kwargs):\n        start = time.time()\n        result = func(*args, **kwargs)\n        print(f'{func.__name__} took {time.time()-start:.2f}s')\n        return result\n    return wrapper", "category": "code"}
+{"id": "inst_00672", "instruction": "解释什么是机器学习中的过拟合现象", "output": "过拟合是指模型在训练数据上表现很好，但在未见过的测试数据上表现较差的现象。这通常是因为模型过度学习了训练数据中的噪声和细节，而不是学习到了真正的规律。", "category": "instruction"}
+{"id": "inst_00180", "instruction": "什么是 Transformer 架构？", "output": "Transformer 是一种基于自注意力机制的神经网络架构，完全摒弃了循环和卷积结构。它由编码器和解码器组成，使用多头注意力和前馈网络。", "category": "instruction"}
+{"id": "code_00177", "instruction": "写一个 Python 函数计算斐波那契数列的第 n 项", "output": "def fibonacci(n):\n    if n <= 1:\n        return n\n    return fibonacci(n-1) + fibonacci(n-2)", "category": "code"}
+{"id": "inst_00363", "instruction": "总结深度学习的三个关键组成部分", "output": "深度学习的三个关键组成部分是：1. 神经网络架构 2. 损失函数 3. 优化算法", "category": "instruction"}
+{"id": "code_00856", "instruction": "用 Python 实现二分查找", "output": "def binary_search(arr, target):\n    left, right = 0, len(arr) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            left = mid + 1\n        else:\n            right = mid - 1\n    return -1", "category": "code"}
+{"id": "inst_00544", "instruction": "解释什么是机器学习中的过拟合现象", "output": "过拟合是指模型在训练数据上表现很好，但在未见过的测试数据上表现较差的现象。这通常是因为模型过度学习了训练数据中的噪声和细节，而不是学习到了真正的规律。", "category": "instruction"}
+{"id": "inst_00057", "instruction": "总结深度学习的三个关键组成部分", "output": "深度学习的三个关键组成部分是：1. 神经网络架构 2. 损失函数 3. 优化算法", "category": "instruction"}
+{"id": "math_00272", "instruction": "计算 30 + 44 的值", "output": "74", "category": "math"}
+{"id": "math_00913", "instruction": "求解方程 45x + 20 = 88", "output": "x = 1.51", "category": "math"}
+{"id": "code_00949", "instruction": "用 Python 实现冒泡排序", "output": "def bubble_sort(arr):\n    n = len(arr)\n    for i in range(n):\n        for j in range(0, n-i-1):\n            if arr[j] > arr[j+1]:\n                arr[j], arr[j+1] = arr[j+1], arr[j]\n    return arr", "category": "code"}
+{"id": "code_00961", "instruction": "用 Python 实现冒泡排序", "output": "def bubble_sort(arr):\n    n = len(arr)\n    for i in range(n):\n        for j in range(0, n-i-1):\n            if arr[j] > arr[j+1]:\n                arr[j], arr[j+1] = arr[j+1], arr[j]\n    return arr", "category": "code"}
+{"id": "code_00163", "instruction": "写一个 Python 装饰器用于计时", "output": "import time\ndef timer(func):\n    def wrapper(*args, **kwargs):\n        start = time.time()\n        result = func(*args, **kwargs)\n        print(f'{func.__name__} took {time.time()-start:.2f}s')\n        return result\n    return wrapper", "category": "code"}
+{"id": "code_00711", "instruction": "写一个 Python 装饰器用于计时", "output": "import time\ndef timer(func):\n    def wrapper(*args, **kwargs):\n        start = time.time()\n        result = func(*args, **kwargs)\n        print(f'{func.__name__} took {time.time()-start:.2f}s')\n        return result\n    return wrapper", "category": "code"}
+{"id": "math_00648", "instruction": "计算 51 + 24 的值", "output": "75", "category": "math"}
+{"id": "math_00768", "instruction": "计算 52 + 29 的值", "output": "81", "category": "math"}
+{"id": "code_00841", "instruction": "用 Python 实现冒泡排序", "output": "def bubble_sort(arr):\n    n = len(arr)\n    for i in range(n):\n        for j in range(0, n-i-1):\n            if arr[j] > arr[j+1]:\n                arr[j], arr[j+1] = arr[j+1], arr[j]\n    return arr", "category": "code"}
+{"id": "inst_00287", "instruction": "解释什么是机器学习中的过拟合现象", "output": "过拟合是指模型在训练数据上表现很好，但在未见过的测试数据上表现较差的现象。这通常是因为模型过度学习了训练数据中的噪声和细节，而不是学习到了真正的规律。", "category": "instruction"}
+{"id": "code_00749", "instruction": "写一个 Python 函数计算斐波那契数列的第 n 项", "output": "def fibonacci(n):\n    if n <= 1:\n        return n\n    return fibonacci(n-1) + fibonacci(n-2)", "category": "code"}
+{"id": "inst_00224", "instruction": "解释梯度下降的基本原理", "output": "梯度下降是一种优化算法，通过计算损失函数关于参数的梯度，沿梯度的反方向更新参数，逐步最小化损失函数。", "category": "instruction"}
+{"id": "inst_00326", "instruction": "总结深度学习的三个关键组成部分", "output": "深度学习的三个关键组成部分是：1. 神经网络架构 2. 损失函数 3. 优化算法", "category": "instruction"}
+{"id": "math_00026", "instruction": "计算 41 + 26 的值", "output": "67", "category": "math"}
+{"id": "inst_00184", "instruction": "解释梯度下降的基本原理", "output": "梯度下降是一种优化算法，通过计算损失函数关于参数的梯度，沿梯度的反方向更新参数，逐步最小化损失函数。", "category": "instruction"}
+{"id": "code_00276", "instruction": "用 Python 实现二分查找", "output": "def binary_search(arr, target):\n    left, right = 0, len(arr) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            left = mid + 1\n        else:\n            right = mid - 1\n    return -1", "category": "code"}
+{"id": "code_00397", "instruction": "写一个 Python 函数计算斐波那契数列的第 n 项", "output": "def fibonacci(n):\n    if n <= 1:\n        return n\n    return fibonacci(n-1) + fibonacci(n-2)", "category": "code"}
+{"id": "math_00756", "instruction": "将分数 51/34 化为小数", "output": "-0.02", "category": "math"}
+{"id": "math_00746", "instruction": "一个矩形的长为 1 厘米，宽为 48 厘米，求面积", "output": "面积 = 1 × 48 = 48 平方厘米", "category": "math"}
+{"id": "math_00352", "instruction": "求解方程 80x + 17 = 174", "output": "x = 1.96", "category": "math"}
+{"id": "code_00496", "instruction": "写一个函数判断一个字符串是否是回文", "output": "def is_palindrome(s):\n    return s == s[::-1]", "category": "code"}
+{"id": "math_00491", "instruction": "一个矩形的长为 93 厘米，宽为 43 厘米，求面积", "output": "面积 = 93 × 43 = 3999 平方厘米", "category": "math"}
+{"id": "math_00367", "instruction": "计算 2 的 17 次方", "output": "34", "category": "math"}
+{"id": "math_00584", "instruction": "一个矩形的长为 91 厘米，宽为 29 厘米，求面积", "output": "面积 = 91 × 29 = 2639 平方厘米", "category": "math"}
+{"id": "math_00019", "instruction": "求解方程 86x + 18 = 180", "output": "x = 1.88", "category": "math"}
+{"id": "code_00556", "instruction": "写一个 Python 函数计算斐波那契数列的第 n 项", "output": "def fibonacci(n):\n    if n <= 1:\n        return n\n    return fibonacci(n-1) + fibonacci(n-2)", "category": "code"}
+{"id": "math_00619", "instruction": "一个矩形的长为 62 厘米，宽为 16 厘米，求面积", "output": "面积 = 62 × 16 = 992 平方厘米", "category": "math"}
+{"id": "code_00538", "instruction": "用 Python 实现冒泡排序", "output": "def bubble_sort(arr):\n    n = len(arr)\n    for i in range(n):\n        for j in range(0, n-i-1):\n            if arr[j] > arr[j+1]:\n                arr[j], arr[j+1] = arr[j+1], arr[j]\n    return arr", "category": "code"}
+{"id": "code_00204", "instruction": "用 Python 实现二分查找", "output": "def binary_search(arr, target):\n    left, right = 0, len(arr) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            left = mid + 1\n        else:\n            right = mid - 1\n    return -1", "category": "code"}
+{"id": "code_00849", "instruction": "写一个函数判断一个字符串是否是回文", "output": "def is_palindrome(s):\n    return s == s[::-1]", "category": "code"}
+{"id": "code_00823", "instruction": "用 Python 实现二分查找", "output": "def binary_search(arr, target):\n    left, right = 0, len(arr) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            left = mid + 1\n        else:\n            right = mid - 1\n    return -1", "category": "code"}
+{"id": "math_00972", "instruction": "一个矩形的长为 32 厘米，宽为 49 厘米，求面积", "output": "面积 = 32 × 49 = 1568 平方厘米", "category": "math"}
+{"id": "math_00726", "instruction": "计算 88 的 33 次方", "output": "2904", "category": "math"}
+{"id": "code_00089", "instruction": "用 Python 实现冒泡排序", "output": "def bubble_sort(arr):\n    n = len(arr)\n    for i in range(n):\n        for j in range(0, n-i-1):\n            if arr[j] > arr[j+1]:\n                arr[j], arr[j+1] = arr[j+1], arr[j]\n    return arr", "category": "code"}
+{"id": "math_00062", "instruction": "一个矩形的长为 3 厘米，宽为 38 厘米，求面积", "output": "面积 = 3 × 38 = 114 平方厘米", "category": "math"}
+{"id": "math_00490", "instruction": "一个矩形的长为 13 厘米，宽为 36 厘米，求面积", "output": "面积 = 13 × 36 = 468 平方厘米", "category": "math"}
+{"id": "code_00620", "instruction": "用 Python 实现二分查找", "output": "def binary_search(arr, target):\n    left, right = 0, len(arr) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            left = mid + 1\n        else:\n            right = mid - 1\n    return -1", "category": "code"}
+{"id": "inst_00969", "instruction": "什么是注意力机制？", "output": "注意力机制是一种让模型在处理输入时能够聚焦于最相关部分的技术。它通过计算查询与键的相似度来分配注意力权重，然后对值进行加权求和。", "category": "instruction"}
+{"id": "math_00510", "instruction": "计算 25 的 24 次方", "output": "600", "category": "math"}
+{"id": "inst_00923", "instruction": "总结深度学习的三个关键组成部分", "output": "深度学习的三个关键组成部分是：1. 神经网络架构 2. 损失函数 3. 优化算法", "category": "instruction"}
+{"id": "inst_00716", "instruction": "解释什么是机器学习中的过拟合现象", "output": "过拟合是指模型在训练数据上表现很好，但在未见过的测试数据上表现较差的现象。这通常是因为模型过度学习了训练数据中的噪声和细节，而不是学习到了真正的规律。", "category": "instruction"}
+{"id": "math_00035", "instruction": "计算 77 的 5 次方", "output": "385", "category": "math"}
+{"id": "code_00152", "instruction": "写一个 Python 装饰器用于计时", "output": "import time\ndef timer(func):\n    def wrapper(*args, **kwargs):\n        start = time.time()\n        result = func(*args, **kwargs)\n        print(f'{func.__name__} took {time.time()-start:.2f}s')\n        return result\n    return wrapper", "category": "code"}
+{"id": "code_00456", "instruction": "用 Python 实现二分查找", "output": "def binary_search(arr, target):\n    left, right = 0, len(arr) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            left = mid + 1\n        else:\n            right = mid - 1\n    return -1", "category": "code"}
+{"id": "math_00986", "instruction": "计算 81 + 30 的值", "output": "111", "category": "math"}
+{"id": "math_00281", "instruction": "一个矩形的长为 42 厘米，宽为 43 厘米，求面积", "output": "面积 = 42 × 43 = 1806 平方厘米", "category": "math"}
+{"id": "math_00191", "instruction": "计算 42 的 14 次方", "output": "588", "category": "math"}
+{"id": "code_00219", "instruction": "写一个函数判断一个字符串是否是回文", "output": "def is_palindrome(s):\n    return s == s[::-1]", "category": "code"}
+{"id": "inst_00362", "instruction": "解释梯度下降的基本原理", "output": "梯度下降是一种优化算法，通过计算损失函数关于参数的梯度，沿梯度的反方向更新参数，逐步最小化损失函数。", "category": "instruction"}
+{"id": "math_00989", "instruction": "求解方程 84x + 20 = 41", "output": "x = 0.25", "category": "math"}
+{"id": "math_00436", "instruction": "计算 12 + 48 的值", "output": "60", "category": "math"}
+{"id": "math_00993", "instruction": "一个矩形的长为 93 厘米，宽为 45 厘米，求面积", "output": "面积 = 93 × 45 = 4185 平方厘米", "category": "math"}
+{"id": "math_00803", "instruction": "计算 73 + 15 的值", "output": "88", "category": "math"}
+{"id": "code_00992", "instruction": "用 Python 实现冒泡排序", "output": "def bubble_sort(arr):\n    n = len(arr)\n    for i in range(n):\n        for j in range(0, n-i-1):\n            if arr[j] > arr[j+1]:\n                arr[j], arr[j+1] = arr[j+1], arr[j]\n    return arr", "category": "code"}
+{"id": "math_00404", "instruction": "计算 8 + 31 的值", "output": "39", "category": "math"}
+{"id": "inst_00443", "instruction": "解释什么是机器学习中的过拟合现象", "output": "过拟合是指模型在训练数据上表现很好，但在未见过的测试数据上表现较差的现象。这通常是因为模型过度学习了训练数据中的噪声和细节，而不是学习到了真正的规律。", "category": "instruction"}
+{"id": "math_00780", "instruction": "计算 24 的 49 次方", "output": "1176", "category": "math"}
+{"id": "code_00172", "instruction": "用 Python 实现冒泡排序", "output": "def bubble_sort(arr):\n    n = len(arr)\n    for i in range(n):\n        for j in range(0, n-i-1):\n            if arr[j] > arr[j+1]:\n                arr[j], arr[j+1] = arr[j+1], arr[j]\n    return arr", "category": "code"}
+{"id": "math_00051", "instruction": "求解方程 73x + 6 = 22", "output": "x = 0.22", "category": "math"}
+{"id": "math_00472", "instruction": "一个矩形的长为 20 厘米，宽为 29 厘米，求面积", "output": "面积 = 20 × 29 = 580 平方厘米", "category": "math"}
+{"id": "inst_00043", "instruction": "总结深度学习的三个关键组成部分", "output": "深度学习的三个关键组成部分是：1. 神经网络架构 2. 损失函数 3. 优化算法", "category": "instruction"}
+{"id": "inst_00125", "instruction": "什么是注意力机制？", "output": "注意力机制是一种让模型在处理输入时能够聚焦于最相关部分的技术。它通过计算查询与键的相似度来分配注意力权重，然后对值进行加权求和。", "category": "instruction"}
+{"id": "math_00339", "instruction": "计算 37 的 44 次方", "output": "1628", "category": "math"}
+{"id": "inst_00094", "instruction": "总结深度学习的三个关键组成部分", "output": "深度学习的三个关键组成部分是：1. 神经网络架构 2. 损失函数 3. 优化算法", "category": "instruction"}
+{"id": "math_00131", "instruction": "计算 15 + 17 的值", "output": "32", "category": "math"}
+{"id": "inst_00454", "instruction": "什么是注意力机制？", "output": "注意力机制是一种让模型在处理输入时能够聚焦于最相关部分的技术。它通过计算查询与键的相似度来分配注意力权重，然后对值进行加权求和。", "category": "instruction"}
+{"id": "math_00609", "instruction": "将分数 37/6 化为小数", "output": "1.59", "category": "math"}
+{"id": "math_00066", "instruction": "计算 28 的 35 次方", "output": "980", "category": "math"}
+{"id": "code_00022", "instruction": "用 Python 实现冒泡排序", "output": "def bubble_sort(arr):\n    n = len(arr)\n    for i in range(n):\n        for j in range(0, n-i-1):\n            if arr[j] > arr[j+1]:\n                arr[j], arr[j+1] = arr[j+1], arr[j]\n    return arr", "category": "code"}
+{"id": "code_00662", "instruction": "写一个函数判断一个字符串是否是回文", "output": "def is_palindrome(s):\n    return s == s[::-1]", "category": "code"}
+{"id": "inst_00813", "instruction": "解释什么是机器学习中的过拟合现象", "output": "过拟合是指模型在训练数据上表现很好，但在未见过的测试数据上表现较差的现象。这通常是因为模型过度学习了训练数据中的噪声和细节，而不是学习到了真正的规律。", "category": "instruction"}
+{"id": "inst_00853", "instruction": "什么是注意力机制？", "output": "注意力机制是一种让模型在处理输入时能够聚焦于最相关部分的技术。它通过计算查询与键的相似度来分配注意力权重，然后对值进行加权求和。", "category": "instruction"}
+{"id": "math_00596", "instruction": "将分数 74/24 化为小数", "output": "1.3", "category": "math"}
+{"id": "inst_00685", "instruction": "解释梯度下降的基本原理", "output": "梯度下降是一种优化算法，通过计算损失函数关于参数的梯度，沿梯度的反方向更新参数，逐步最小化损失函数。", "category": "instruction"}
+{"id": "math_00687", "instruction": "一个矩形的长为 92 厘米，宽为 6 厘米，求面积", "output": "面积 = 92 × 6 = 552 平方厘米", "category": "math"}
+{"id": "code_00975", "instruction": "写一个 Python 函数计算斐波那契数列的第 n 项", "output": "def fibonacci(n):\n    if n <= 1:\n        return n\n    return fibonacci(n-1) + fibonacci(n-2)", "category": "code"}
+{"id": "inst_00202", "instruction": "解释什么是机器学习中的过拟合现象", "output": "过拟合是指模型在训练数据上表现很好，但在未见过的测试数据上表现较差的现象。这通常是因为模型过度学习了训练数据中的噪声和细节，而不是学习到了真正的规律。", "category": "instruction"}
+{"id": "code_00704", "instruction": "用 Python 实现冒泡排序", "output": "def bubble_sort(arr):\n    n = len(arr)\n    for i in range(n):\n        for j in range(0, n-i-1):\n            if arr[j] > arr[j+1]:\n                arr[j], arr[j+1] = arr[j+1], arr[j]\n    return arr", "category": "code"}
+{"id": "math_00227", "instruction": "求解方程 52x + 45 = 63", "output": "x = 0.35", "category": "math"}
+{"id": "math_00675", "instruction": "求解方程 59x + 35 = 88", "output": "x = 0.9", "category": "math"}
+{"id": "inst_00990", "instruction": "什么是注意力机制？", "output": "注意力机制是一种让模型在处理输入时能够聚焦于最相关部分的技术。它通过计算查询与键的相似度来分配注意力权重，然后对值进行加权求和。", "category": "instruction"}
+{"id": "math_00124", "instruction": "一个矩形的长为 53 厘米，宽为 43 厘米，求面积", "output": "面积 = 53 × 43 = 2279 平方厘米", "category": "math"}
+{"id": "math_00950", "instruction": "一个矩形的长为 29 厘米，宽为 35 厘米，求面积", "output": "面积 = 29 × 35 = 1015 平方厘米", "category": "math"}
+{"id": "math_00104", "instruction": "将分数 39/43 化为小数", "output": "-0.41", "category": "math"}
+{"id": "code_00473", "instruction": "写一个函数判断一个字符串是否是回文", "output": "def is_palindrome(s):\n    return s == s[::-1]", "category": "code"}
+{"id": "math_00096", "instruction": "计算 17 的 43 次方", "output": "731", "category": "math"}
+{"id": "code_00255", "instruction": "写一个函数判断一个字符串是否是回文", "output": "def is_palindrome(s):\n    return s == s[::-1]", "category": "code"}
+{"id": "code_00563", "instruction": "用 Python 实现二分查找", "output": "def binary_search(arr, target):\n    left, right = 0, len(arr) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            left = mid + 1\n        else:\n            right = mid - 1\n    return -1", "category": "code"}
+{"id": "inst_00569", "instruction": "什么是注意力机制？", "output": "注意力机制是一种让模型在处理输入时能够聚焦于最相关部分的技术。它通过计算查询与键的相似度来分配注意力权重，然后对值进行加权求和。", "category": "instruction"}
+{"id": "math_00850", "instruction": "计算 30 的 5 次方", "output": "150", "category": "math"}
+{"id": "code_00414", "instruction": "用 Python 实现冒泡排序", "output": "def bubble_sort(arr):\n    n = len(arr)\n    for i in range(n):\n        for j in range(0, n-i-1):\n            if arr[j] > arr[j+1]:\n                arr[j], arr[j+1] = arr[j+1], arr[j]\n    return arr", "category": "code"}
+{"id": "code_00031", "instruction": "写一个 Python 装饰器用于计时", "output": "import time\ndef timer(func):\n    def wrapper(*args, **kwargs):\n        start = time.time()\n        result = func(*args, **kwargs)\n        print(f'{func.__name__} took {time.time()-start:.2f}s')\n        return result\n    return wrapper", "category": "code"}
+{"id": "math_00178", "instruction": "计算 50 的 50 次方", "output": "2500", "category": "math"}
+{"id": "math_00266", "instruction": "一个矩形的长为 77 厘米，宽为 48 厘米，求面积", "output": "面积 = 77 × 48 = 3696 平方厘米", "category": "math"}
+{"id": "math_00995", "instruction": "计算 17 + 38 的值", "output": "55", "category": "math"}
+{"id": "math_00050", "instruction": "计算 15 + 24 的值", "output": "39", "category": "math"}
+{"id": "math_00525", "instruction": "计算 48 + 15 的值", "output": "63", "category": "math"}
+{"id": "code_00405", "instruction": "写一个 Python 函数计算斐波那契数列的第 n 项", "output": "def fibonacci(n):\n    if n <= 1:\n        return n\n    return fibonacci(n-1) + fibonacci(n-2)", "category": "code"}
+{"id": "inst_00364", "instruction": "总结深度学习的三个关键组成部分", "output": "深度学习的三个关键组成部分是：1. 神经网络架构 2. 损失函数 3. 优化算法", "category": "instruction"}
+{"id": "math_00755", "instruction": "将分数 18/42 化为小数", "output": "2.67", "category": "math"}
+{"id": "code_00093", "instruction": "写一个函数判断一个字符串是否是回文", "output": "def is_palindrome(s):\n    return s == s[::-1]", "category": "code"}
+{"id": "code_00151", "instruction": "写一个函数判断一个字符串是否是回文", "output": "def is_palindrome(s):\n    return s == s[::-1]", "category": "code"}
+{"id": "inst_00734", "instruction": "解释什么是机器学习中的过拟合现象", "output": "过拟合是指模型在训练数据上表现很好，但在未见过的测试数据上表现较差的现象。这通常是因为模型过度学习了训练数据中的噪声和细节，而不是学习到了真正的规律。", "category": "instruction"}
+{"id": "math_00885", "instruction": "计算 74 的 16 次方", "output": "1184", "category": "math"}
+{"id": "math_00041", "instruction": "计算 21 的 30 次方", "output": "630", "category": "math"}
+{"id": "code_00617", "instruction": "写一个 Python 函数计算斐波那契数列的第 n 项", "output": "def fibonacci(n):\n    if n <= 1:\n        return n\n    return fibonacci(n-1) + fibonacci(n-2)", "category": "code"}
+{"id": "code_00725", "instruction": "用 Python 实现二分查找", "output": "def binary_search(arr, target):\n    left, right = 0, len(arr) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            left = mid + 1\n        else:\n            right = mid - 1\n    return -1", "category": "code"}
+{"id": "code_00783", "instruction": "用 Python 实现二分查找", "output": "def binary_search(arr, target):\n    left, right = 0, len(arr) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            left = mid + 1\n        else:\n            right = mid - 1\n    return -1", "category": "code"}
+{"id": "code_00092", "instruction": "写一个 Python 装饰器用于计时", "output": "import time\ndef timer(func):\n    def wrapper(*args, **kwargs):\n        start = time.time()\n        result = func(*args, **kwargs)\n        print(f'{func.__name__} took {time.time()-start:.2f}s')\n        return result\n    return wrapper", "category": "code"}
+{"id": "math_00843", "instruction": "求解方程 76x + 10 = 193", "output": "x = 2.41", "category": "math"}
+{"id": "math_00271", "instruction": "计算 95 的 21 次方", "output": "1995", "category": "math"}
+{"id": "inst_00474", "instruction": "什么是 Transformer 架构？", "output": "Transformer 是一种基于自注意力机制的神经网络架构，完全摒弃了循环和卷积结构。它由编码器和解码器组成，使用多头注意力和前馈网络。", "category": "instruction"}
+{"id": "math_00315", "instruction": "计算 91 的 25 次方", "output": "2275", "category": "math"}
+{"id": "math_00462", "instruction": "一个矩形的长为 96 厘米，宽为 22 厘米，求面积", "output": "面积 = 96 × 22 = 2112 平方厘米", "category": "math"}
+{"id": "math_00212", "instruction": "一个矩形的长为 82 厘米，宽为 30 厘米，求面积", "output": "面积 = 82 × 30 = 2460 平方厘米", "category": "math"}
+{"id": "inst_00366", "instruction": "什么是 Transformer 架构？", "output": "Transformer 是一种基于自注意力机制的神经网络架构，完全摒弃了循环和卷积结构。它由编码器和解码器组成，使用多头注意力和前馈网络。", "category": "instruction"}
+{"id": "inst_00548", "instruction": "总结深度学习的三个关键组成部分", "output": "深度学习的三个关键组成部分是：1. 神经网络架构 2. 损失函数 3. 优化算法", "category": "instruction"}
+{"id": "inst_00123", "instruction": "解释什么是机器学习中的过拟合现象", "output": "过拟合是指模型在训练数据上表现很好，但在未见过的测试数据上表现较差的现象。这通常是因为模型过度学习了训练数据中的噪声和细节，而不是学习到了真正的规律。", "category": "instruction"}
+{"id": "math_00416", "instruction": "计算 41 + 28 的值", "output": "69", "category": "math"}
+{"id": "math_00321", "instruction": "一个矩形的长为 44 厘米，宽为 40 厘米，求面积", "output": "面积 = 44 × 40 = 1760 平方厘米", "category": "math"}
+{"id": "math_00477", "instruction": "一个矩形的长为 10 厘米，宽为 42 厘米，求面积", "output": "面积 = 10 × 42 = 420 平方厘米", "category": "math"}
+{"id": "math_00460", "instruction": "计算 32 + 28 的值", "output": "60", "category": "math"}
+{"id": "code_00978", "instruction": "用 Python 实现二分查找", "output": "def binary_search(arr, target):\n    left, right = 0, len(arr) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            left = mid + 1\n        else:\n            right = mid - 1\n    return -1", "category": "code"}
+{"id": "math_00108", "instruction": "一个矩形的长为 65 厘米，宽为 32 厘米，求面积", "output": "面积 = 65 × 32 = 2080 平方厘米", "category": "math"}
+{"id": "math_00857", "instruction": "将分数 38/16 化为小数", "output": "4.39", "category": "math"}
+{"id": "math_00111", "instruction": "求解方程 82x + 17 = 42", "output": "x = 0.3", "category": "math"}
+{"id": "math_00598", "instruction": "计算 9 + 20 的值", "output": "29", "category": "math"}
+{"id": "code_00139", "instruction": "用 Python 实现冒泡排序", "output": "def bubble_sort(arr):\n    n = len(arr)\n    for i in range(n):\n        for j in range(0, n-i-1):\n            if arr[j] > arr[j+1]:\n                arr[j], arr[j+1] = arr[j+1], arr[j]\n    return arr", "category": "code"}
+{"id": "math_00207", "instruction": "一个矩形的长为 88 厘米，宽为 39 厘米，求面积", "output": "面积 = 88 × 39 = 3432 平方厘米", "category": "math"}
+{"id": "inst_00678", "instruction": "什么是注意力机制？", "output": "注意力机制是一种让模型在处理输入时能够聚焦于最相关部分的技术。它通过计算查询与键的相似度来分配注意力权重，然后对值进行加权求和。", "category": "instruction"}
+{"id": "code_00239", "instruction": "写一个函数判断一个字符串是否是回文", "output": "def is_palindrome(s):\n    return s == s[::-1]", "category": "code"}
+{"id": "inst_00800", "instruction": "解释梯度下降的基本原理", "output": "梯度下降是一种优化算法，通过计算损失函数关于参数的梯度，沿梯度的反方向更新参数，逐步最小化损失函数。", "category": "instruction"}
+{"id": "math_00463", "instruction": "求解方程 10x + 33 = 163", "output": "x = 13.0", "category": "math"}
+{"id": "math_00325", "instruction": "计算 31 + 41 的值", "output": "72", "category": "math"}
+{"id": "math_00855", "instruction": "计算 56 的 12 次方", "output": "672", "category": "math"}
+{"id": "inst_00402", "instruction": "解释什么是机器学习中的过拟合现象", "output": "过拟合是指模型在训练数据上表现很好，但在未见过的测试数据上表现较差的现象。这通常是因为模型过度学习了训练数据中的噪声和细节，而不是学习到了真正的规律。", "category": "instruction"}
+{"id": "inst_00952", "instruction": "什么是 Transformer 架构？", "output": "Transformer 是一种基于自注意力机制的神经网络架构，完全摒弃了循环和卷积结构。它由编码器和解码器组成，使用多头注意力和前馈网络。", "category": "instruction"}
+{"id": "inst_00267", "instruction": "解释梯度下降的基本原理", "output": "梯度下降是一种优化算法，通过计算损失函数关于参数的梯度，沿梯度的反方向更新参数，逐步最小化损失函数。", "category": "instruction"}
+{"id": "inst_00727", "instruction": "解释什么是机器学习中的过拟合现象", "output": "过拟合是指模型在训练数据上表现很好，但在未见过的测试数据上表现较差的现象。这通常是因为模型过度学习了训练数据中的噪声和细节，而不是学习到了真正的规律。", "category": "instruction"}
+{"id": "math_00242", "instruction": "计算 74 + 19 的值", "output": "93", "category": "math"}
+{"id": "math_00133", "instruction": "将分数 56/23 化为小数", "output": "2.93", "category": "math"}
+{"id": "code_00445", "instruction": "写一个 Python 装饰器用于计时", "output": "import time\ndef timer(func):\n    def wrapper(*args, **kwargs):\n        start = time.time()\n        result = func(*args, **kwargs)\n        print(f'{func.__name__} took {time.time()-start:.2f}s')\n        return result\n    return wrapper", "category": "code"}
+{"id": "math_00063", "instruction": "求解方程 1x + 5 = 182", "output": "x = 177.0", "category": "math"}
+{"id": "math_00581", "instruction": "计算 4 + 48 的值", "output": "52", "category": "math"}
+{"id": "code_00606", "instruction": "写一个 Python 函数计算斐波那契数列的第 n 项", "output": "def fibonacci(n):\n    if n <= 1:\n        return n\n    return fibonacci(n-1) + fibonacci(n-2)", "category": "code"}
+{"id": "math_00076", "instruction": "求解方程 10x + 29 = 141", "output": "x = 11.2", "category": "math"}
+{"id": "inst_00403", "instruction": "什么是 Transformer 架构？", "output": "Transformer 是一种基于自注意力机制的神经网络架构，完全摒弃了循环和卷积结构。它由编码器和解码器组成，使用多头注意力和前馈网络。", "category": "instruction"}
+{"id": "code_00652", "instruction": "写一个 Python 函数计算斐波那契数列的第 n 项", "output": "def fibonacci(n):\n    if n <= 1:\n        return n\n    return fibonacci(n-1) + fibonacci(n-2)", "category": "code"}
+{"id": "inst_00988", "instruction": "解释梯度下降的基本原理", "output": "梯度下降是一种优化算法，通过计算损失函数关于参数的梯度，沿梯度的反方向更新参数，逐步最小化损失函数。", "category": "instruction"}
+{"id": "inst_00517", "instruction": "什么是 Transformer 架构？", "output": "Transformer 是一种基于自注意力机制的神经网络架构，完全摒弃了循环和卷积结构。它由编码器和解码器组成，使用多头注意力和前馈网络。", "category": "instruction"}
+{"id": "math_00097", "instruction": "一个矩形的长为 97 厘米，宽为 5 厘米，求面积", "output": "面积 = 97 × 5 = 485 平方厘米", "category": "math"}
+{"id": "inst_00594", "instruction": "什么是 Transformer 架构？", "output": "Transformer 是一种基于自注意力机制的神经网络架构，完全摒弃了循环和卷积结构。它由编码器和解码器组成，使用多头注意力和前馈网络。", "category": "instruction"}
+{"id": "code_00946", "instruction": "用 Python 实现二分查找", "output": "def binary_search(arr, target):\n    left, right = 0, len(arr) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            left = mid + 1\n        else:\n            right = mid - 1\n    return -1", "category": "code"}
+{"id": "inst_00469", "instruction": "解释梯度下降的基本原理", "output": "梯度下降是一种优化算法，通过计算损失函数关于参数的梯度，沿梯度的反方向更新参数，逐步最小化损失函数。", "category": "instruction"}
+{"id": "code_00748", "instruction": "写一个 Python 函数计算斐波那契数列的第 n 项", "output": "def fibonacci(n):\n    if n <= 1:\n        return n\n    return fibonacci(n-1) + fibonacci(n-2)", "category": "code"}
+{"id": "math_00422", "instruction": "将分数 72/22 化为小数", "output": "2.08", "category": "math"}
+{"id": "code_00532", "instruction": "用 Python 实现二分查找", "output": "def binary_search(arr, target):\n    left, right = 0, len(arr) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            left = mid + 1\n        else:\n            right = mid - 1\n    return -1", "category": "code"}
+{"id": "inst_00237", "instruction": "什么是注意力机制？", "output": "注意力机制是一种让模型在处理输入时能够聚焦于最相关部分的技术。它通过计算查询与键的相似度来分配注意力权重，然后对值进行加权求和。", "category": "instruction"}
+{"id": "code_00044", "instruction": "写一个 Python 函数计算斐波那契数列的第 n 项", "output": "def fibonacci(n):\n    if n <= 1:\n        return n\n    return fibonacci(n-1) + fibonacci(n-2)", "category": "code"}
+{"id": "code_00095", "instruction": "写一个函数判断一个字符串是否是回文", "output": "def is_palindrome(s):\n    return s == s[::-1]", "category": "code"}
+{"id": "math_00286", "instruction": "计算 99 + 26 的值", "output": "125", "category": "math"}
+{"id": "code_00145", "instruction": "写一个函数判断一个字符串是否是回文", "output": "def is_palindrome(s):\n    return s == s[::-1]", "category": "code"}
+{"id": "code_00883", "instruction": "用 Python 实现冒泡排序", "output": "def bubble_sort(arr):\n    n = len(arr)\n    for i in range(n):\n        for j in range(0, n-i-1):\n            if arr[j] > arr[j+1]:\n                arr[j], arr[j+1] = arr[j+1], arr[j]\n    return arr", "category": "code"}
+{"id": "inst_00503", "instruction": "什么是 Transformer 架构？", "output": "Transformer 是一种基于自注意力机制的神经网络架构，完全摒弃了循环和卷积结构。它由编码器和解码器组成，使用多头注意力和前馈网络。", "category": "instruction"}
+{"id": "code_00760", "instruction": "写一个 Python 装饰器用于计时", "output": "import time\ndef timer(func):\n    def wrapper(*args, **kwargs):\n        start = time.time()\n        result = func(*args, **kwargs)\n        print(f'{func.__name__} took {time.time()-start:.2f}s')\n        return result\n    return wrapper", "category": "code"}
+{"id": "code_00243", "instruction": "写一个函数判断一个字符串是否是回文", "output": "def is_palindrome(s):\n    return s == s[::-1]", "category": "code"}
+{"id": "math_00542", "instruction": "将分数 70/33 化为小数", "output": "1.39", "category": "math"}
+{"id": "math_00930", "instruction": "一个矩形的长为 26 厘米，宽为 30 厘米，求面积", "output": "面积 = 26 × 30 = 780 平方厘米", "category": "math"}
+{"id": "math_00106", "instruction": "计算 96 + 36 的值", "output": "132", "category": "math"}
+{"id": "inst_00314", "instruction": "解释梯度下降的基本原理", "output": "梯度下降是一种优化算法，通过计算损失函数关于参数的梯度，沿梯度的反方向更新参数，逐步最小化损失函数。", "category": "instruction"}
+{"id": "math_00385", "instruction": "求解方程 83x + 41 = 153", "output": "x = 1.35", "category": "math"}
+{"id": "inst_00829", "instruction": "总结深度学习的三个关键组成部分", "output": "深度学习的三个关键组成部分是：1. 神经网络架构 2. 损失函数 3. 优化算法", "category": "instruction"}
+{"id": "inst_00001", "instruction": "总结深度学习的三个关键组成部分", "output": "深度学习的三个关键组成部分是：1. 神经网络架构 2. 损失函数 3. 优化算法", "category": "instruction"}
+{"id": "inst_00920", "instruction": "总结深度学习的三个关键组成部分", "output": "深度学习的三个关键组成部分是：1. 神经网络架构 2. 损失函数 3. 优化算法", "category": "instruction"}
+{"id": "math_00009", "instruction": "求解方程 98x + 22 = 27", "output": "x = 0.05", "category": "math"}
+{"id": "code_00651", "instruction": "用 Python 实现二分查找", "output": "def binary_search(arr, target):\n    left, right = 0, len(arr) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            left = mid + 1\n        else:\n            right = mid - 1\n    return -1", "category": "code"}
+{"id": "code_00354", "instruction": "写一个 Python 函数计算斐波那契数列的第 n 项", "output": "def fibonacci(n):\n    if n <= 1:\n        return n\n    return fibonacci(n-1) + fibonacci(n-2)", "category": "code"}
+{"id": "math_00554", "instruction": "求解方程 6x + 21 = 80", "output": "x = 9.83", "category": "math"}
+{"id": "math_00238", "instruction": "求解方程 39x + 1 = 182", "output": "x = 4.64", "category": "math"}
+{"id": "code_00024", "instruction": "写一个函数判断一个字符串是否是回文", "output": "def is_palindrome(s):\n    return s == s[::-1]", "category": "code"}
+{"id": "math_00419", "instruction": "计算 12 + 28 的值", "output": "40", "category": "math"}
+{"id": "code_00006", "instruction": "写一个 Python 函数计算斐波那契数列的第 n 项", "output": "def fibonacci(n):\n    if n <= 1:\n        return n\n    return fibonacci(n-1) + fibonacci(n-2)", "category": "code"}
+{"id": "inst_00154", "instruction": "总结深度学习的三个关键组成部分", "output": "深度学习的三个关键组成部分是：1. 神经网络架构 2. 损失函数 3. 优化算法", "category": "instruction"}
+{"id": "math_00251", "instruction": "将分数 55/20 化为小数", "output": "2.29", "category": "math"}
+{"id": "code_00897", "instruction": "用 Python 实现二分查找", "output": "def binary_search(arr, target):\n    left, right = 0, len(arr) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            left = mid + 1\n        else:\n            right = mid - 1\n    return -1", "category": "code"}
+{"id": "math_00200", "instruction": "将分数 96/46 化为小数", "output": "-0.17", "category": "math"}
+{"id": "code_00505", "instruction": "用 Python 实现冒泡排序", "output": "def bubble_sort(arr):\n    n = len(arr)\n    for i in range(n):\n        for j in range(0, n-i-1):\n            if arr[j] > arr[j+1]:\n                arr[j], arr[j+1] = arr[j+1], arr[j]\n    return arr", "category": "code"}
+{"id": "inst_00605", "instruction": "总结深度学习的三个关键组成部分", "output": "深度学习的三个关键组成部分是：1. 神经网络架构 2. 损失函数 3. 优化算法", "category": "instruction"}
+{"id": "inst_00796", "instruction": "什么是 Transformer 架构？", "output": "Transformer 是一种基于自注意力机制的神经网络架构，完全摒弃了循环和卷积结构。它由编码器和解码器组成，使用多头注意力和前馈网络。", "category": "instruction"}
+{"id": "math_00475", "instruction": "将分数 10/20 化为小数", "output": "9.9", "category": "math"}
+{"id": "math_00248", "instruction": "将分数 39/6 化为小数", "output": "1.49", "category": "math"}
+{"id": "inst_00637", "instruction": "什么是 Transformer 架构？", "output": "Transformer 是一种基于自注意力机制的神经网络架构，完全摒弃了循环和卷积结构。它由编码器和解码器组成，使用多头注意力和前馈网络。", "category": "instruction"}
+{"id": "math_00311", "instruction": "将分数 49/30 化为小数", "output": "1.08", "category": "math"}
+{"id": "math_00577", "instruction": "计算 73 的 3 次方", "output": "219", "category": "math"}
+{"id": "inst_00298", "instruction": "什么是注意力机制？", "output": "注意力机制是一种让模型在处理输入时能够聚焦于最相关部分的技术。它通过计算查询与键的相似度来分配注意力权重，然后对值进行加权求和。", "category": "instruction"}
+{"id": "math_00205", "instruction": "求解方程 10x + 38 = 177", "output": "x = 13.9", "category": "math"}
+{"id": "math_00377", "instruction": "将分数 54/38 化为小数", "output": "2.83", "category": "math"}
+{"id": "code_00981", "instruction": "写一个函数判断一个字符串是否是回文", "output": "def is_palindrome(s):\n    return s == s[::-1]", "category": "code"}
+{"id": "inst_00467", "instruction": "解释什么是机器学习中的过拟合现象", "output": "过拟合是指模型在训练数据上表现很好，但在未见过的测试数据上表现较差的现象。这通常是因为模型过度学习了训练数据中的噪声和细节，而不是学习到了真正的规律。", "category": "instruction"}
+{"id": "inst_00762", "instruction": "总结深度学习的三个关键组成部分", "output": "深度学习的三个关键组成部分是：1. 神经网络架构 2. 损失函数 3. 优化算法", "category": "instruction"}
+{"id": "inst_00839", "instruction": "什么是注意力机制？", "output": "注意力机制是一种让模型在处理输入时能够聚焦于最相关部分的技术。它通过计算查询与键的相似度来分配注意力权重，然后对值进行加权求和。", "category": "instruction"}
+{"id": "math_00335", "instruction": "计算 79 + 25 的值", "output": "104", "category": "math"}
+{"id": "math_00318", "instruction": "将分数 43/7 化为小数", "output": "2.47", "category": "math"}
+{"id": "code_00289", "instruction": "写一个 Python 函数计算斐波那契数列的第 n 项", "output": "def fibonacci(n):\n    if n <= 1:\n        return n\n    return fibonacci(n-1) + fibonacci(n-2)", "category": "code"}
+{"id": "code_00476", "instruction": "写一个 Python 函数计算斐波那契数列的第 n 项", "output": "def fibonacci(n):\n    if n <= 1:\n        return n\n    return fibonacci(n-1) + fibonacci(n-2)", "category": "code"}
+{"id": "math_00984", "instruction": "一个矩形的长为 44 厘米，宽为 36 厘米，求面积", "output": "面积 = 44 × 36 = 1584 平方厘米", "category": "math"}
+{"id": "math_00410", "instruction": "将分数 68/19 化为小数", "output": "1.44", "category": "math"}
+{"id": "code_00769", "instruction": "写一个 Python 函数计算斐波那契数列的第 n 项", "output": "def fibonacci(n):\n    if n <= 1:\n        return n\n    return fibonacci(n-1) + fibonacci(n-2)", "category": "code"}
+{"id": "math_00528", "instruction": "计算 90 的 9 次方", "output": "810", "category": "math"}
+{"id": "math_00228", "instruction": "将分数 48/31 化为小数", "output": "2.31", "category": "math"}
+{"id": "math_00764", "instruction": "计算 5 + 43 的值", "output": "48", "category": "math"}
+{"id": "inst_00053", "instruction": "什么是 Transformer 架构？", "output": "Transformer 是一种基于自注意力机制的神经网络架构，完全摒弃了循环和卷积结构。它由编码器和解码器组成，使用多头注意力和前馈网络。", "category": "instruction"}
+{"id": "inst_00689", "instruction": "总结深度学习的三个关键组成部分", "output": "深度学习的三个关键组成部分是：1. 神经网络架构 2. 损失函数 3. 优化算法", "category": "instruction"}
+{"id": "code_00514", "instruction": "用 Python 实现冒泡排序", "output": "def bubble_sort(arr):\n    n = len(arr)\n    for i in range(n):\n        for j in range(0, n-i-1):\n            if arr[j] > arr[j+1]:\n                arr[j], arr[j+1] = arr[j+1], arr[j]\n    return arr", "category": "code"}
+{"id": "math_00826", "instruction": "将分数 33/23 化为小数", "output": "1.39", "category": "math"}
+{"id": "math_00381", "instruction": "一个矩形的长为 28 厘米，宽为 29 厘米，求面积", "output": "面积 = 28 × 29 = 812 平方厘米", "category": "math"}
+{"id": "inst_00585", "instruction": "什么是注意力机制？", "output": "注意力机制是一种让模型在处理输入时能够聚焦于最相关部分的技术。它通过计算查询与键的相似度来分配注意力权重，然后对值进行加权求和。", "category": "instruction"}
+{"id": "code_00079", "instruction": "用 Python 实现二分查找", "output": "def binary_search(arr, target):\n    left, right = 0, len(arr) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            left = mid + 1\n        else:\n            right = mid - 1\n    return -1", "category": "code"}
+{"id": "inst_00277", "instruction": "总结深度学习的三个关键组成部分", "output": "深度学习的三个关键组成部分是：1. 神经网络架构 2. 损失函数 3. 优化算法", "category": "instruction"}
+{"id": "inst_00327", "instruction": "解释梯度下降的基本原理", "output": "梯度下降是一种优化算法，通过计算损失函数关于参数的梯度，沿梯度的反方向更新参数，逐步最小化损失函数。", "category": "instruction"}
+{"id": "inst_00737", "instruction": "解释什么是机器学习中的过拟合现象", "output": "过拟合是指模型在训练数据上表现很好，但在未见过的测试数据上表现较差的现象。这通常是因为模型过度学习了训练数据中的噪声和细节，而不是学习到了真正的规律。", "category": "instruction"}
+{"id": "math_00426", "instruction": "计算 74 + 33 的值", "output": "107", "category": "math"}
+{"id": "math_00945", "instruction": "计算 72 的 33 次方", "output": "2376", "category": "math"}
+{"id": "code_00329", "instruction": "写一个函数判断一个字符串是否是回文", "output": "def is_palindrome(s):\n    return s == s[::-1]", "category": "code"}
+{"id": "code_00229", "instruction": "用 Python 实现二分查找", "output": "def binary_search(arr, target):\n    left, right = 0, len(arr) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            left = mid + 1\n        else:\n            right = mid - 1\n    return -1", "category": "code"}
+{"id": "math_00429", "instruction": "一个矩形的长为 74 厘米，宽为 15 厘米，求面积", "output": "面积 = 74 × 15 = 1110 平方厘米", "category": "math"}
+{"id": "code_00671", "instruction": "用 Python 实现二分查找", "output": "def binary_search(arr, target):\n    left, right = 0, len(arr) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            left = mid + 1\n        else:\n            right = mid - 1\n    return -1", "category": "code"}
+{"id": "code_00775", "instruction": "写一个 Python 装饰器用于计时", "output": "import time\ndef timer(func):\n    def wrapper(*args, **kwargs):\n        start = time.time()\n        result = func(*args, **kwargs)\n        print(f'{func.__name__} took {time.time()-start:.2f}s')\n        return result\n    return wrapper", "category": "code"}
+{"id": "code_00731", "instruction": "用 Python 实现二分查找", "output": "def binary_search(arr, target):\n    left, right = 0, len(arr) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            left = mid + 1\n        else:\n            right = mid - 1\n    return -1", "category": "code"}
+{"id": "math_00944", "instruction": "一个矩形的长为 2 厘米，宽为 32 厘米，求面积", "output": "面积 = 2 × 32 = 64 平方厘米", "category": "math"}
+{"id": "math_00036", "instruction": "计算 68 的 17 次方", "output": "1156", "category": "math"}
+{"id": "code_00183", "instruction": "写一个 Python 装饰器用于计时", "output": "import time\ndef timer(func):\n    def wrapper(*args, **kwargs):\n        start = time.time()\n        result = func(*args, **kwargs)\n        print(f'{func.__name__} took {time.time()-start:.2f}s')\n        return result\n    return wrapper", "category": "code"}
+{"id": "math_00153", "instruction": "求解方程 87x + 20 = 58", "output": "x = 0.44", "category": "math"}
+{"id": "inst_00392", "instruction": "总结深度学习的三个关键组成部分", "output": "深度学习的三个关键组成部分是：1. 神经网络架构 2. 损失函数 3. 优化算法", "category": "instruction"}
+{"id": "code_00372", "instruction": "用 Python 实现二分查找", "output": "def binary_search(arr, target):\n    left, right = 0, len(arr) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            left = mid + 1\n        else:\n            right = mid - 1\n    return -1", "category": "code"}
+{"id": "math_00483", "instruction": "计算 58 + 7 的值", "output": "65", "category": "math"}
+{"id": "code_00047", "instruction": "用 Python 实现冒泡排序", "output": "def bubble_sort(arr):\n    n = len(arr)\n    for i in range(n):\n        for j in range(0, n-i-1):\n            if arr[j] > arr[j+1]:\n                arr[j], arr[j+1] = arr[j+1], arr[j]\n    return arr", "category": "code"}
+{"id": "inst_00840", "instruction": "什么是 Transformer 架构？", "output": "Transformer 是一种基于自注意力机制的神经网络架构，完全摒弃了循环和卷积结构。它由编码器和解码器组成，使用多头注意力和前馈网络。", "category": "instruction"}
+{"id": "math_00825", "instruction": "计算 68 + 10 的值", "output": "78", "category": "math"}
+{"id": "inst_00045", "instruction": "什么是注意力机制？", "output": "注意力机制是一种让模型在处理输入时能够聚焦于最相关部分的技术。它通过计算查询与键的相似度来分配注意力权重，然后对值进行加权求和。", "category": "instruction"}
+{"id": "math_00002", "instruction": "计算 87 + 48 的值", "output": "135", "category": "math"}
+{"id": "math_00927", "instruction": "求解方程 27x + 18 = 193", "output": "x = 6.48", "category": "math"}
+{"id": "math_00828", "instruction": "计算 59 的 37 次方", "output": "2183", "category": "math"}
+{"id": "code_00233", "instruction": "用 Python 实现冒泡排序", "output": "def bubble_sort(arr):\n    n = len(arr)\n    for i in range(n):\n        for j in range(0, n-i-1):\n            if arr[j] > arr[j+1]:\n                arr[j], arr[j+1] = arr[j+1], arr[j]\n    return arr", "category": "code"}
+{"id": "inst_00837", "instruction": "解释什么是机器学习中的过拟合现象", "output": "过拟合是指模型在训练数据上表现很好，但在未见过的测试数据上表现较差的现象。这通常是因为模型过度学习了训练数据中的噪声和细节，而不是学习到了真正的规律。", "category": "instruction"}
+{"id": "math_00740", "instruction": "将分数 57/8 化为小数", "output": "2.93", "category": "math"}
+{"id": "math_00690", "instruction": "将分数 35/36 化为小数", "output": "4.09", "category": "math"}
+{"id": "math_00587", "instruction": "求解方程 10x + 29 = 45", "output": "x = 1.6", "category": "math"}
+{"id": "inst_00999", "instruction": "解释什么是机器学习中的过拟合现象", "output": "过拟合是指模型在训练数据上表现很好，但在未见过的测试数据上表现较差的现象。这通常是因为模型过度学习了训练数据中的噪声和细节，而不是学习到了真正的规律。", "category": "instruction"}
+{"id": "code_00261", "instruction": "写一个函数判断一个字符串是否是回文", "output": "def is_palindrome(s):\n    return s == s[::-1]", "category": "code"}
+{"id": "math_00161", "instruction": "将分数 60/4 化为小数", "output": "2.32", "category": "math"}
+{"id": "math_00997", "instruction": "一个矩形的长为 16 厘米，宽为 28 厘米，求面积", "output": "面积 = 16 × 28 = 448 平方厘米", "category": "math"}
+{"id": "code_00962", "instruction": "用 Python 实现冒泡排序", "output": "def bubble_sort(arr):\n    n = len(arr)\n    for i in range(n):\n        for j in range(0, n-i-1):\n            if arr[j] > arr[j+1]:\n                arr[j], arr[j+1] = arr[j+1], arr[j]\n    return arr", "category": "code"}
+{"id": "math_00580", "instruction": "一个矩形的长为 51 厘米，宽为 21 厘米，求面积", "output": "面积 = 51 × 21 = 1071 平方厘米", "category": "math"}
+{"id": "code_00912", "instruction": "写一个 Python 函数计算斐波那契数列的第 n 项", "output": "def fibonacci(n):\n    if n <= 1:\n        return n\n    return fibonacci(n-1) + fibonacci(n-2)", "category": "code"}
+{"id": "inst_00833", "instruction": "解释什么是机器学习中的过拟合现象", "output": "过拟合是指模型在训练数据上表现很好，但在未见过的测试数据上表现较差的现象。这通常是因为模型过度学习了训练数据中的噪声和细节，而不是学习到了真正的规律。", "category": "instruction"}
+{"id": "math_00368", "instruction": "一个矩形的长为 87 厘米，宽为 48 厘米，求面积", "output": "面积 = 87 × 48 = 4176 平方厘米", "category": "math"}
+{"id": "inst_00860", "instruction": "什么是注意力机制？", "output": "注意力机制是一种让模型在处理输入时能够聚焦于最相关部分的技术。它通过计算查询与键的相似度来分配注意力权重，然后对值进行加权求和。", "category": "instruction"}
+{"id": "math_00466", "instruction": "求解方程 78x + 10 = 195", "output": "x = 2.37", "category": "math"}
+{"id": "code_00819", "instruction": "写一个 Python 装饰器用于计时", "output": "import time\ndef timer(func):\n    def wrapper(*args, **kwargs):\n        start = time.time()\n        result = func(*args, **kwargs)\n        print(f'{func.__name__} took {time.time()-start:.2f}s')\n        return result\n    return wrapper", "category": "code"}
+{"id": "inst_00078", "instruction": "总结深度学习的三个关键组成部分", "output": "深度学习的三个关键组成部分是：1. 神经网络架构 2. 损失函数 3. 优化算法", "category": "instruction"}
+{"id": "inst_00642", "instruction": "什么是注意力机制？", "output": "注意力机制是一种让模型在处理输入时能够聚焦于最相关部分的技术。它通过计算查询与键的相似度来分配注意力权重，然后对值进行加权求和。", "category": "instruction"}
+{"id": "code_00590", "instruction": "写一个 Python 函数计算斐波那契数列的第 n 项", "output": "def fibonacci(n):\n    if n <= 1:\n        return n\n    return fibonacci(n-1) + fibonacci(n-2)", "category": "code"}
+{"id": "code_00877", "instruction": "用 Python 实现冒泡排序", "output": "def bubble_sort(arr):\n    n = len(arr)\n    for i in range(n):\n        for j in range(0, n-i-1):\n            if arr[j] > arr[j+1]:\n                arr[j], arr[j+1] = arr[j+1], arr[j]\n    return arr", "category": "code"}
+{"id": "code_00269", "instruction": "用 Python 实现二分查找", "output": "def binary_search(arr, target):\n    left, right = 0, len(arr) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            left = mid + 1\n        else:\n            right = mid - 1\n    return -1", "category": "code"}
+{"id": "math_00065", "instruction": "计算 43 + 5 的值", "output": "48", "category": "math"}
+{"id": "code_00536", "instruction": "写一个 Python 装饰器用于计时", "output": "import time\ndef timer(func):\n    def wrapper(*args, **kwargs):\n        start = time.time()\n        result = func(*args, **kwargs)\n        print(f'{func.__name__} took {time.time()-start:.2f}s')\n        return result\n    return wrapper", "category": "code"}
+{"id": "inst_00278", "instruction": "解释梯度下降的基本原理", "output": "梯度下降是一种优化算法，通过计算损失函数关于参数的梯度，沿梯度的反方向更新参数，逐步最小化损失函数。", "category": "instruction"}
+{"id": "code_00953", "instruction": "写一个 Python 装饰器用于计时", "output": "import time\ndef timer(func):\n    def wrapper(*args, **kwargs):\n        start = time.time()\n        result = func(*args, **kwargs)\n        print(f'{func.__name__} took {time.time()-start:.2f}s')\n        return result\n    return wrapper", "category": "code"}
+{"id": "inst_00343", "instruction": "总结深度学习的三个关键组成部分", "output": "深度学习的三个关键组成部分是：1. 神经网络架构 2. 损失函数 3. 优化算法", "category": "instruction"}
+{"id": "math_00030", "instruction": "求解方程 32x + 48 = 144", "output": "x = 3.0", "category": "math"}
+{"id": "math_00789", "instruction": "计算 25 + 49 的值", "output": "74", "category": "math"}
+{"id": "inst_00120", "instruction": "总结深度学习的三个关键组成部分", "output": "深度学习的三个关键组成部分是：1. 神经网络架构 2. 损失函数 3. 优化算法", "category": "instruction"}
+{"id": "inst_00750", "instruction": "解释什么是机器学习中的过拟合现象", "output": "过拟合是指模型在训练数据上表现很好，但在未见过的测试数据上表现较差的现象。这通常是因为模型过度学习了训练数据中的噪声和细节，而不是学习到了真正的规律。", "category": "instruction"}
+{"id": "code_00275", "instruction": "用 Python 实现冒泡排序", "output": "def bubble_sort(arr):\n    n = len(arr)\n    for i in range(n):\n        for j in range(0, n-i-1):\n            if arr[j] > arr[j+1]:\n                arr[j], arr[j+1] = arr[j+1], arr[j]\n    return arr", "category": "code"}
+{"id": "math_00799", "instruction": "将分数 64/30 化为小数", "output": "-0.06", "category": "math"}
+{"id": "code_00767", "instruction": "写一个 Python 函数计算斐波那契数列的第 n 项", "output": "def fibonacci(n):\n    if n <= 1:\n        return n\n    return fibonacci(n-1) + fibonacci(n-2)", "category": "code"}
+{"id": "inst_00129", "instruction": "什么是注意力机制？", "output": "注意力机制是一种让模型在处理输入时能够聚焦于最相关部分的技术。它通过计算查询与键的相似度来分配注意力权重，然后对值进行加权求和。", "category": "instruction"}
+{"id": "code_00380", "instruction": "写一个函数判断一个字符串是否是回文", "output": "def is_palindrome(s):\n    return s == s[::-1]", "category": "code"}
+{"id": "inst_00170", "instruction": "什么是注意力机制？", "output": "注意力机制是一种让模型在处理输入时能够聚焦于最相关部分的技术。它通过计算查询与键的相似度来分配注意力权重，然后对值进行加权求和。", "category": "instruction"}
+{"id": "math_00265", "instruction": "求解方程 35x + 10 = 19", "output": "x = 0.26", "category": "math"}
+{"id": "inst_00970", "instruction": "总结深度学习的三个关键组成部分", "output": "深度学习的三个关键组成部分是：1. 神经网络架构 2. 损失函数 3. 优化算法", "category": "instruction"}
+{"id": "inst_00801", "instruction": "什么是注意力机制？", "output": "注意力机制是一种让模型在处理输入时能够聚焦于最相关部分的技术。它通过计算查询与键的相似度来分配注意力权重，然后对值进行加权求和。", "category": "instruction"}
+{"id": "inst_00529", "instruction": "解释梯度下降的基本原理", "output": "梯度下降是一种优化算法，通过计算损失函数关于参数的梯度，沿梯度的反方向更新参数，逐步最小化损失函数。", "category": "instruction"}
+{"id": "math_00535", "instruction": "计算 77 的 35 次方", "output": "2695", "category": "math"}
+{"id": "math_00355", "instruction": "计算 5 的 38 次方", "output": "190", "category": "math"}
+{"id": "inst_00508", "instruction": "什么是 Transformer 架构？", "output": "Transformer 是一种基于自注意力机制的神经网络架构，完全摒弃了循环和卷积结构。它由编码器和解码器组成，使用多头注意力和前馈网络。", "category": "instruction"}
+{"id": "code_00167", "instruction": "用 Python 实现冒泡排序", "output": "def bubble_sort(arr):\n    n = len(arr)\n    for i in range(n):\n        for j in range(0, n-i-1):\n            if arr[j] > arr[j+1]:\n                arr[j], arr[j+1] = arr[j+1], arr[j]\n    return arr", "category": "code"}
+{"id": "math_00011", "instruction": "计算 94 + 30 的值", "output": "124", "category": "math"}
+{"id": "math_00872", "instruction": "一个矩形的长为 35 厘米，宽为 32 厘米，求面积", "output": "面积 = 35 × 32 = 1120 平方厘米", "category": "math"}
+{"id": "math_00994", "instruction": "计算 91 + 7 的值", "output": "98", "category": "math"}
+{"id": "math_00724", "instruction": "一个矩形的长为 89 厘米，宽为 16 厘米，求面积", "output": "面积 = 89 × 16 = 1424 平方厘米", "category": "math"}
+{"id": "inst_00907", "instruction": "什么是 Transformer 架构？", "output": "Transformer 是一种基于自注意力机制的神经网络架构，完全摒弃了循环和卷积结构。它由编码器和解码器组成，使用多头注意力和前馈网络。", "category": "instruction"}
+{"id": "inst_00122", "instruction": "总结深度学习的三个关键组成部分", "output": "深度学习的三个关键组成部分是：1. 神经网络架构 2. 损失函数 3. 优化算法", "category": "instruction"}
+{"id": "inst_00179", "instruction": "解释什么是机器学习中的过拟合现象", "output": "过拟合是指模型在训练数据上表现很好，但在未见过的测试数据上表现较差的现象。这通常是因为模型过度学习了训练数据中的噪声和细节，而不是学习到了真正的规律。", "category": "instruction"}
+{"id": "inst_00758", "instruction": "解释什么是机器学习中的过拟合现象", "output": "过拟合是指模型在训练数据上表现很好，但在未见过的测试数据上表现较差的现象。这通常是因为模型过度学习了训练数据中的噪声和细节，而不是学习到了真正的规律。", "category": "instruction"}
+{"id": "inst_00673", "instruction": "什么是 Transformer 架构？", "output": "Transformer 是一种基于自注意力机制的神经网络架构，完全摒弃了循环和卷积结构。它由编码器和解码器组成，使用多头注意力和前馈网络。", "category": "instruction"}
+{"id": "inst_00759", "instruction": "解释梯度下降的基本原理", "output": "梯度下降是一种优化算法，通过计算损失函数关于参数的梯度，沿梯度的反方向更新参数，逐步最小化损失函数。", "category": "instruction"}
+{"id": "code_00682", "instruction": "用 Python 实现二分查找", "output": "def binary_search(arr, target):\n    left, right = 0, len(arr) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            left = mid + 1\n        else:\n            right = mid - 1\n    return -1", "category": "code"}
+{"id": "inst_00316", "instruction": "总结深度学习的三个关键组成部分", "output": "深度学习的三个关键组成部分是：1. 神经网络架构 2. 损失函数 3. 优化算法", "category": "instruction"}
+{"id": "math_00056", "instruction": "将分数 78/28 化为小数", "output": "0.35", "category": "math"}
+{"id": "math_00623", "instruction": "求解方程 41x + 46 = 82", "output": "x = 0.88", "category": "math"}
+{"id": "inst_00626", "instruction": "什么是 Transformer 架构？", "output": "Transformer 是一种基于自注意力机制的神经网络架构，完全摒弃了循环和卷积结构。它由编码器和解码器组成，使用多头注意力和前馈网络。", "category": "instruction"}
+{"id": "math_00464", "instruction": "将分数 25/50 化为小数", "output": "1.6", "category": "math"}
+{"id": "math_00118", "instruction": "计算 46 + 50 的值", "output": "96", "category": "math"}
+{"id": "math_00444", "instruction": "计算 37 + 44 的值", "output": "81", "category": "math"}
+{"id": "inst_00963", "instruction": "解释什么是机器学习中的过拟合现象", "output": "过拟合是指模型在训练数据上表现很好，但在未见过的测试数据上表现较差的现象。这通常是因为模型过度学习了训练数据中的噪声和细节，而不是学习到了真正的规律。", "category": "instruction"}
+{"id": "math_00250", "instruction": "将分数 49/29 化为小数", "output": "1.73", "category": "math"}
+{"id": "inst_00059", "instruction": "什么是注意力机制？", "output": "注意力机制是一种让模型在处理输入时能够聚焦于最相关部分的技术。它通过计算查询与键的相似度来分配注意力权重，然后对值进行加权求和。", "category": "instruction"}
+{"id": "math_00244", "instruction": "计算 33 + 31 的值", "output": "64", "category": "math"}
+{"id": "math_00956", "instruction": "求解方程 39x + 3 = 116", "output": "x = 2.9", "category": "math"}
+{"id": "math_00447", "instruction": "将分数 8/1 化为小数", "output": "6.5", "category": "math"}
+{"id": "code_00715", "instruction": "写一个函数判断一个字符串是否是回文", "output": "def is_palindrome(s):\n    return s == s[::-1]", "category": "code"}
+{"id": "math_00862", "instruction": "一个矩形的长为 14 厘米，宽为 9 厘米，求面积", "output": "面积 = 14 × 9 = 126 平方厘米", "category": "math"}
+{"id": "inst_00067", "instruction": "什么是 Transformer 架构？", "output": "Transformer 是一种基于自注意力机制的神经网络架构，完全摒弃了循环和卷积结构。它由编码器和解码器组成，使用多头注意力和前馈网络。", "category": "instruction"}
+{"id": "code_00658", "instruction": "写一个 Python 装饰器用于计时", "output": "import time\ndef timer(func):\n    def wrapper(*args, **kwargs):\n        start = time.time()\n        result = func(*args, **kwargs)\n        print(f'{func.__name__} took {time.time()-start:.2f}s')\n        return result\n    return wrapper", "category": "code"}
+{"id": "inst_00697", "instruction": "解释梯度下降的基本原理", "output": "梯度下降是一种优化算法，通过计算损失函数关于参数的梯度，沿梯度的反方向更新参数，逐步最小化损失函数。", "category": "instruction"}
+{"id": "math_00979", "instruction": "计算 100 + 47 的值", "output": "147", "category": "math"}
+{"id": "code_00894", "instruction": "用 Python 实现冒泡排序", "output": "def bubble_sort(arr):\n    n = len(arr)\n    for i in range(n):\n        for j in range(0, n-i-1):\n            if arr[j] > arr[j+1]:\n                arr[j], arr[j+1] = arr[j+1], arr[j]\n    return arr", "category": "code"}
+{"id": "code_00649", "instruction": "写一个函数判断一个字符串是否是回文", "output": "def is_palindrome(s):\n    return s == s[::-1]", "category": "code"}
+{"id": "code_00600", "instruction": "用 Python 实现二分查找", "output": "def binary_search(arr, target):\n    left, right = 0, len(arr) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            left = mid + 1\n        else:\n            right = mid - 1\n    return -1", "category": "code"}
+{"id": "code_00400", "instruction": "写一个 Python 函数计算斐波那契数列的第 n 项", "output": "def fibonacci(n):\n    if n <= 1:\n        return n\n    return fibonacci(n-1) + fibonacci(n-2)", "category": "code"}
+{"id": "code_00334", "instruction": "用 Python 实现冒泡排序", "output": "def bubble_sort(arr):\n    n = len(arr)\n    for i in range(n):\n        for j in range(0, n-i-1):\n            if arr[j] > arr[j+1]:\n                arr[j], arr[j+1] = arr[j+1], arr[j]\n    return arr", "category": "code"}
+{"id": "inst_00935", "instruction": "什么是 Transformer 架构？", "output": "Transformer 是一种基于自注意力机制的神经网络架构，完全摒弃了循环和卷积结构。它由编码器和解码器组成，使用多头注意力和前馈网络。", "category": "instruction"}
+{"id": "math_00159", "instruction": "计算 97 + 50 的值", "output": "147", "category": "math"}
+{"id": "inst_00827", "instruction": "解释什么是机器学习中的过拟合现象", "output": "过拟合是指模型在训练数据上表现很好，但在未见过的测试数据上表现较差的现象。这通常是因为模型过度学习了训练数据中的噪声和细节，而不是学习到了真正的规律。", "category": "instruction"}
+{"id": "inst_00208", "instruction": "什么是 Transformer 架构？", "output": "Transformer 是一种基于自注意力机制的神经网络架构，完全摒弃了循环和卷积结构。它由编码器和解码器组成，使用多头注意力和前馈网络。", "category": "instruction"}
+{"id": "code_00523", "instruction": "用 Python 实现二分查找", "output": "def binary_search(arr, target):\n    left, right = 0, len(arr) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            left = mid + 1\n        else:\n            right = mid - 1\n    return -1", "category": "code"}
+{"id": "math_00080", "instruction": "计算 8 的 11 次方", "output": "88", "category": "math"}
+{"id": "code_00317", "instruction": "写一个 Python 函数计算斐波那契数列的第 n 项", "output": "def fibonacci(n):\n    if n <= 1:\n        return n\n    return fibonacci(n-1) + fibonacci(n-2)", "category": "code"}
+{"id": "inst_00085", "instruction": "解释什么是机器学习中的过拟合现象", "output": "过拟合是指模型在训练数据上表现很好，但在未见过的测试数据上表现较差的现象。这通常是因为模型过度学习了训练数据中的噪声和细节，而不是学习到了真正的规律。", "category": "instruction"}
+{"id": "math_00284", "instruction": "计算 98 的 36 次方", "output": "3528", "category": "math"}
+{"id": "math_00156", "instruction": "计算 81 的 37 次方", "output": "2997", "category": "math"}
+{"id": "inst_00968", "instruction": "解释梯度下降的基本原理", "output": "梯度下降是一种优化算法，通过计算损失函数关于参数的梯度，沿梯度的反方向更新参数，逐步最小化损失函数。", "category": "instruction"}
+{"id": "inst_00550", "instruction": "解释梯度下降的基本原理", "output": "梯度下降是一种优化算法，通过计算损失函数关于参数的梯度，沿梯度的反方向更新参数，逐步最小化损失函数。", "category": "instruction"}
+{"id": "math_00549", "instruction": "将分数 44/42 化为小数", "output": "0.07", "category": "math"}
+{"id": "math_00655", "instruction": "计算 79 的 48 次方", "output": "3792", "category": "math"}
+{"id": "math_00084", "instruction": "一个矩形的长为 28 厘米，宽为 4 厘米，求面积", "output": "面积 = 28 × 4 = 112 平方厘米", "category": "math"}
+{"id": "code_00411", "instruction": "用 Python 实现二分查找", "output": "def binary_search(arr, target):\n    left, right = 0, len(arr) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            left = mid + 1\n        else:\n            right = mid - 1\n    return -1", "category": "code"}
+{"id": "code_00718", "instruction": "用 Python 实现冒泡排序", "output": "def bubble_sort(arr):\n    n = len(arr)\n    for i in range(n):\n        for j in range(0, n-i-1):\n            if arr[j] > arr[j+1]:\n                arr[j], arr[j+1] = arr[j+1], arr[j]\n    return arr", "category": "code"}
+{"id": "inst_00433", "instruction": "什么是注意力机制？", "output": "注意力机制是一种让模型在处理输入时能够聚焦于最相关部分的技术。它通过计算查询与键的相似度来分配注意力权重，然后对值进行加权求和。", "category": "instruction"}
+{"id": "inst_00425", "instruction": "什么是 Transformer 架构？", "output": "Transformer 是一种基于自注意力机制的神经网络架构，完全摒弃了循环和卷积结构。它由编码器和解码器组成，使用多头注意力和前馈网络。", "category": "instruction"}
+{"id": "math_00785", "instruction": "一个矩形的长为 27 厘米，宽为 22 厘米，求面积", "output": "面积 = 27 × 22 = 594 平方厘米", "category": "math"}
+{"id": "inst_00513", "instruction": "什么是 Transformer 架构？", "output": "Transformer 是一种基于自注意力机制的神经网络架构，完全摒弃了循环和卷积结构。它由编码器和解码器组成，使用多头注意力和前馈网络。", "category": "instruction"}
+{"id": "math_00729", "instruction": "求解方程 29x + 9 = 123", "output": "x = 3.93", "category": "math"}
+{"id": "math_00973", "instruction": "求解方程 74x + 41 = 69", "output": "x = 0.38", "category": "math"}
+{"id": "inst_00293", "instruction": "解释梯度下降的基本原理", "output": "梯度下降是一种优化算法，通过计算损失函数关于参数的梯度，沿梯度的反方向更新参数，逐步最小化损失函数。", "category": "instruction"}
+{"id": "inst_00518", "instruction": "什么是 Transformer 架构？", "output": "Transformer 是一种基于自注意力机制的神经网络架构，完全摒弃了循环和卷积结构。它由编码器和解码器组成，使用多头注意力和前馈网络。", "category": "instruction"}
+{"id": "math_00407", "instruction": "计算 42 + 39 的值", "output": "81", "category": "math"}
+{"id": "code_00808", "instruction": "写一个函数判断一个字符串是否是回文", "output": "def is_palindrome(s):\n    return s == s[::-1]", "category": "code"}
+{"id": "code_00061", "instruction": "用 Python 实现冒泡排序", "output": "def bubble_sort(arr):\n    n = len(arr)\n    for i in range(n):\n        for j in range(0, n-i-1):\n            if arr[j] > arr[j+1]:\n                arr[j], arr[j+1] = arr[j+1], arr[j]\n    return arr", "category": "code"}
+{"id": "inst_00040", "instruction": "什么是注意力机制？", "output": "注意力机制是一种让模型在处理输入时能够聚焦于最相关部分的技术。它通过计算查询与键的相似度来分配注意力权重，然后对值进行加权求和。", "category": "instruction"}
+{"id": "inst_00220", "instruction": "什么是注意力机制？", "output": "注意力机制是一种让模型在处理输入时能够聚焦于最相关部分的技术。它通过计算查询与键的相似度来分配注意力权重，然后对值进行加权求和。", "category": "instruction"}
+{"id": "math_00268", "instruction": "一个矩形的长为 90 厘米，宽为 26 厘米，求面积", "output": "面积 = 90 × 26 = 2340 平方厘米", "category": "math"}
+{"id": "inst_00014", "instruction": "什么是注意力机制？", "output": "注意力机制是一种让模型在处理输入时能够聚焦于最相关部分的技术。它通过计算查询与键的相似度来分配注意力权重，然后对值进行加权求和。", "category": "instruction"}
+{"id": "inst_00069", "instruction": "解释梯度下降的基本原理", "output": "梯度下降是一种优化算法，通过计算损失函数关于参数的梯度，沿梯度的反方向更新参数，逐步最小化损失函数。", "category": "instruction"}
+{"id": "inst_00601", "instruction": "解释什么是机器学习中的过拟合现象", "output": "过拟合是指模型在训练数据上表现很好，但在未见过的测试数据上表现较差的现象。这通常是因为模型过度学习了训练数据中的噪声和细节，而不是学习到了真正的规律。", "category": "instruction"}
+{"id": "inst_00017", "instruction": "解释什么是机器学习中的过拟合现象", "output": "过拟合是指模型在训练数据上表现很好，但在未见过的测试数据上表现较差的现象。这通常是因为模型过度学习了训练数据中的噪声和细节，而不是学习到了真正的规律。", "category": "instruction"}
+{"id": "math_00074", "instruction": "一个矩形的长为 14 厘米，宽为 16 厘米，求面积", "output": "面积 = 14 × 16 = 224 平方厘米", "category": "math"}
+{"id": "math_00788", "instruction": "计算 87 的 39 次方", "output": "3393", "category": "math"}
+{"id": "code_00482", "instruction": "写一个 Python 装饰器用于计时", "output": "import time\ndef timer(func):\n    def wrapper(*args, **kwargs):\n        start = time.time()\n        result = func(*args, **kwargs)\n        print(f'{func.__name__} took {time.time()-start:.2f}s')\n        return result\n    return wrapper", "category": "code"}
+{"id": "code_00781", "instruction": "用 Python 实现冒泡排序", "output": "def bubble_sort(arr):\n    n = len(arr)\n    for i in range(n):\n        for j in range(0, n-i-1):\n            if arr[j] > arr[j+1]:\n                arr[j], arr[j+1] = arr[j+1], arr[j]\n    return arr", "category": "code"}
+{"id": "math_00176", "instruction": "计算 53 的 22 次方", "output": "1166", "category": "math"}
+{"id": "inst_00699", "instruction": "什么是注意力机制？", "output": "注意力机制是一种让模型在处理输入时能够聚焦于最相关部分的技术。它通过计算查询与键的相似度来分配注意力权重，然后对值进行加权求和。", "category": "instruction"}
+{"id": "math_00559", "instruction": "一个矩形的长为 56 厘米，宽为 26 厘米，求面积", "output": "面积 = 56 × 26 = 1456 平方厘米", "category": "math"}
+{"id": "code_00374", "instruction": "写一个 Python 函数计算斐波那契数列的第 n 项", "output": "def fibonacci(n):\n    if n <= 1:\n        return n\n    return fibonacci(n-1) + fibonacci(n-2)", "category": "code"}
+{"id": "inst_00430", "instruction": "什么是 Transformer 架构？", "output": "Transformer 是一种基于自注意力机制的神经网络架构，完全摒弃了循环和卷积结构。它由编码器和解码器组成，使用多头注意力和前馈网络。", "category": "instruction"}
+{"id": "code_00582", "instruction": "用 Python 实现二分查找", "output": "def binary_search(arr, target):\n    left, right = 0, len(arr) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            left = mid + 1\n        else:\n            right = mid - 1\n    return -1", "category": "code"}
+{"id": "inst_00859", "instruction": "总结深度学习的三个关键组成部分", "output": "深度学习的三个关键组成部分是：1. 神经网络架构 2. 损失函数 3. 优化算法", "category": "instruction"}
+{"id": "inst_00881", "instruction": "什么是 Transformer 架构？", "output": "Transformer 是一种基于自注意力机制的神经网络架构，完全摒弃了循环和卷积结构。它由编码器和解码器组成，使用多头注意力和前馈网络。", "category": "instruction"}
+{"id": "math_00396", "instruction": "一个矩形的长为 7 厘米，宽为 9 厘米，求面积", "output": "面积 = 7 × 9 = 63 平方厘米", "category": "math"}
+{"id": "code_00135", "instruction": "写一个 Python 装饰器用于计时", "output": "import time\ndef timer(func):\n    def wrapper(*args, **kwargs):\n        start = time.time()\n        result = func(*args, **kwargs)\n        print(f'{func.__name__} took {time.time()-start:.2f}s')\n        return result\n    return wrapper", "category": "code"}
+{"id": "code_00324", "instruction": "写一个 Python 装饰器用于计时", "output": "import time\ndef timer(func):\n    def wrapper(*args, **kwargs):\n        start = time.time()\n        result = func(*args, **kwargs)\n        print(f'{func.__name__} took {time.time()-start:.2f}s')\n        return result\n    return wrapper", "category": "code"}
+{"id": "math_00369", "instruction": "计算 82 的 24 次方", "output": "1968", "category": "math"}
+{"id": "math_00012", "instruction": "计算 11 的 36 次方", "output": "396", "category": "math"}
+{"id": "code_00540", "instruction": "写一个 Python 函数计算斐波那契数列的第 n 项", "output": "def fibonacci(n):\n    if n <= 1:\n        return n\n    return fibonacci(n-1) + fibonacci(n-2)", "category": "code"}
+{"id": "inst_00072", "instruction": "解释什么是机器学习中的过拟合现象", "output": "过拟合是指模型在训练数据上表现很好，但在未见过的测试数据上表现较差的现象。这通常是因为模型过度学习了训练数据中的噪声和细节，而不是学习到了真正的规律。", "category": "instruction"}
+{"id": "math_00608", "instruction": "求解方程 21x + 21 = 182", "output": "x = 7.67", "category": "math"}
+{"id": "math_00653", "instruction": "一个矩形的长为 61 厘米，宽为 34 厘米，求面积", "output": "面积 = 61 × 34 = 2074 平方厘米", "category": "math"}
+{"id": "inst_00511", "instruction": "解释梯度下降的基本原理", "output": "梯度下降是一种优化算法，通过计算损失函数关于参数的梯度，沿梯度的反方向更新参数，逐步最小化损失函数。", "category": "instruction"}
+{"id": "code_00246", "instruction": "写一个 Python 装饰器用于计时", "output": "import time\ndef timer(func):\n    def wrapper(*args, **kwargs):\n        start = time.time()\n        result = func(*args, **kwargs)\n        print(f'{func.__name__} took {time.time()-start:.2f}s')\n        return result\n    return wrapper", "category": "code"}
+{"id": "math_00115", "instruction": "一个矩形的长为 75 厘米，宽为 36 厘米，求面积", "output": "面积 = 75 × 36 = 2700 平方厘米", "category": "math"}
+{"id": "math_00395", "instruction": "一个矩形的长为 31 厘米，宽为 38 厘米，求面积", "output": "面积 = 31 × 38 = 1178 平方厘米", "category": "math"}
+{"id": "math_00506", "instruction": "将分数 22/47 化为小数", "output": "3.0", "category": "math"}
+{"id": "inst_00245", "instruction": "解释梯度下降的基本原理", "output": "梯度下降是一种优化算法，通过计算损失函数关于参数的梯度，沿梯度的反方向更新参数，逐步最小化损失函数。", "category": "instruction"}
+{"id": "math_00812", "instruction": "将分数 63/12 化为小数", "output": "2.02", "category": "math"}
+{"id": "math_00919", "instruction": "一个矩形的长为 83 厘米，宽为 7 厘米，求面积", "output": "面积 = 83 × 7 = 581 平方厘米", "category": "math"}
+{"id": "inst_00802", "instruction": "什么是注意力机制？", "output": "注意力机制是一种让模型在处理输入时能够聚焦于最相关部分的技术。它通过计算查询与键的相似度来分配注意力权重，然后对值进行加权求和。", "category": "instruction"}
+{"id": "code_00055", "instruction": "写一个 Python 装饰器用于计时", "output": "import time\ndef timer(func):\n    def wrapper(*args, **kwargs):\n        start = time.time()\n        result = func(*args, **kwargs)\n        print(f'{func.__name__} took {time.time()-start:.2f}s')\n        return result\n    return wrapper", "category": "code"}
+{"id": "inst_00661", "instruction": "解释什么是机器学习中的过拟合现象", "output": "过拟合是指模型在训练数据上表现很好，但在未见过的测试数据上表现较差的现象。这通常是因为模型过度学习了训练数据中的噪声和细节，而不是学习到了真正的规律。", "category": "instruction"}
+{"id": "code_00302", "instruction": "用 Python 实现冒泡排序", "output": "def bubble_sort(arr):\n    n = len(arr)\n    for i in range(n):\n        for j in range(0, n-i-1):\n            if arr[j] > arr[j+1]:\n                arr[j], arr[j+1] = arr[j+1], arr[j]\n    return arr", "category": "code"}
+{"id": "code_00401", "instruction": "用 Python 实现冒泡排序", "output": "def bubble_sort(arr):\n    n = len(arr)\n    for i in range(n):\n        for j in range(0, n-i-1):\n            if arr[j] > arr[j+1]:\n                arr[j], arr[j+1] = arr[j+1], arr[j]\n    return arr", "category": "code"}
+{"id": "code_00765", "instruction": "写一个 Python 函数计算斐波那契数列的第 n 项", "output": "def fibonacci(n):\n    if n <= 1:\n        return n\n    return fibonacci(n-1) + fibonacci(n-2)", "category": "code"}
+{"id": "math_00193", "instruction": "计算 61 + 2 的值", "output": "63", "category": "math"}
+{"id": "math_00521", "instruction": "计算 12 的 15 次方", "output": "180", "category": "math"}
+{"id": "math_00621", "instruction": "计算 21 + 29 的值", "output": "50", "category": "math"}
+{"id": "code_00530", "instruction": "写一个 Python 函数计算斐波那契数列的第 n 项", "output": "def fibonacci(n):\n    if n <= 1:\n        return n\n    return fibonacci(n-1) + fibonacci(n-2)", "category": "code"}
+{"id": "code_00210", "instruction": "写一个函数判断一个字符串是否是回文", "output": "def is_palindrome(s):\n    return s == s[::-1]", "category": "code"}
+{"id": "code_00308", "instruction": "用 Python 实现二分查找", "output": "def binary_search(arr, target):\n    left, right = 0, len(arr) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            left = mid + 1\n        else:\n            right = mid - 1\n    return -1", "category": "code"}
+{"id": "math_00896", "instruction": "将分数 62/38 化为小数", "output": "1.05", "category": "math"}
+{"id": "math_00674", "instruction": "一个矩形的长为 85 厘米，宽为 31 厘米，求面积", "output": "面积 = 85 × 31 = 2635 平方厘米", "category": "math"}
+{"id": "math_00867", "instruction": "计算 50 的 50 次方", "output": "2500", "category": "math"}
+{"id": "inst_00868", "instruction": "什么是 Transformer 架构？", "output": "Transformer 是一种基于自注意力机制的神经网络架构，完全摒弃了循环和卷积结构。它由编码器和解码器组成，使用多头注意力和前馈网络。", "category": "instruction"}
+{"id": "math_00027", "instruction": "将分数 92/21 化为小数", "output": "0.37", "category": "math"}
+{"id": "inst_00707", "instruction": "总结深度学习的三个关键组成部分", "output": "深度学习的三个关键组成部分是：1. 神经网络架构 2. 损失函数 3. 优化算法", "category": "instruction"}
+{"id": "math_00797", "instruction": "一个矩形的长为 49 厘米，宽为 30 厘米，求面积", "output": "面积 = 49 × 30 = 1470 平方厘米", "category": "math"}
+{"id": "code_00291", "instruction": "写一个 Python 函数计算斐波那契数列的第 n 项", "output": "def fibonacci(n):\n    if n <= 1:\n        return n\n    return fibonacci(n-1) + fibonacci(n-2)", "category": "code"}
+{"id": "code_00622", "instruction": "用 Python 实现冒泡排序", "output": "def bubble_sort(arr):\n    n = len(arr)\n    for i in range(n):\n        for j in range(0, n-i-1):\n            if arr[j] > arr[j+1]:\n                arr[j], arr[j+1] = arr[j+1], arr[j]\n    return arr", "category": "code"}
+{"id": "math_00738", "instruction": "将分数 65/13 化为小数", "output": "2.06", "category": "math"}
+{"id": "math_00614", "instruction": "将分数 6/2 化为小数", "output": "3.17", "category": "math"}
+{"id": "math_00615", "instruction": "将分数 34/42 化为小数", "output": "0.35", "category": "math"}
+{"id": "math_00566", "instruction": "一个矩形的长为 85 厘米，宽为 19 厘米，求面积", "output": "面积 = 85 × 19 = 1615 平方厘米", "category": "math"}
+{"id": "inst_00254", "instruction": "总结深度学习的三个关键组成部分", "output": "深度学习的三个关键组成部分是：1. 神经网络架构 2. 损失函数 3. 优化算法", "category": "instruction"}
+{"id": "inst_00086", "instruction": "解释什么是机器学习中的过拟合现象", "output": "过拟合是指模型在训练数据上表现很好，但在未见过的测试数据上表现较差的现象。这通常是因为模型过度学习了训练数据中的噪声和细节，而不是学习到了真正的规律。", "category": "instruction"}
+{"id": "math_00660", "instruction": "计算 75 的 20 次方", "output": "1500", "category": "math"}
+{"id": "code_00283", "instruction": "用 Python 实现二分查找", "output": "def binary_search(arr, target):\n    left, right = 0, len(arr) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            left = mid + 1\n        else:\n            right = mid - 1\n    return -1", "category": "code"}
+{"id": "inst_00253", "instruction": "解释什么是机器学习中的过拟合现象", "output": "过拟合是指模型在训练数据上表现很好，但在未见过的测试数据上表现较差的现象。这通常是因为模型过度学习了训练数据中的噪声和细节，而不是学习到了真正的规律。", "category": "instruction"}
+{"id": "code_00960", "instruction": "写一个 Python 装饰器用于计时", "output": "import time\ndef timer(func):\n    def wrapper(*args, **kwargs):\n        start = time.time()\n        result = func(*args, **kwargs)\n        print(f'{func.__name__} took {time.time()-start:.2f}s')\n        return result\n    return wrapper", "category": "code"}
+{"id": "code_00810", "instruction": "用 Python 实现冒泡排序", "output": "def bubble_sort(arr):\n    n = len(arr)\n    for i in range(n):\n        for j in range(0, n-i-1):\n            if arr[j] > arr[j+1]:\n                arr[j], arr[j+1] = arr[j+1], arr[j]\n    return arr", "category": "code"}
+{"id": "math_00322", "instruction": "计算 43 + 44 的值", "output": "87", "category": "math"}
+{"id": "math_00439", "instruction": "计算 20 + 11 的值", "output": "31", "category": "math"}
+{"id": "code_00976", "instruction": "写一个函数判断一个字符串是否是回文", "output": "def is_palindrome(s):\n    return s == s[::-1]", "category": "code"}
+{"id": "inst_00393", "instruction": "什么是 Transformer 架构？", "output": "Transformer 是一种基于自注意力机制的神经网络架构，完全摒弃了循环和卷积结构。它由编码器和解码器组成，使用多头注意力和前馈网络。", "category": "instruction"}
+{"id": "code_00747", "instruction": "写一个 Python 函数计算斐波那契数列的第 n 项", "output": "def fibonacci(n):\n    if n <= 1:\n        return n\n    return fibonacci(n-1) + fibonacci(n-2)", "category": "code"}
+{"id": "code_00603", "instruction": "写一个 Python 装饰器用于计时", "output": "import time\ndef timer(func):\n    def wrapper(*args, **kwargs):\n        start = time.time()\n        result = func(*args, **kwargs)\n        print(f'{func.__name__} took {time.time()-start:.2f}s')\n        return result\n    return wrapper", "category": "code"}
+{"id": "math_00126", "instruction": "计算 49 + 3 的值", "output": "52", "category": "math"}
+{"id": "math_00770", "instruction": "一个矩形的长为 30 厘米，宽为 47 厘米，求面积", "output": "面积 = 30 × 47 = 1410 平方厘米", "category": "math"}
+{"id": "math_00143", "instruction": "求解方程 25x + 27 = 171", "output": "x = 5.76", "category": "math"}
+{"id": "math_00102", "instruction": "计算 70 的 46 次方", "output": "3220", "category": "math"}
+{"id": "math_00918", "instruction": "一个矩形的长为 6 厘米，宽为 46 厘米，求面积", "output": "面积 = 6 × 46 = 276 平方厘米", "category": "math"}
+{"id": "math_00088", "instruction": "将分数 11/12 化为小数", "output": "0.55", "category": "math"}
+{"id": "math_00222", "instruction": "求解方程 11x + 16 = 185", "output": "x = 15.36", "category": "math"}
+{"id": "code_00880", "instruction": "用 Python 实现二分查找", "output": "def binary_search(arr, target):\n    left, right = 0, len(arr) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            left = mid + 1\n        else:\n            right = mid - 1\n    return -1", "category": "code"}
+{"id": "math_00453", "instruction": "计算 56 + 2 的值", "output": "58", "category": "math"}
+{"id": "inst_00703", "instruction": "总结深度学习的三个关键组成部分", "output": "深度学习的三个关键组成部分是：1. 神经网络架构 2. 损失函数 3. 优化算法", "category": "instruction"}
+{"id": "code_00630", "instruction": "用 Python 实现冒泡排序", "output": "def bubble_sort(arr):\n    n = len(arr)\n    for i in range(n):\n        for j in range(0, n-i-1):\n            if arr[j] > arr[j+1]:\n                arr[j], arr[j+1] = arr[j+1], arr[j]\n    return arr", "category": "code"}
+{"id": "inst_00421", "instruction": "什么是 Transformer 架构？", "output": "Transformer 是一种基于自注意力机制的神经网络架构，完全摒弃了循环和卷积结构。它由编码器和解码器组成，使用多头注意力和前馈网络。", "category": "instruction"}
+{"id": "code_00941", "instruction": "用 Python 实现冒泡排序", "output": "def bubble_sort(arr):\n    n = len(arr)\n    for i in range(n):\n        for j in range(0, n-i-1):\n            if arr[j] > arr[j+1]:\n                arr[j], arr[j+1] = arr[j+1], arr[j]\n    return arr", "category": "code"}
+{"id": "math_00155", "instruction": "求解方程 61x + 40 = 197", "output": "x = 2.57", "category": "math"}
+{"id": "math_00766", "instruction": "计算 13 + 39 的值", "output": "52", "category": "math"}
+{"id": "inst_00643", "instruction": "什么是注意力机制？", "output": "注意力机制是一种让模型在处理输入时能够聚焦于最相关部分的技术。它通过计算查询与键的相似度来分配注意力权重，然后对值进行加权求和。", "category": "instruction"}
+{"id": "math_00218", "instruction": "计算 64 + 21 的值", "output": "85", "category": "math"}
+{"id": "code_00739", "instruction": "用 Python 实现冒泡排序", "output": "def bubble_sort(arr):\n    n = len(arr)\n    for i in range(n):\n        for j in range(0, n-i-1):\n            if arr[j] > arr[j+1]:\n                arr[j], arr[j+1] = arr[j+1], arr[j]\n    return arr", "category": "code"}
+{"id": "math_00359", "instruction": "将分数 47/34 化为小数", "output": "2.02", "category": "math"}
+{"id": "inst_00450", "instruction": "总结深度学习的三个关键组成部分", "output": "深度学习的三个关键组成部分是：1. 神经网络架构 2. 损失函数 3. 优化算法", "category": "instruction"}
+{"id": "inst_00168", "instruction": "解释梯度下降的基本原理", "output": "梯度下降是一种优化算法，通过计算损失函数关于参数的梯度，沿梯度的反方向更新参数，逐步最小化损失函数。", "category": "instruction"}
+{"id": "code_00665", "instruction": "用 Python 实现冒泡排序", "output": "def bubble_sort(arr):\n    n = len(arr)\n    for i in range(n):\n        for j in range(0, n-i-1):\n            if arr[j] > arr[j+1]:\n                arr[j], arr[j+1] = arr[j+1], arr[j]\n    return arr", "category": "code"}
+{"id": "inst_00624", "instruction": "什么是注意力机制？", "output": "注意力机制是一种让模型在处理输入时能够聚焦于最相关部分的技术。它通过计算查询与键的相似度来分配注意力权重，然后对值进行加权求和。", "category": "instruction"}
+{"id": "code_00008", "instruction": "写一个函数判断一个字符串是否是回文", "output": "def is_palindrome(s):\n    return s == s[::-1]", "category": "code"}
+{"id": "math_00576", "instruction": "计算 31 + 50 的值", "output": "81", "category": "math"}
+{"id": "code_00543", "instruction": "用 Python 实现二分查找", "output": "def binary_search(arr, target):\n    left, right = 0, len(arr) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            left = mid + 1\n        else:\n            right = mid - 1\n    return -1", "category": "code"}
+{"id": "math_00070", "instruction": "计算 85 + 28 的值", "output": "113", "category": "math"}
+{"id": "code_00146", "instruction": "写一个 Python 函数计算斐波那契数列的第 n 项", "output": "def fibonacci(n):\n    if n <= 1:\n        return n\n    return fibonacci(n-1) + fibonacci(n-2)", "category": "code"}
+{"id": "code_00693", "instruction": "写一个 Python 函数计算斐波那契数列的第 n 项", "output": "def fibonacci(n):\n    if n <= 1:\n        return n\n    return fibonacci(n-1) + fibonacci(n-2)", "category": "code"}
+{"id": "code_00656", "instruction": "写一个 Python 装饰器用于计时", "output": "import time\ndef timer(func):\n    def wrapper(*args, **kwargs):\n        start = time.time()\n        result = func(*args, **kwargs)\n        print(f'{func.__name__} took {time.time()-start:.2f}s')\n        return result\n    return wrapper", "category": "code"}
+{"id": "math_00136", "instruction": "将分数 25/17 化为小数", "output": "-0.2", "category": "math"}
+{"id": "math_00895", "instruction": "求解方程 92x + 28 = 97", "output": "x = 0.75", "category": "math"}
+{"id": "math_00771", "instruction": "将分数 99/44 化为小数", "output": "0.39", "category": "math"}
+{"id": "code_00832", "instruction": "写一个 Python 函数计算斐波那契数列的第 n 项", "output": "def fibonacci(n):\n    if n <= 1:\n        return n\n    return fibonacci(n-1) + fibonacci(n-2)", "category": "code"}
+{"id": "math_00792", "instruction": "求解方程 95x + 8 = 192", "output": "x = 1.94", "category": "math"}
+{"id": "math_00391", "instruction": "求解方程 77x + 1 = 71", "output": "x = 0.91", "category": "math"}
+{"id": "math_00140", "instruction": "计算 86 + 22 的值", "output": "108", "category": "math"}
+{"id": "math_00306", "instruction": "将分数 35/1 化为小数", "output": "2.06", "category": "math"}
+{"id": "math_00902", "instruction": "将分数 6/37 化为小数", "output": "21.5", "category": "math"}
+{"id": "math_00376", "instruction": "将分数 18/25 化为小数", "output": "5.11", "category": "math"}
+{"id": "code_00320", "instruction": "用 Python 实现冒泡排序", "output": "def bubble_sort(arr):\n    n = len(arr)\n    for i in range(n):\n        for j in range(0, n-i-1):\n            if arr[j] > arr[j+1]:\n                arr[j], arr[j+1] = arr[j+1], arr[j]\n    return arr", "category": "code"}
+{"id": "inst_00105", "instruction": "总结深度学习的三个关键组成部分", "output": "深度学习的三个关键组成部分是：1. 神经网络架构 2. 损失函数 3. 优化算法", "category": "instruction"}

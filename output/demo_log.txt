@@ -1,0 +1,4 @@
+生成 500 个样本 -> data/demo_data.jsonl
+  code: 149
+  instruction: 138
+  math: 213

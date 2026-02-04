@@ -1,0 +1,70 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Jupyter
+.ipynb_checkpoints/
+
+# PyTorch / ML
+*.pth
+*.pt
+*.ckpt
+*.safetensors
+
+# Data files (optional - uncomment if needed)
+# *.h5
+# *.hdf5
+# *.parquet
+
+# Logs
+*.log
+logs/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Claude Code
+.claude/
+
+# Environment variables
+.env
+.env.local
+
+# Cache
+.cache/
+*.cache
+
+# Output (optional - uncomment if you don't want to track outputs)
+# output/
