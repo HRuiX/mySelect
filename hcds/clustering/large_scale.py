@@ -140,12 +140,13 @@ class LargeScaleClusterer(Clusterer):
         pilot_embeddings: np.ndarray
     ) -> Tuple[np.ndarray, np.ndarray]:
         """
-        对 Pilot 集聚类
+        对 Pilot 集聚类 (优先使用 GPU)
 
         Returns:
             (标签, 簇中心)
         """
-        clusterer = HDBSCANClusterer(**self.hdbscan_config)
+        print(f"对 Pilot 集 ({len(pilot_embeddings):,} 个样本) 执行 HDBSCAN...")
+        clusterer = HDBSCANClusterer(**self.hdbscan_config, use_gpu=True)
         result = clusterer.fit(pilot_embeddings)
         return result.labels, result.centroids
 

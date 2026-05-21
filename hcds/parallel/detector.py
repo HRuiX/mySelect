@@ -107,7 +107,11 @@ class ParallelDetector:
 
     def _calc_embedding_batch(self, gpu_memory_gb: float) -> int:
         """根据显存计算嵌入 batch size"""
-        if gpu_memory_gb >= 20:
+        if gpu_memory_gb >= 70:  # A100 80GB
+            return 1024
+        elif gpu_memory_gb >= 40:  # A100 40GB
+            return 512
+        elif gpu_memory_gb >= 20:
             return 256
         elif gpu_memory_gb >= 14:
             return 128

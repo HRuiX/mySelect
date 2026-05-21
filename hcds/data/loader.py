@@ -84,7 +84,21 @@ class Sample:
 
 
 class DataLoader:
-    """统一数据加载器"""
+    """
+    统一数据加载器
+
+    支持多种数据源:
+    - 本地文件: JSONL, JSON, Parquet, CSV
+    - HuggingFace 数据集: 使用 hf:// 前缀或直接使用数据集名
+
+    Examples:
+        # 本地文件
+        loader = DataLoader(config)  # config.data.path = "data/train.jsonl"
+
+        # HuggingFace 数据集
+        loader = DataLoader(config)  # config.data.path = "hf://maveriq/bigbenchhard"
+        loader = DataLoader(config)  # config.data.path = "princeton-nlp/less_data"
+    """
 
     def __init__(
         self,
@@ -116,6 +130,10 @@ class DataLoader:
         # 移除 None 值
         self._field_mapping = {k: v for k, v in self._field_mapping.items() if v}
 
+        # HuggingFace 特定配置
+        self._hf_split = getattr(config, 'hf_split', 'train')
+        self._hf_subset = getattr(config, 'hf_subset', None)
+
     def load(self) -> Dict[str, Sample]:
         """
         加载数据
@@ -130,12 +148,23 @@ class DataLoader:
             print(f"正在加载数据: {self.config.path}")
 
         # 获取解析器
-        format_type = DataFormat(self.config.format)
-        parser = get_parser(
-            self.config.path,
-            format=format_type,
-            field_mapping=self._field_mapping
-        )
+        format_type = detect_format(self.config.path)
+
+        # 根据格式类型选择不同的加载方式
+        if format_type == DataFormat.HUGGINGFACE:
+            parser = get_parser(
+                self.config.path,
+                format=format_type,
+                field_mapping=self._field_mapping,
+                split=self._hf_split,
+                subset=self._hf_subset,
+            )
+        else:
+            parser = get_parser(
+                self.config.path,
+                format=format_type,
+                field_mapping=self._field_mapping
+            )
 
         samples = {}
         sample_ids = []

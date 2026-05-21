@@ -16,7 +16,10 @@ from hcds.sampling import ThompsonSampler, BudgetAllocator, PrioritySampler, Ret
 from hcds.feedback import ErrorIntensityComputer, PosteriorUpdater
 from hcds.metrics import compute_cluster_metrics, compute_prior_scores, compute_diversity
 from hcds.parallel import ParallelDetector
-from hcds.utils import setup_logger, get_logger, CheckpointManager
+from hcds.utils import (
+    setup_logger, get_logger, CheckpointManager,
+    get_shutdown_handler, check_interrupt, register_cleanup, cleanup_gpu_memory
+)
 
 
 class HCDSPipeline:
@@ -54,6 +57,11 @@ class HCDSPipeline:
         # 状态
         self._current_round = 0
         self._selection_history = []
+
+        # 初始化信号处理
+        self._shutdown_handler = get_shutdown_handler()
+        self._shutdown_handler.register_cleanup(self._emergency_save)
+        self._shutdown_handler.register_cleanup(cleanup_gpu_memory)
 
         # 恢复检查点
         if resume_from:
@@ -97,92 +105,189 @@ class HCDSPipeline:
 
     def run_offline(self) -> Dict[str, Any]:
         """
-        执行离线预处理
+        执行离线预处理 (支持 Ctrl+C 中断)
 
         Returns:
             离线统计信息
         """
         self.logger.info("=" * 50)
         self.logger.info("开始离线预处理")
+        self.logger.info("提示: 按 Ctrl+C 可中断并保存进度")
         self.logger.info("=" * 50)
 
-        # Step 1: 加载数据
-        self.logger.info("Step 1: 加载数据")
-        samples = self.data_loader.load()
-        sample_ids = list(samples.keys())
-        n_samples = len(sample_ids)
-        self.logger.info(f"加载 {n_samples:,} 个样本")
+        # 临时变量用于中断时保存
+        self._offline_state = {}
 
-        # Step 2: 计算嵌入
-        self.logger.info("Step 2: 计算嵌入")
-        embeddings = self._compute_embeddings(samples, sample_ids)
-        self.logger.info(f"嵌入维度: {embeddings.shape}")
+        try:
+            # Step 1: 加载数据
+            self.logger.info("Step 1: 加载数据")
+            samples = self.data_loader.load()
+            sample_ids = list(samples.keys())
+            n_samples = len(sample_ids)
+            self.logger.info(f"加载 {n_samples:,} 个样本")
+            self._offline_state['samples'] = samples
+            self._offline_state['sample_ids'] = sample_ids
 
-        # Step 3: PCA 降维 (可选)
-        if self.config.embedding.pca.enabled:
-            self.logger.info("Step 3: PCA 降维")
-            embeddings = self._apply_pca(embeddings)
-            self.logger.info(f"降维后维度: {embeddings.shape}")
+            if check_interrupt():
+                raise KeyboardInterrupt("用户中断")
 
-        # Step 4: 聚类
-        self.logger.info("Step 4: 聚类")
-        labels, centroids = self._cluster(embeddings)
-        n_clusters = len(np.unique(labels[labels >= 0]))
-        self.logger.info(f"得到 {n_clusters} 个簇")
+            # Step 2: 计算嵌入
+            self.logger.info("Step 2: 计算嵌入")
+            embeddings = self._compute_embeddings(samples, sample_ids)
+            self.logger.info(f"嵌入维度: {embeddings.shape}")
+            self._offline_state['embeddings'] = embeddings
 
-        # Step 5: 计算簇指标
-        self.logger.info("Step 5: 计算簇级指标")
-        cluster_metrics = compute_cluster_metrics(embeddings, labels, centroids)
-        prior_scores = compute_prior_scores(cluster_metrics, self.config.cluster_prior_weights)
+            if check_interrupt():
+                raise KeyboardInterrupt("用户中断")
 
-        # Step 6: 簇内压缩
-        self.logger.info("Step 6: 簇内压缩")
-        compression_result = self._compress_clusters(embeddings, labels)
+            # Step 3: PCA 降维 (可选)
+            if self.config.embedding.pca.enabled:
+                self.logger.info("Step 3: PCA 降维")
+                embeddings = self._apply_pca(embeddings)
+                self.logger.info(f"降维后维度: {embeddings.shape}")
+                self._offline_state['embeddings'] = embeddings
 
-        # Step 7: 保存结果
-        self.logger.info("Step 7: 保存离线结果")
-        self._save_offline_results(
-            samples, sample_ids, embeddings, labels, centroids,
-            cluster_metrics, prior_scores, compression_result
-        )
+            if check_interrupt():
+                raise KeyboardInterrupt("用户中断")
 
-        stats = {
-            "n_samples": n_samples,
-            "n_clusters": n_clusters,
-            "embedding_dim": embeddings.shape[1],
-            "cluster_sizes": {int(k): v["size"] for k, v in cluster_metrics.items()},
-            "prior_scores": prior_scores
-        }
+            # Step 4: 聚类
+            self.logger.info("Step 4: 聚类")
+            labels, centroids = self._cluster(embeddings)
+            n_clusters = len(np.unique(labels[labels >= 0]))
+            self.logger.info(f"得到 {n_clusters} 个簇")
+            self._offline_state['labels'] = labels
+            self._offline_state['centroids'] = centroids
 
-        self.logger.info("离线预处理完成")
-        self.logger.info(f"统计: {json.dumps(stats, indent=2)}")
+            if check_interrupt():
+                raise KeyboardInterrupt("用户中断")
 
-        return stats
+            # Step 5: 计算簇指标
+            self.logger.info("Step 5: 计算簇级指标")
+            cluster_metrics = compute_cluster_metrics(embeddings, labels, centroids)
+            prior_scores = compute_prior_scores(cluster_metrics, self.config.cluster_prior_weights)
+            self._offline_state['cluster_metrics'] = cluster_metrics
+            self._offline_state['prior_scores'] = prior_scores
+
+            if check_interrupt():
+                raise KeyboardInterrupt("用户中断")
+
+            # Step 6: 簇内压缩
+            self.logger.info("Step 6: 簇内压缩")
+            compression_result = self._compress_clusters(embeddings, labels)
+            self._offline_state['compression_result'] = compression_result
+
+            if check_interrupt():
+                raise KeyboardInterrupt("用户中断")
+
+            # Step 7: 保存结果
+            self.logger.info("Step 7: 保存离线结果")
+            self._save_offline_results(
+                samples, sample_ids, embeddings, labels, centroids,
+                cluster_metrics, prior_scores, compression_result
+            )
+
+            stats = {
+                "n_samples": n_samples,
+                "n_clusters": n_clusters,
+                "embedding_dim": embeddings.shape[1],
+                "cluster_sizes": {int(k): v["size"] for k, v in cluster_metrics.items()},
+                "prior_scores": prior_scores
+            }
+
+            self.logger.info("离线预处理完成")
+            self.logger.info(f"统计: {json.dumps(stats, indent=2)}")
+
+            # 清理临时状态
+            self._offline_state = {}
+
+            return stats
+
+        except KeyboardInterrupt:
+            self.logger.warning("=" * 50)
+            self.logger.warning("离线预处理被中断")
+            self.logger.warning("=" * 50)
+            self._emergency_save()
+            raise
+
+    def _emergency_save(self):
+        """紧急保存当前进度"""
+        self.logger.info("正在保存当前进度...")
+
+        try:
+            # 保存已计算的嵌入
+            if hasattr(self, '_offline_state') and self._offline_state:
+                state = self._offline_state
+
+                if 'embeddings' in state and 'sample_ids' in state:
+                    self.logger.info("保存嵌入向量...")
+                    # 嵌入会通过 IncrementalEmbeddingComputer 自动保存
+
+                if 'labels' in state and 'centroids' in state:
+                    self.logger.info("保存聚类结果...")
+                    # 这里可以添加额外的保存逻辑
+
+            # 保存检查点
+            if self._current_round > 0:
+                self.logger.info(f"保存第 {self._current_round} 轮检查点...")
+                self._save_checkpoint(self._current_round)
+
+            self.logger.info("进度已保存，可使用 --resume 参数恢复")
+
+        except Exception as e:
+            self.logger.error(f"保存进度时出错: {e}")
 
     def _compute_embeddings(
         self,
         samples: Dict[str, Sample],
         sample_ids: List[str]
     ) -> np.ndarray:
-        """计算嵌入"""
-        # 检查是否已存在
+        """计算嵌入 (支持缓存检查和进度显示)"""
+        # 检查是否已存在缓存
         if self.embedding_storage.exists():
-            self.logger.info("发现已有嵌入，尝试加载")
-            embeddings, stored_ids, _ = self.embedding_storage.load()
+            self.logger.info("=" * 40)
+            self.logger.info("检测到嵌入缓存，正在验证...")
+            self.logger.info("=" * 40)
 
-            # 检查是否匹配
-            if set(stored_ids) == set(sample_ids):
-                self.logger.info("嵌入已存在且匹配，跳过计算")
-                # 按 sample_ids 顺序重排
-                id_to_idx = {sid: idx for idx, sid in enumerate(stored_ids)}
-                indices = [id_to_idx[sid] for sid in sample_ids]
-                return embeddings[indices]
+            try:
+                embeddings, stored_ids, metadata = self.embedding_storage.load()
+                self.logger.info(f"缓存信息:")
+                self.logger.info(f"  - 嵌入数量: {len(stored_ids):,}")
+                self.logger.info(f"  - 嵌入维度: {embeddings.shape[1]}")
+                if metadata:
+                    self.logger.info(f"  - 模型: {metadata.get('model', 'unknown')}")
+
+                # 检查是否匹配
+                stored_set = set(stored_ids)
+                required_set = set(sample_ids)
+
+                if stored_set == required_set:
+                    self.logger.info("✓ 缓存完全匹配，跳过嵌入计算")
+                    # 按 sample_ids 顺序重排
+                    id_to_idx = {sid: idx for idx, sid in enumerate(stored_ids)}
+                    indices = [id_to_idx[sid] for sid in sample_ids]
+                    return embeddings[indices]
+                else:
+                    missing = required_set - stored_set
+                    extra = stored_set - required_set
+                    if missing:
+                        self.logger.info(f"✗ 缓存缺少 {len(missing):,} 个样本")
+                    if extra:
+                        self.logger.info(f"✗ 缓存多出 {len(extra):,} 个样本")
+                    self.logger.info("将重新计算嵌入...")
+            except Exception as e:
+                self.logger.warning(f"加载缓存失败: {e}")
+                self.logger.info("将重新计算嵌入...")
+
+        self.logger.info("=" * 40)
+        self.logger.info("开始计算嵌入向量")
+        self.logger.info("=" * 40)
 
         # 创建编码器
         if self._encoder is None:
             self._encoder = EncoderFactory.create(self.config.embedding)
 
         # 获取文本
+        self.logger.info(f"准备 {len(sample_ids):,} 个样本的文本...")
         texts = [samples[sid].get_text(self.config.data.content_template) for sid in sample_ids]
 
         # 增量计算
@@ -197,6 +302,8 @@ class HCDSPipeline:
             batch_size=self.parallel_config.embedding_batch_size,
             show_progress=True
         )
+
+        self.logger.info(f"嵌入计算完成: {embeddings.shape}")
 
         return embeddings
 

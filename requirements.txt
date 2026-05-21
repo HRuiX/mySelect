@@ -17,9 +17,18 @@ transformers>=4.30.0
 hdbscan>=0.8.29
 scikit-learn>=1.0.0
 
+# ==================== GPU 加速聚类 (cuML) ====================
+# cuML 提供 GPU 加速的 HDBSCAN，需要 CUDA 环境
+# 安装方式: conda install -c rapidsai -c nvidia cuml cudf
+# 或通过 pip: pip install cuml-cu12 (根据 CUDA 版本选择)
+# cuml-cu12>=24.0.0  # 取消注释以启用 GPU HDBSCAN
+# cupy-cuda12x>=12.0.0  # cuML 依赖
+
+# ==================== 性能优化 ====================
+numba>=0.56.0  # JIT 加速 FPS 算法
+
 # ==================== 向量检索 (大规模) ====================
-faiss-cpu>=1.7.0
-# 或者 GPU 版本: faiss-gpu>=1.7.0
+faiss-gpu>=1.7.0
 
 # ==================== 数据存储 ====================
 h5py>=3.7.0

@@ -112,12 +112,23 @@ class IncrementalEmbeddingComputer:
         all_embeddings = []
         all_ids = []
         n_batches = (len(new_texts) + batch_size - 1) // batch_size
+        interrupted = False
 
         iterator = range(0, len(new_texts), batch_size)
         if show_progress:
             iterator = tqdm(iterator, total=n_batches, desc="计算嵌入")
 
         for batch_idx, start_idx in enumerate(iterator):
+            # 检查中断信号
+            try:
+                from hcds.utils import check_interrupt
+                if check_interrupt():
+                    print("\n收到中断信号，正在保存已计算的嵌入...")
+                    interrupted = True
+                    break
+            except ImportError:
+                pass
+
             end_idx = min(start_idx + batch_size, len(new_texts))
             batch_texts = new_texts[start_idx:end_idx]
             batch_ids = new_ids[start_idx:end_idx]
@@ -143,6 +154,13 @@ class IncrementalEmbeddingComputer:
                         processed_count
                     )
 
+        # 如果被中断，保存当前进度
+        if interrupted and all_embeddings:
+            print(f"保存 {len(all_ids)} 个已计算的嵌入...")
+            partial_embeddings = np.vstack(all_embeddings)
+            self._save_checkpoint(partial_embeddings, all_ids, len(all_ids))
+            raise KeyboardInterrupt(f"嵌入计算被中断，已保存 {len(all_ids)}/{len(new_texts)} 个样本")
+
         new_embeddings = np.vstack(all_embeddings)
 
         # 保存最终结果
@@ -152,24 +170,38 @@ class IncrementalEmbeddingComputer:
         return self._load_all_embeddings(sample_ids)
 
     def _auto_batch_size(self) -> int:
-        """自动确定批大小"""
+        """自动确定批大小 (最大化显存利用)"""
         try:
             import torch
             if not torch.cuda.is_available():
                 return 32
 
             gpu_memory_gb = torch.cuda.get_device_properties(0).total_memory / (1024**3)
+            gpu_name = torch.cuda.get_device_properties(0).name
 
-            if gpu_memory_gb >= 20:
-                return 256
+            print(f"检测到 GPU: {gpu_name}, 显存: {gpu_memory_gb:.1f} GB")
+
+            # 更激进的 batch size 设置
+            if gpu_memory_gb >= 70:  # A100 80GB
+                batch_size = 2048
+            elif gpu_memory_gb >= 40:  # A100 40GB / A6000
+                batch_size = 1024
+            elif gpu_memory_gb >= 24:  # RTX 3090/4090
+                batch_size = 512
+            elif gpu_memory_gb >= 20:
+                batch_size = 384
             elif gpu_memory_gb >= 14:
-                return 128
+                batch_size = 256
             elif gpu_memory_gb >= 8:
-                return 64
+                batch_size = 128
             else:
-                return 32
-        except:
-            return 32
+                batch_size = 64
+
+            print(f"自动设置 batch_size: {batch_size}")
+            return batch_size
+        except Exception as e:
+            print(f"自动检测 batch_size 失败: {e}, 使用默认值 64")
+            return 64
 
     def _load_processed_ids(self) -> None:
         """加载已处理的样本 ID"""

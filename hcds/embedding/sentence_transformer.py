@@ -65,9 +65,23 @@ class SentenceTransformerEncoder:
             elif self._precision == "bf16":
                 self._model = self._model.to(torch.bfloat16)
 
+            # 尝试使用 torch.compile 加速 (PyTorch 2.0+)
+            try:
+                if hasattr(torch, 'compile') and torch.__version__ >= "2.0":
+                    self._model = torch.compile(self._model, mode="reduce-overhead")
+                    print("已启用 torch.compile 加速")
+            except Exception as e:
+                print(f"torch.compile 不可用: {e}")
+
         # 获取嵌入维度
         self._embedding_dim = self._model.get_sentence_embedding_dimension()
         print(f"嵌入维度: {self._embedding_dim}")
+
+        # 打印显存使用信息
+        if self._device == "cuda":
+            allocated = torch.cuda.memory_allocated() / (1024**3)
+            reserved = torch.cuda.memory_reserved() / (1024**3)
+            print(f"模型加载后显存: 已分配 {allocated:.2f} GB, 已预留 {reserved:.2f} GB")
 
     def encode(
         self,
@@ -95,12 +109,14 @@ class SentenceTransformerEncoder:
         if "e5" in self._model_name.lower():
             texts = [f"query: {t}" if len(t) < 200 else f"passage: {t}" for t in texts]
 
+        # 使用高性能参数
         embeddings = self._model.encode(
             texts,
             batch_size=batch_size,
             show_progress_bar=show_progress,
             normalize_embeddings=self._normalize,
-            convert_to_numpy=True
+            convert_to_numpy=True,
+            device=self._device,  # 确保使用正确设备
         )
 
         return embeddings.astype(np.float32)
@@ -151,24 +167,38 @@ class SentenceTransformerEncoder:
         return np.vstack(all_embeddings).astype(np.float32)
 
     def _auto_batch_size(self) -> int:
-        """根据 GPU 显存自动确定批大小"""
+        """根据 GPU 显存自动确定批大小 (最大化显存利用)"""
         try:
             import torch
             if not torch.cuda.is_available():
                 return 32
 
             gpu_memory_gb = torch.cuda.get_device_properties(0).total_memory / (1024**3)
+            gpu_name = torch.cuda.get_device_properties(0).name
 
-            if gpu_memory_gb >= 20:
-                return 256
+            print(f"检测到 GPU: {gpu_name}, 显存: {gpu_memory_gb:.1f} GB")
+
+            # 更激进的 batch size 设置以最大化显存利用
+            if gpu_memory_gb >= 70:  # A100 80GB
+                batch_size = 2048
+            elif gpu_memory_gb >= 40:  # A100 40GB / A6000
+                batch_size = 1024
+            elif gpu_memory_gb >= 24:  # RTX 3090/4090
+                batch_size = 512
+            elif gpu_memory_gb >= 20:
+                batch_size = 384
             elif gpu_memory_gb >= 14:
-                return 128
+                batch_size = 256
             elif gpu_memory_gb >= 8:
-                return 64
+                batch_size = 128
             else:
-                return 32
-        except:
-            return 32
+                batch_size = 64
+
+            print(f"自动设置 batch_size: {batch_size}")
+            return batch_size
+        except Exception as e:
+            print(f"自动检测 batch_size 失败: {e}, 使用默认值 64")
+            return 64
 
     @property
     def embedding_dim(self) -> int:

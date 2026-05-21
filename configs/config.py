@@ -110,7 +110,7 @@ def get_default_config(data_path: str = "data/train.jsonl") -> HCDSConfig:
             ),
             incremental=IncrementalConfig(
                 enabled=True,
-                checkpoint_interval=10000,
+                checkpoint_interval=50000,  # 减少 I/O 开销
                 resume_from_latest=True,
             ),
         ),
@@ -125,7 +125,7 @@ def get_default_config(data_path: str = "data/train.jsonl") -> HCDSConfig:
                 metric="euclidean",
             ),
             large_scale=LargeScaleConfig(
-                threshold=1_000_000,
+                threshold=100_000,  # 降低阈值，>100K 样本使用 Pilot+FAISS 模式避免 HDBSCAN 卡死
                 pilot_sampling=PilotSamplingConfig(
                     ratio=0.02,
                     min_samples=50000,

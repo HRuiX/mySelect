@@ -1,5 +1,9 @@
 """
 优先级计算与簇内采样
+
+性能优化:
+- 向量化新颖度计算 (矩阵乘法)
+- FAISS 加速 kNN 搜索
 """
 
 from typing import List, Dict, Optional, Tuple, Set
@@ -8,6 +12,17 @@ from dataclasses import dataclass
 
 from hcds.config.schema import PriorityConfig
 from hcds.clustering.compression import compute_local_density
+
+# ==================== FAISS 加速 ====================
+_FAISS_AVAILABLE = False
+_FAISS_GPU_AVAILABLE = False
+try:
+    import faiss
+    _FAISS_AVAILABLE = True
+    if faiss.get_num_gpus() > 0:
+        _FAISS_GPU_AVAILABLE = True
+except ImportError:
+    pass
 
 
 @dataclass
@@ -75,7 +90,8 @@ class PriorityCalculator:
     def compute_novelty(
         self,
         embeddings: np.ndarray,
-        history_embeddings: Optional[np.ndarray]
+        history_embeddings: Optional[np.ndarray],
+        use_faiss: bool = True
     ) -> np.ndarray:
         """
         计算新颖度 (相对历史已选集的最近距离)
@@ -83,6 +99,7 @@ class PriorityCalculator:
         Args:
             embeddings: 候选嵌入 [N, D]
             history_embeddings: 历史已选嵌入 [H, D] (None 表示无历史)
+            use_faiss: 是否使用 FAISS 加速 (默认 True)
 
         Returns:
             新颖度分数 [N] ∈ [0, 1]
@@ -90,10 +107,14 @@ class PriorityCalculator:
         if history_embeddings is None or len(history_embeddings) == 0:
             return np.ones(len(embeddings))
 
+        # 优先使用 FAISS
+        if use_faiss and _FAISS_AVAILABLE:
+            return self._compute_novelty_faiss(embeddings, history_embeddings)
+
         try:
             from sklearn.neighbors import NearestNeighbors
         except ImportError:
-            # 简化版本
+            # 回退到向量化版本
             return self._compute_novelty_simple(embeddings, history_embeddings)
 
         nn = NearestNeighbors(n_neighbors=1, metric='cosine', algorithm='auto')
@@ -110,20 +131,61 @@ class PriorityCalculator:
 
         return novelty
 
+    def _compute_novelty_faiss(
+        self,
+        embeddings: np.ndarray,
+        history_embeddings: np.ndarray
+    ) -> np.ndarray:
+        """使用 FAISS 加速的新颖度计算"""
+        import faiss
+
+        dim = embeddings.shape[1]
+
+        # 归一化向量 (内积 = 余弦相似度)
+        embeddings_norm = embeddings.astype(np.float32)
+        history_norm = history_embeddings.astype(np.float32)
+
+        faiss.normalize_L2(embeddings_norm)
+        faiss.normalize_L2(history_norm)
+
+        # 创建内积索引
+        index = faiss.IndexFlatIP(dim)
+
+        # 如果有 GPU 且数据量较大，使用 GPU 加速
+        if _FAISS_GPU_AVAILABLE and len(history_embeddings) > 10000:
+            res = faiss.StandardGpuResources()
+            index = faiss.index_cpu_to_gpu(res, 0, index)
+
+        index.add(history_norm)
+
+        # 搜索最近邻 (返回相似度)
+        similarities, _ = index.search(embeddings_norm, 1)
+
+        # 转换为距离: distance = 1 - similarity
+        novelty = 1.0 - similarities.flatten()
+
+        # 归一化
+        if novelty.max() > novelty.min():
+            novelty = (novelty - novelty.min()) / (novelty.max() - novelty.min() + 1e-12)
+        else:
+            novelty = np.ones_like(novelty)
+
+        return novelty
+
     def _compute_novelty_simple(
         self,
         embeddings: np.ndarray,
         history_embeddings: np.ndarray
     ) -> np.ndarray:
-        """简化版新颖度计算"""
-        novelty = []
-        for emb in embeddings:
-            # 计算到历史集的最小余弦距离
-            similarities = history_embeddings @ emb
-            min_dist = 1 - similarities.max()
-            novelty.append(min_dist)
+        """向量化新颖度计算 (矩阵乘法)"""
+        # 一次性计算所有相似度: [N, H] = [N, D] @ [D, H]
+        all_similarities = embeddings @ history_embeddings.T
 
-        novelty = np.array(novelty)
+        # 每个样本到历史集的最大相似度
+        max_similarities = all_similarities.max(axis=1)
+
+        # 新颖度 = 1 - 最大相似度 (最小余弦距离)
+        novelty = 1.0 - max_similarities
 
         # 归一化
         if novelty.max() > novelty.min():
