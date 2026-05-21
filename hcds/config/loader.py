@@ -149,6 +149,7 @@ def _infer_config_func(config_path: Path) -> str:
         "math_reasoning": "get_math_reasoning_config",
         "instruction_tuning": "get_instruction_tuning_config",
         "code_generation": "get_code_generation_config",
+        "mmlu_bbh": "get_mmlu_bbh_combined_config",
     }
 
     return func_map.get(name, f"get_{name}_config")
@@ -340,6 +341,9 @@ def create_config_from_task(
         "math": ("configs/tasks/math_reasoning.py", "get_math_reasoning_config"),
         "instruction": ("configs/tasks/instruction_tuning.py", "get_instruction_tuning_config"),
         "code": ("configs/tasks/code_generation.py", "get_code_generation_config"),
+        "mmlu": ("configs/tasks/mmlu_bbh.py", "get_mmlu_config"),
+        "bbh": ("configs/tasks/mmlu_bbh.py", "get_bbh_config"),
+        "mmlu_bbh": ("configs/tasks/mmlu_bbh.py", "get_mmlu_bbh_combined_config"),
     }
 
     if task not in task_config_map:

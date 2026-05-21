@@ -68,9 +68,15 @@ class FieldMappingConfig(BaseModel):
 
 
 class DataConfig(BaseModel):
-    """数据加载配置"""
-    path: str = Field(..., description="数据文件路径")
-    format: Literal["jsonl", "json", "parquet", "huggingface"] = "jsonl"
+    """
+    数据加载配置
+
+    支持本地文件和 HuggingFace 数据集:
+    - 本地文件: path = "data/train.jsonl"
+    - HuggingFace: path = "hf://maveriq/bigbenchhard" 或 "princeton-nlp/less_data"
+    """
+    path: str = Field(..., description="数据文件路径或 HuggingFace 数据集名")
+    format: Literal["jsonl", "json", "parquet", "huggingface", "auto"] = "auto"
 
     field_mapping: FieldMappingConfig = Field(default_factory=FieldMappingConfig)
     content_template: str = "{instruction}\n{input}"
@@ -79,10 +85,23 @@ class DataConfig(BaseModel):
     min_length: int = Field(default=10, ge=0)
     max_length: int = Field(default=4096, ge=1)
 
+    # HuggingFace 特定配置
+    hf_split: str = Field(default="train", description="HuggingFace 数据集分割")
+    hf_subset: Optional[str] = Field(default=None, description="HuggingFace 数据集子集/配置名")
+    hf_streaming: bool = Field(default=False, description="是否流式加载")
+
     @field_validator('path')
     @classmethod
     def validate_path(cls, v: str) -> str:
-        # 允许相对路径和绝对路径
+        # 允许相对路径、绝对路径和 HuggingFace 数据集名
+        return v
+
+    @field_validator('format', mode='before')
+    @classmethod
+    def auto_detect_format(cls, v: str, info) -> str:
+        if v == "auto":
+            # 在验证阶段无法自动检测，保持 auto
+            return v
         return v
 
 
